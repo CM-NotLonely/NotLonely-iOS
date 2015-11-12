@@ -1,0 +1,15 @@
+platform :ios, '7.0'
+
+pod 'AFNetworking'
+pod 'ReactiveCocoa'
+pod 'AFNetworking-RACExtensions', '~> 0.1.6'
+
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'DateTools'
+pod 'Mantle'
+pod 'Masonry'
+pod 'ODRefreshControl'
+pod 'SKTagView'
+pod 'UIActivityIndicator-for-SDWebImage'
+pod 'HexColors'

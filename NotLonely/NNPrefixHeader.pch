@@ -1,0 +1,51 @@
+//
+//  NNPrefixHeader.pch
+//  NotLonely
+//
+//  Created by tesths on 10/16/15.
+//  Copyright (c) 2015 tesths. All rights reserved.
+//
+
+#ifndef NotLonely_NNPrefixHeader_pch
+#define NotLonely_NNPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//appdelegate
+#import "AppDelegate.h"
+
+//constant
+#import "Color.h"
+#import "Property.h"
+#import "Url.h"
+
+//utility
+#import "ColorWithImage.h"
+#import "ImageWithColor.h"
+#import "NSObject+Common.h"
+
+//database
+#import "NNUserData.h"
+
+//vendor
+#import "MHTabBarController.h"
+
+//cocoapods
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
+#import <Mantle/Mantle.h>
+#import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+#import <HexColors/HexColors.h>
+
+//vc
+#import "NNViewController.h"
+
+//network
+#import "NetWork.h"
+
+//appcommon
+#import "CustomHud.h"
+#import "BlackODRefreshControl.h"
+
+#endif
