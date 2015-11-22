@@ -37,10 +37,8 @@ static NSString *CellIdentifier =@"MyReceiveTableViewCell";
 
 -(void)sendMyRecieve
 {
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_MyRequest:nil] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(MyReceiveModel *data) = x;
-        [CustomHud hideHUDForView:self.view animated:YES];
         [self.refreshControl endRefreshing];
         if (data) {
             self.dataArray = data.myRequestList;
@@ -104,7 +102,7 @@ static NSString *CellIdentifier =@"MyReceiveTableViewCell";
     if ([self configureModelatIndex:indexPath.row].relationDeal) {
         DetPublishViewController *detVC = [[DetPublishViewController alloc] init];
         detVC.activityId = [self configureModelatIndex:indexPath.row].activityId;
-        detVC.is_finish = [self configureModelatIndex:indexPath.row].is_finish;
+        detVC.is_finish = [[self configureModelatIndex:indexPath.row].is_finish boolValue];
         detVC.type = @1;
         [self.navigationController pushViewController:detVC animated:YES];
     }

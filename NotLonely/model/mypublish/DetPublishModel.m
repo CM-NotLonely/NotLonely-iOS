@@ -34,7 +34,6 @@
 
 + (NSValueTransformer *)initiatorJSONTransformer {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSDictionary *value, BOOL *success, NSError *__autoreleasing *error) {
-        DetPublishDetModel *model = [MTLJSONAdapter modelOfClass:DetPublishDetModel.class fromJSONDictionary:value error:nil];
         return [MTLJSONAdapter modelOfClass:DetPublishDetModel.class fromJSONDictionary:value error:nil];
     }];
 }

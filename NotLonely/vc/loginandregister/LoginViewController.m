@@ -15,6 +15,9 @@
 #import "LoginModel.h"
 
 @interface LoginViewController ()
+@property (strong, nonatomic) TPKeyboardAvoidingScrollView *scrollView;
+@property (strong, nonatomic) UIView *backscrollView;
+
 @property (strong, nonatomic) UIImageView *logoImg;
 @property (strong, nonatomic) UILabel *nameLb;
 
@@ -34,45 +37,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = WhiteColor;
+    [self.view addSubview:self.scrollView];
+    [self.scrollView addSubview:self.backscrollView];
     
-    [self.view addSubview:self.logoImg];
-    [self.view addSubview:self.nameLb];
+    [self.backscrollView addSubview:self.logoImg];
+    [self.backscrollView addSubview:self.nameLb];
     
-    [self.view addSubview:self.userTextField];
-    [self.view addSubview:self.pswTextField];
+    [self.backscrollView addSubview:self.userTextField];
+    [self.backscrollView addSubview:self.pswTextField];
     
-    [self.view addSubview:self.registerBtn];
+    [self.backscrollView addSubview:self.registerBtn];
     
-    [self.view addSubview:self.loginBtn];
-    [self.view addSubview:self.moreBtn];
+    [self.backscrollView addSubview:self.loginBtn];
+    [self.backscrollView addSubview:self.moreBtn];
     
     [self setUpConstraint];
 }
 
 - (void)setUpConstraint
 {
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
     [self.logoImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).offset(70);
+        make.centerX.equalTo(self.backscrollView);
+        make.top.equalTo(self.backscrollView.mas_top).offset(70);
         make.width.height.equalTo(@80);
     }];
     [self.nameLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
+        make.centerX.equalTo(self.backscrollView);
         make.top.equalTo(self.logoImg.mas_bottom).offset(10);
     }];
     
     [self.userTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.nameLb.mas_bottom).offset(40);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.backscrollView);
+        make.left.equalTo(self.backscrollView.mas_left).offset(40);
+        make.right.equalTo(self.backscrollView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.pswTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.userTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.backscrollView);
+        make.left.equalTo(self.backscrollView.mas_left).offset(40);
+        make.right.equalTo(self.backscrollView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     
@@ -83,14 +92,14 @@
     
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.pswTextField.mas_bottom).offset(50);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.backscrollView);
+        make.left.equalTo(self.backscrollView.mas_left).offset(40);
+        make.right.equalTo(self.backscrollView.mas_right).offset(-40);
         make.height.equalTo(@38);
     }];
     [self.moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-10);
-        make.centerX.equalTo(self.view);
+        make.bottom.equalTo(self.backscrollView.mas_bottom).offset(-10);
+        make.centerX.equalTo(self.backscrollView);
     }];
 }
 
@@ -98,7 +107,6 @@
 {
     NSDictionary *para = @{@"username":self.userTextField.text,
                            @"password":self.pswTextField.text};
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_Login:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(LoginModel *data) = x;
         if (data) {
@@ -110,12 +118,29 @@
             [NNUserData setDefaultValue:data.sex withKey:user_sex];
         }
     }];
-    [CustomHud hideHUDForView:self.view animated:YES];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+
+-(TPKeyboardAvoidingScrollView *)scrollView
+{
+    if (_scrollView == nil) {
+        _scrollView = [[TPKeyboardAvoidingScrollView alloc] init];
+        _scrollView.contentSize = CGSizeMake(self.view.GetWidth, self.view.GetHeight);
+    }
+    return _scrollView;
+}
+
+-(UIView *)backscrollView
+{
+    if (_backscrollView == nil) {
+        _backscrollView = [[UIView alloc] init];
+        _backscrollView.frame = CGRectMake(0, 0, self.view.GetWidth, self.view.GetHeight);
+    }
+    return _backscrollView;
 }
 
 -(UIImageView *)logoImg

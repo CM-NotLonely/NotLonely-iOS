@@ -1,4 +1,5 @@
 platform :ios, '7.0'
+inhibit_all_warnings!
 
 pod 'AFNetworking'
 pod 'ReactiveCocoa'
@@ -13,3 +14,4 @@ pod 'ODRefreshControl'
 pod 'SKTagView'
 pod 'UIActivityIndicator-for-SDWebImage'
 pod 'HexColors'
+pod 'TPKeyboardAvoiding'

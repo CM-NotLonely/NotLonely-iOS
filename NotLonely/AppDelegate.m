@@ -23,11 +23,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    [self setupLoginViewController];
-//    [self setupRootViewController];
+//    [self setupLoginViewController];
+    [self setupRootViewController];
     return YES;
 }
 

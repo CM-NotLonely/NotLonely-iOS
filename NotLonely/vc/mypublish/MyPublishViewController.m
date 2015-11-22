@@ -46,10 +46,8 @@ static NSString *CellIdentifier =@"MyPublishTableViewCell";
 
 - (void)sendMyPost
 {
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_MyPublish:nil] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(MyPublishModel *data) = x;
-        [CustomHud hideHUDForView:self.view animated:YES];
         [self.refreshControl endRefreshing];
         if (data) {
             self.dataArray = data.myPostList;
@@ -116,7 +114,7 @@ static NSString *CellIdentifier =@"MyPublishTableViewCell";
     DetPublishViewController *detVC = [[DetPublishViewController alloc] init];
     detVC.type = @0;
     detVC.activityId = [self configureModelatIndex:indexPath.row].activityId;
-    detVC.is_finish = [self configureModelatIndex:indexPath.row].is_finish;
+    detVC.is_finish = [[self configureModelatIndex:indexPath.row].is_finish boolValue];
     [self.navigationController pushViewController:detVC animated:YES];
 }
 @end
