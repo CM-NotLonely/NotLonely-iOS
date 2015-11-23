@@ -11,6 +11,9 @@
 #import "NAButton.h"
 
 @interface AddNaViewController ()<UITextFieldDelegate>
+
+@property (strong, nonatomic) NNScrollView *scrollView;
+
 @property (strong, nonatomic) UILabel *addNALb;
 
 @property (strong, nonatomic) NATextField *nameTextField;
@@ -39,87 +42,94 @@
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_backarrow"] style:UIBarButtonItemStylePlain target:self action:@selector(backSquare)];
     [self.navigationItem setLeftBarButtonItem:leftBtn];
     
-    [self.view addSubview:self.addNALb];
     
-    [self.view addSubview:self.nameTextField];
-    [self.view addSubview:self.tagTextField];
-    [self.view addSubview:self.contentTextField];
-    [self.view addSubview:self.numberTextField];
-    [self.view addSubview:self.timeTextField];
-    [self.view addSubview:self.placeTextField];
-    [self.view addSubview:self.remarkLabel];
-    [self.view addSubview:self.remarkTextView];
+    [self.view addSubview:self.scrollView];
     
-    [self.view addSubview:self.addNABtn];
+    [self.scrollView.contentView addSubview:self.addNALb];
+    
+    [self.scrollView.contentView addSubview:self.nameTextField];
+    [self.scrollView.contentView addSubview:self.tagTextField];
+    [self.scrollView.contentView addSubview:self.contentTextField];
+    [self.scrollView.contentView addSubview:self.numberTextField];
+    [self.scrollView.contentView addSubview:self.timeTextField];
+    [self.scrollView.contentView addSubview:self.placeTextField];
+    [self.scrollView.contentView addSubview:self.remarkLabel];
+    [self.scrollView.contentView addSubview:self.remarkTextView];
+    
+    [self.scrollView.contentView addSubview:self.addNABtn];
     
     [self setUpConstraint];
 }
 
 - (void)setUpConstraint
 {
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
     [self.addNALb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).offset(40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.top.equalTo(self.scrollView.contentView.mas_top).offset(40);
     }];
     [self.nameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.addNALb.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.tagTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.nameTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.contentTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.tagTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.numberTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.timeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.numberTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.placeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.timeTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.remarkLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.placeTextField.mas_bottom).offset(20);
-        make.left.equalTo(self.view.mas_left).offset(40);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
     }];
     [self.remarkTextView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.remarkLabel.mas_bottom).offset(10);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@70);
     }];
     
     [self.addNABtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.remarkTextView.mas_bottom).offset(30);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@38);
     }];
 }
@@ -134,14 +144,12 @@
                            @"remark":self.remarkTextView.text,
                            @"tag":self.tagTextField.text
                            };
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_ADDNA:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(id data) = x;
         if (data) {
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
-    [CustomHud hideHUDForView:self.view animated:YES];
 }
 
 - (void)backSquare
@@ -166,6 +174,21 @@ replacementString:(NSString *)string
     } else {
         return YES;
     }
+}
+
+-(NNScrollView *)scrollView
+{
+    if (_scrollView == nil) {
+        _scrollView = [[NNScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.GetWidth, self.view.GetHeight)];
+        if (Screen35in) {
+            _scrollView.contentView.frame = CGRectMake(0, 0, self.view.GetWidth, self.view.GetHeight + 120);
+            _scrollView.contentSize = CGSizeMake(self.view.GetWidth, self.view.GetHeight + 120);
+        } else {
+            _scrollView.contentSize = CGSizeMake(self.view.GetWidth, self.view.GetHeight);
+        }
+        
+    }
+    return _scrollView;
 }
 
 -(UILabel *)addNALb

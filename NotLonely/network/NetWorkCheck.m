@@ -31,6 +31,7 @@ static dispatch_once_t onceToken;
         return nil;
     }
     self.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.requestSerializer.timeoutInterval = 1;
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
     
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -54,6 +55,9 @@ static dispatch_once_t onceToken;
                  withMethodType:(NetworkMethod)method
                   autoShowError:(BOOL)autoShowError
 {
+    UIView *view = [UIApplication sharedApplication].delegate.window ;
+    [CustomHud showHUDAddedTo:view animated:YES];
+
     //log请求数据
     DebugLog(@"\n===========request===========\n%@\n%@:\n%@", kNetworkMethodName[method], aPath, params);
     //    发起请求
@@ -70,6 +74,7 @@ static dispatch_once_t onceToken;
                 }
             }]
               catch:^RACSignal *(NSError *error) {
+                  [CustomHud hideHUDForView:view animated:YES];
                   DebugLog(@"\n===========response===========\n%@:\n%@", aPath, error);
                   return [self showError:error];
               }] replayLazily];
@@ -87,6 +92,7 @@ static dispatch_once_t onceToken;
                 }
             }]
               catch:^RACSignal *(NSError *error) {
+                  [CustomHud hideHUDForView:view animated:YES];
                   DebugLog(@"\n===========response===========\n%@:\n%@", aPath, error);
                   return [self showError:error];
               }] replayLazily];
@@ -145,9 +151,12 @@ rerequestJsonDataWithPath:(NSString *)aPath
 
 - (RACSignal *)showError:(NSError *)error
 {
-    NSString *tipStr = [self tipFromError:error];
-    [self showHudTipStr:tipStr];
-    
+    if (error.code == NSURLErrorTimedOut) {
+        [self showHudTipStr:@"服务器开了个小差~"];
+    } else {
+        NSString *tipStr = [self tipFromError:error];
+        [self showHudTipStr:tipStr];
+    }
     return [RACSignal error:error];
 }
 @end

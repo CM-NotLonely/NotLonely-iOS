@@ -44,10 +44,8 @@ static NSString *CellIdentifier =@"SquareTableViewCell";
 - (void)sendSquare
 {
     NSDictionary *para = @{@"tag":@"电影"};
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_Square:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(SquareModel *data) = x;
-        [CustomHud hideHUDForView:self.view animated:YES];
         [self.refreshControl endRefreshing];
         if (data) {
             self.dataArray = data.items;

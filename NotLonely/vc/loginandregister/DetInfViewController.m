@@ -9,8 +9,11 @@
 #import "DetInfViewController.h"
 #import "NATextField.h"
 #import "NAButton.h"
+#import "NNScrollView.h"
 
 @interface DetInfViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) NNScrollView *scrollView;
+
 @property (strong, nonatomic) UIImageView *headImg;
 @property (strong, nonatomic) UILabel *headLb;
 
@@ -38,44 +41,48 @@
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
     self.sexStr = @"男";
+    [self.view addSubview:self.scrollView];
     
-    [self.view addSubview:self.headImg];
-    [self.view addSubview:self.headLb];
+    [self.scrollView.contentView addSubview:self.headImg];
+    [self.scrollView.contentView addSubview:self.headLb];
     
-    [self.view addSubview:self.userTextField];
-    [self.view addSubview:self.sexLabel];
-    [self.view addSubview:self.sexSegmentedControl];
+    [self.scrollView.contentView addSubview:self.userTextField];
+    [self.scrollView.contentView addSubview:self.sexLabel];
+    [self.scrollView.contentView addSubview:self.sexSegmentedControl];
     
-    [self.view addSubview:self.phoneTextField];
-    [self.view addSubview:self.tagTextField];
+    [self.scrollView.contentView addSubview:self.phoneTextField];
+    [self.scrollView.contentView addSubview:self.tagTextField];
     
-    [self.view addSubview:self.defineBtn];
+    [self.scrollView.contentView addSubview:self.defineBtn];
     
     [self setUpConstraint];
 }
 
 - (void)setUpConstraint
 {
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     [self.headImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).offset(40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.top.equalTo(self.scrollView.contentView.mas_top).offset(40);
         make.width.height.equalTo(@70);
     }];
     [self.headLb mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
+        make.centerX.equalTo(self.scrollView.contentView);
         make.top.equalTo(self.headImg.mas_bottom).offset(10);
     }];
     
     [self.userTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.headLb.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.sexLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.userTextField.mas_bottom).offset(25);
-        make.left.equalTo(self.view.mas_left).offset(40);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
     }];
     [self.sexSegmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.sexLabel);
@@ -84,24 +91,24 @@
     }];
     [self.phoneTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.sexSegmentedControl.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     [self.tagTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.phoneTextField.mas_bottom).offset(20);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@30);
     }];
     
     [self.defineBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.tagTextField.mas_bottom).offset(50);
-        make.centerX.equalTo(self.view);
-        make.left.equalTo(self.view.mas_left).offset(40);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.centerX.equalTo(self.scrollView.contentView);
+        make.left.equalTo(self.scrollView.contentView.mas_left).offset(40);
+        make.right.equalTo(self.scrollView.contentView.mas_right).offset(-40);
         make.height.equalTo(@38);
     }];
 }
@@ -125,14 +132,12 @@
                            @"desc":self.tagTextField.text,
                            @"qq":self.phoneTextField.text
                            };
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_DetInf:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(id data) = x;
         if (data) {
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
-    [CustomHud hideHUDForView:self.view animated:YES];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -196,6 +201,15 @@
     imagePickerController.allowsEditing = YES;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     [self presentViewController:imagePickerController animated:YES completion:^{}];
+}
+
+-(NNScrollView *)scrollView
+{
+    if (_scrollView == nil) {
+        _scrollView = [[NNScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.GetWidth, self.view.GetHeight)];
+        _scrollView.contentSize = CGSizeMake(self.view.GetWidth, self.view.GetHeight);
+    }
+    return _scrollView;
 }
 
 -(UIImageView *)headImg

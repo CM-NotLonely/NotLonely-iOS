@@ -44,11 +44,9 @@ static NSString *CellIdentifier =@"DetPublishTableViewCell";
 -(void)sendPeopleList
 {
     NSDictionary *para = @{@"activityId":self.activityId};
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     if ([self.type integerValue] == 0) {
         [[[NetWork sharedManager] request_DetMyPublish:para] subscribeNext:^(RACTuple *x) {
             RACTupleUnpack(DetPublishModel *data) = x;
-            [CustomHud hideHUDForView:self.view animated:YES];
             [self.refreshControl endRefreshing];
             if (data) {
                 self.dataArray = data.relationList;
@@ -58,7 +56,6 @@ static NSString *CellIdentifier =@"DetPublishTableViewCell";
     } else {
         [[[NetWork sharedManager] request_OtherMyPublish:para] subscribeNext:^(RACTuple *x) {
             RACTupleUnpack(DetPublishModel *data) = x;
-            [CustomHud hideHUDForView:self.view animated:YES];
             [self.refreshControl endRefreshing];
             if (data) {
                 self.dataArray = data.relationList;

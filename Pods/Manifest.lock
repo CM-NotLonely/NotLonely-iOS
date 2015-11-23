@@ -43,6 +43,7 @@ PODS:
   - SDWebImage/Core (3.7.3)
   - SKTagView (0.7):
     - Masonry
+  - TPKeyboardAvoiding (1.2.10)
   - UIActivityIndicator-for-SDWebImage (1.2):
     - SDWebImage (~> 3.7)
 
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - ReactiveCocoa
   - SDWebImage
   - SKTagView
+  - TPKeyboardAvoiding
   - UIActivityIndicator-for-SDWebImage
 
 SPEC CHECKSUMS:
@@ -72,6 +74,7 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SKTagView: 1e89c1ce2292cf890610901d3621c55d1ed82379
+  TPKeyboardAvoiding: 614ebec846ec28b83d548769297fa5fb56468904
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
 COCOAPODS: 0.39.0

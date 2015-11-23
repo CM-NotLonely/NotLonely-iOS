@@ -59,6 +59,7 @@
 		069AB1DF1BEF68D6004C1456 /* MyReceiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 069AB1DE1BEF68D6004C1456 /* MyReceiveModel.m */; };
 		069AB1E21BEF68E2004C1456 /* MyReceiveDetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 069AB1E11BEF68E2004C1456 /* MyReceiveDetModel.m */; };
 		48ACC72C7BCF6604304B432D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AE0EB12D747DB59C512BCD /* libPods.a */; };
+		7458BEBD1C015A110015CE3B /* NNScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7458BEBC1C015A110015CE3B /* NNScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		069AB1E11BEF68E2004C1456 /* MyReceiveDetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyReceiveDetModel.m; sourceTree = "<group>"; };
 		14D703B33D822DE982C5FABD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		567A05C0F7AAA294C113512F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7458BEBB1C015A110015CE3B /* NNScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNScrollView.h; sourceTree = "<group>"; };
+		7458BEBC1C015A110015CE3B /* NNScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNScrollView.m; sourceTree = "<group>"; };
 		A3AE0EB12D747DB59C512BCD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -514,6 +517,8 @@
 				060F2C0B1BEE199B00EA30F8 /* CustomHud.m */,
 				060F2C191BEE396D00EA30F8 /* BlackODRefreshControl.h */,
 				060F2C1A1BEE396D00EA30F8 /* BlackODRefreshControl.m */,
+				7458BEBB1C015A110015CE3B /* NNScrollView.h */,
+				7458BEBC1C015A110015CE3B /* NNScrollView.m */,
 			);
 			path = appcommon;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 				062DC5B81BDA0ED300C9B8DB /* MHTabBarController.m in Sources */,
 				060F2C5B1BEE3AB200EA30F8 /* LoginViewController.m in Sources */,
 				060F2C621BEE3AB200EA30F8 /* DetPublishTableViewCell.m in Sources */,
+				7458BEBD1C015A110015CE3B /* NNScrollView.m in Sources */,
 				060F2C6B1BEE3AB200EA30F8 /* DetSquareViewController.m in Sources */,
 				060F2C5F1BEE3AB200EA30F8 /* NATextField.m in Sources */,
 				069AB1D21BEF3710004C1456 /* MyPublishDetModel.m in Sources */,

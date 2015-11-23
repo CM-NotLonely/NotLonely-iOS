@@ -46,10 +46,8 @@
 {
     NSDictionary *para = @{@"activityId":self.activityId,
                            @"personInId":self.detpublishdetModel.personInId};
-    [CustomHud showHUDAddedTo:self.view animated:YES];
     [[[NetWork sharedManager] request_MPhone:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(NSString *data) = x;
-        [CustomHud hideHUDForView:self.view animated:YES];
         if (data) {
             self.phoneLabel.text = [NSString stringWithFormat:@"☎️%@", data];
         }
