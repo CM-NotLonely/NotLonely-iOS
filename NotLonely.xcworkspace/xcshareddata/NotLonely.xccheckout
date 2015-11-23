@@ -10,14 +10,14 @@
 	<string>NotLonely</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BED44456006653548AE5B3F3A02739ACE9B6D423</key>
+		<key>2C6FB28F4E98FDF4CF5C32988ADA9B97C1B24019</key>
 		<string>git.coding.net:judi/NotLonely.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NotLonely.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BED44456006653548AE5B3F3A02739ACE9B6D423</key>
+		<key>2C6FB28F4E98FDF4CF5C32988ADA9B97C1B24019</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BED44456006653548AE5B3F3A02739ACE9B6D423</string>
+	<string>2C6FB28F4E98FDF4CF5C32988ADA9B97C1B24019</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BED44456006653548AE5B3F3A02739ACE9B6D423</string>
+			<string>2C6FB28F4E98FDF4CF5C32988ADA9B97C1B24019</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NotLonely</string>
 		</dict>
