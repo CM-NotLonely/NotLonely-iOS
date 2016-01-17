@@ -26,13 +26,29 @@
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
+    if (NNGetUserData(is_login)) {
+        [self postLogin];
+    } else {
+        [self setupLoginViewController];
+    }
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
-//    [self setupLoginViewController];
-    [self setupRootViewController];
     return YES;
+}
+
+- (void)postLogin
+{
+    NSDictionary *para = @{@"username":NNGetUserData(user_username),
+                           @"password":NNGetUserData(user_password)};
+    [[[NetWork sharedManager] request_Login:para] subscribeNext:^(RACTuple *x) {
+        RACTupleUnpack(id data) = x;
+        if (data) {
+            [self setupRootViewController];
+        } else {
+            [self setupLoginViewController];
+        }
+    }];
 }
 
 - (void)setupLoginViewController

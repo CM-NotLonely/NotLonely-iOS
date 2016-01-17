@@ -16,7 +16,8 @@
              @"phone": @"phone",
              @"avatar": @"avatar",
              @"nickname": @"nickname",
-             @"tag": @"tag"
+             @"tag": @"tag",
+             @"sessionid": @"sessionId"
              };
 }
 

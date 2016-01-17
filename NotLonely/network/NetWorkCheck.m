@@ -65,6 +65,7 @@ static dispatch_once_t onceToken;
         case Get:{
             return [[[[self rac_GET:aPath parameters:params] map:^id(RACTuple *JSONAndHeaders) {
                 NSDictionary *responseObject = JSONAndHeaders[0];
+                [CustomHud hideHUDForView:view animated:YES];
                 DebugLog(@"\n===========response===========\n%@:\n%@", aPath, responseObject);
                 id error = [self handleResponse:responseObject autoShowError:autoShowError rerequestJsonDataWithPath:aPath withParams:params];
                 if (error) {
@@ -72,6 +73,7 @@ static dispatch_once_t onceToken;
                 }else{
                     return RACTuplePack(responseObject, nil);
                 }
+                
             }]
               catch:^RACSignal *(NSError *error) {
                   [CustomHud hideHUDForView:view animated:YES];
@@ -83,6 +85,7 @@ static dispatch_once_t onceToken;
         case Post:{
             return [[[[self rac_POST:aPath parameters:params] map:^id(RACTuple *JSONAndHeaders) {
                 NSDictionary *responseObject = JSONAndHeaders[0];
+                [CustomHud hideHUDForView:view animated:YES];
                 DebugLog(@"\n===========response===========\n%@:\n%@", aPath, responseObject);
                 id error = [self handleResponse:responseObject autoShowError:autoShowError rerequestJsonDataWithPath:aPath withParams:params];
                 if (error) {
@@ -101,6 +104,7 @@ static dispatch_once_t onceToken;
         default:
             break;
     }
+
     return 0;
 }
 - (RACSignal *)uploadImageWithPath:(NSString *)aPath

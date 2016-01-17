@@ -13,7 +13,7 @@
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 
 
-#define BASE_URL @"http://10.211.55.20:8000"
+#define BASE_URL @"http://121.42.52.45"
 
 
 #endif

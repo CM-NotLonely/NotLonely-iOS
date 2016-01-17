@@ -19,6 +19,7 @@
 @property (strong, nonatomic) UILabel *phonenumLabel;
 @property (strong, nonatomic) UISwitch *pushSwitch;
 
+@property (strong, nonatomic) UIButton *logoutBtn;
 @end
 
 @implementation SettingViewController
@@ -28,17 +29,15 @@
     // Do any additional setup after loading the view.
     self.title = @"设置";
     
-    self.usernameLabel.text = @"tesths";
-    
     [self.view addSubview:self.headLabel];
     [self.view addSubview:self.nameLabel];
     [self.view addSubview:self.phoneLabel];
-//    [self.view addSubview:self.pushLabel];
     
     [self.view addSubview:self.headImg];
     [self.view addSubview:self.usernameLabel];
     [self.view addSubview:self.phonenumLabel];
-//    [self.view addSubview:self.pushSwitch];
+    
+    [self.view addSubview:self.logoutBtn];
 
     [self setUpConstraint];
 }
@@ -70,6 +69,13 @@
     [self.phonenumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.phoneLabel);
         make.centerX.equalTo(self.headImg);
+    }];
+    
+    [self.logoutBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.phonenumLabel.mas_bottom).offset(50);
+        make.left.equalTo(self.view.mas_left).offset(20);
+        make.right.equalTo(self.view.mas_right).offset(-20);
+        make.height.equalTo(@38);
     }];
 }
 
@@ -190,7 +196,8 @@
     if (_usernameLabel == nil) {
         _usernameLabel = [[UILabel alloc] init];
         _usernameLabel.font = [UIFont systemFontOfSize:14];
-        _usernameLabel.text = NNGetUserData(user_nickname);
+        NSLog(@"%@", NNGetUserData(user_username));
+        _usernameLabel.text = NNGetUserData(user_username);
     }
     return _usernameLabel;
 }
@@ -207,9 +214,25 @@
             [self chooseImg];
         }];
         [_headImg addGestureRecognizer:tap];
+        NSLog(@"%@", NNGetUserData(user_avatar));
         [_headImg setImageWithURL:[NSURL URLWithString:NNGetUserData(user_avatar)] placeholderImage:[UIImage imageNamed:@"head_placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     }
     return _headImg;
+}
+
+-(UIButton *)logoutBtn
+{
+    if (!_logoutBtn) {
+        _logoutBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [_logoutBtn setTitleColor:WhiteColor forState:UIControlStateNormal];
+        [_logoutBtn setBackgroundColor:BlackColor];
+        [[_logoutBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [((AppDelegate *)[UIApplication sharedApplication].delegate) setupLoginViewController];
+            [NNUserData setDefaultValue:@"0" withKey:is_login];
+        }];
+    }
+    return _logoutBtn;
 }
 
 @end

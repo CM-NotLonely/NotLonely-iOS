@@ -127,6 +127,13 @@
 
 - (void)sendDetInf
 {
+    if (self.userTextField.text.length < 6 ||
+        self.tagTextField.text.length < 6 ||
+        self.phoneTextField.text.length < 6) {
+        [self showHudTipStr:@"格式不正确~"];
+        return;
+    }
+    
     NSDictionary *para = @{@"nickname":self.userTextField.text,
                            @"sex":self.sexStr,
                            @"desc":self.tagTextField.text,

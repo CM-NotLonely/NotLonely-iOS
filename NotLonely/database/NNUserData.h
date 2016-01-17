@@ -10,8 +10,11 @@
 
 #define NNGetUserData(str) [[NNUserData customDefault] objectForKey:str]
 
+#define is_login @"islogin"
+
 #define user_username @"username"
 #define user_nickname @"nickname"
+#define user_password @"password"
 #define user_sex @"sex"
 
 #define user_avatar @"avatar"

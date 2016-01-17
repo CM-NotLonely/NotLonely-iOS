@@ -14,6 +14,8 @@
 @property (strong, nonatomic) NSString *phone;
 @property (strong, nonatomic) NSString *avatar;
 @property (strong, nonatomic) NSString *nickname;
+@property (strong, nonatomic) NSString *sessionid;
+
 @property (strong, nonatomic) NSMutableArray *tag;
 
 @end

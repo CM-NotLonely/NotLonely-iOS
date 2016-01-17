@@ -105,17 +105,26 @@
 
 - (void)sendLogin
 {
+    if (self.userTextField.text.length < 6 || self.pswTextField.text.length < 6) {
+        [self showHudTipStr:@"格式不正确~"];
+        return;
+    }
     NSDictionary *para = @{@"username":self.userTextField.text,
                            @"password":self.pswTextField.text};
+    
+    
+    [NNUserData setDefaultValue:self.userTextField.text withKey:user_username];
+    [NNUserData setDefaultValue:self.pswTextField.text withKey:user_password];
+
     [[[NetWork sharedManager] request_Login:para] subscribeNext:^(RACTuple *x) {
         RACTupleUnpack(LoginModel *data) = x;
         if (data) {
             [((AppDelegate *)[UIApplication sharedApplication].delegate) setupRootViewController];
-            [NNUserData setDefaultValue:data.username withKey:user_username];
             [NNUserData setDefaultValue:data.nickname withKey:user_nickname];
             [NNUserData setDefaultValue:data.avatar withKey:user_avatar];
             [NNUserData setDefaultValue:data.phone withKey:user_phone];
             [NNUserData setDefaultValue:data.sex withKey:user_sex];
+            [NNUserData setDefaultValue:@"1" withKey:is_login];
         }
     }];
 }

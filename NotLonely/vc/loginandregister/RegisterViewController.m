@@ -105,6 +105,15 @@
 
 - (void)sendRegister
 {
+    if (self.numberTextField.text.length < 6 ||
+        self.pswTextField.text.length < 6 ||
+        self.userTextField.text.length < 6 ||
+        self.userPswTextField.text.length < 6 ||
+        self.userPswTextField.text.length < 6) {
+        [self showHudTipStr:@"格式不正确~"];
+        return;
+    }
+    
     NSDictionary *para = @{@"stu_number":self.numberTextField.text,
                            @"stu_password":self.pswTextField.text,
                            @"username":self.userTextField.text,
