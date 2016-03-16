@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        NNNetWork.Get()
+        
+        NNNetWork.Get(BASE_URL, params: nil, success: { (json, sjson) -> Void in
+            print(json)
+            print(sjson)
+            }) { (error) -> Void in
+                print(error)
+        }
+        
+        test("adf");
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +32,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func test(test : AnyObject) {
+        print("asdf")
+    }
 
 }
 
