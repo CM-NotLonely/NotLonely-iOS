@@ -16,15 +16,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 //        NNNetWork.Get()
         
-        NNNetWork.Get(BASE_URL, params: nil, success: { (json, sjson) -> Void in
+//        NNNetWork.Get(BASE_URL, params: nil, success: { (json, sjson) -> Void in
+//            print(json)
+//            print(sjson)
+//            }) { (error) -> Void in
+//                print(error)
+//        }
+//        
+//        test("adf");
+        NNApi.TestApi(BASE_URL, params: nil) { (json, sjson) -> Void in
             print(json)
             print(sjson)
-            }) { (error) -> Void in
-                print(error)
         }
-        
-        test("adf");
-        
     }
 
     override func didReceiveMemoryWarning() {
