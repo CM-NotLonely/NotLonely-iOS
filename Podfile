@@ -13,7 +13,6 @@ pod 'netfox'
 pod 'URLNavigator'
 pod 'SwiftyUserDefaults'
 	
-pod 'SQLite.swift'
 pod 'SwiftyBeaver'
 pod 'ReachabilitySwift'
 pod 'PKHUD'

@@ -28,6 +28,8 @@ class ViewController: UIViewController {
             print(json)
             print(sjson)
         }
+        
+        test("a")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +39,17 @@ class ViewController: UIViewController {
 
     func test(test : AnyObject) {
         print("asdf")
+        let urlSting = "TT://"
+        // 2
+        if let url = NSURL(string: urlSting) {
+            // 3
+            let application = UIApplication.sharedApplication()
+            // 4
+            if application.canOpenURL(url) {
+                // 5
+                application.openURL(url)
+            }
+        }
     }
 
 }

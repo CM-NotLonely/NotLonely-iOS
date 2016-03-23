@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740645131CA28D9B00FCC873 /* NNTabBarController.swift */; };
+		7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406451B1CA2931300FCC873 /* NNNavigationController.swift */; };
 		740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */; };
 		740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00ED1C9191F000E6ABD0 /* ViewController.swift */; };
 		740B00F11C9191F000E6ABD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740B00EF1C9191F000E6ABD0 /* Main.storyboard */; };
@@ -17,6 +19,9 @@
 		740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B01651C9565E900E6ABD0 /* NNUrl.swift */; };
 		740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B01671C9566A100E6ABD0 /* NNNetWork.swift */; };
 		740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B01691C9566E200E6ABD0 /* NNApi.swift */; };
+		74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C991CA2B311009BBCE5 /* SegueViewController.swift */; };
+		74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */; };
+		74163C9E1CA2B3AF009BBCE5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */; };
 		741975761C996BFB00CDC5B1 /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975751C996BFB00CDC5B1 /* UIViewController+Common.swift */; };
 		741975781C99895300CDC5B1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975771C99895300CDC5B1 /* String+Extension.swift */; };
 		7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */; };
@@ -42,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		740645131CA28D9B00FCC873 /* NNTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNTabBarController.swift; sourceTree = "<group>"; };
+		7406451B1CA2931300FCC873 /* NNNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNavigationController.swift; sourceTree = "<group>"; };
 		740B00E81C9191F000E6ABD0 /* NotLonely-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotLonely-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		740B00ED1C9191F000E6ABD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +65,9 @@
 		740B01651C9565E900E6ABD0 /* NNUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNUrl.swift; sourceTree = "<group>"; };
 		740B01671C9566A100E6ABD0 /* NNNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNetWork.swift; sourceTree = "<group>"; };
 		740B01691C9566E200E6ABD0 /* NNApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNApi.swift; sourceTree = "<group>"; };
+		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		741975751C996BFB00CDC5B1 /* UIViewController+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
 		741975771C99895300CDC5B1 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
@@ -99,6 +109,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		740645111CA28D5600FCC873 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74163C981CA2B306009BBCE5 /* Base */,
+				7406451A1CA292F900FCC873 /* Navi */,
+				740645151CA2918800FCC873 /* Find */,
+				740645161CA2918800FCC873 /* Menu */,
+				740645171CA2918800FCC873 /* Msg */,
+				740645181CA2918800FCC873 /* My */,
+				740645191CA2918800FCC873 /* Raise */,
+				740645121CA28D6E00FCC873 /* TabBar */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		740645121CA28D6E00FCC873 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				740645131CA28D9B00FCC873 /* NNTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		740645151CA2918800FCC873 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		740645161CA2918800FCC873 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		740645171CA2918800FCC873 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Msg;
+			sourceTree = "<group>";
+		};
+		740645181CA2918800FCC873 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		740645191CA2918800FCC873 /* Raise */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Raise;
+			sourceTree = "<group>";
+		};
+		7406451A1CA292F900FCC873 /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				7406451B1CA2931300FCC873 /* NNNavigationController.swift */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
 		740B00DF1C9191F000E6ABD0 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +201,8 @@
 		740B00EA1C9191F000E6ABD0 /* NotLonely-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				74163CA11CA2B994009BBCE5 /* View */,
+				740645111CA28D5600FCC873 /* ViewController */,
 				741975791C9EDF2900CDC5B1 /* homepage */,
 				740B015C1C955B4200E6ABD0 /* extension */,
 				740B015D1C955B4200E6ABD0 /* network */,
@@ -172,6 +251,22 @@
 				740B01671C9566A100E6ABD0 /* NNNetWork.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		74163C981CA2B306009BBCE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				74163C991CA2B311009BBCE5 /* SegueViewController.swift */,
+				74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		74163CA11CA2B994009BBCE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		741975791C9EDF2900CDC5B1 /* homepage */ = {
@@ -401,8 +496,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */,
+				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
+				740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */,
 				741975781C99895300CDC5B1 /* String+Extension.swift in Sources */,
+				7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */,
+				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
+				74163C9E1CA2B3AF009BBCE5 /* MenuViewController.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
@@ -549,6 +649,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm.NotLonely-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm.NotLonely-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
