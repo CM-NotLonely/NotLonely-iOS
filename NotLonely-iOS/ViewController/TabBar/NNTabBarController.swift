@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
 
 class NNTabBarController: UITabBarController {
     @IBOutlet weak var mainTabBar: NNTabBar!
