@@ -29,10 +29,10 @@ class NNTabBarController: UITabBarController {
     
     
     func addViewController() {
-        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home")
-        addChildViewController("Find", imageName: "ic_tabbar_find", hightlight: "ic_tabbar_find")
-        addChildViewController("Msg", imageName: "ic_tabbar_message", hightlight: "ic_tabbar_message")
-        addChildViewController("My", imageName: "ic_tabbar_my", hightlight: "ic_tabbar_my")
+        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
+        addChildViewController("Find", imageName: "ic_tabbar_find", hightlight: "ic_tabbar_find_select")
+        addChildViewController("Msg", imageName: "ic_tabbar_message", hightlight: "ic_tabbar_message_select")
+        addChildViewController("My", imageName: "ic_tabbar_my", hightlight: "ic_tabbar_my_select")
     }
     
     func addChildViewController(name: String, imageName: String, hightlight: String){
