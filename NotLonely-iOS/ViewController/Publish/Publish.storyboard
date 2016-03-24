@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Publish-->
+        <scene sceneID="m1Z-6R-ma2">
+            <objects>
+                <viewController storyboardIdentifier="PublishViewController" id="B8i-z2-c2E" customClass="PublishViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WLN-Rz-6S3"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdc-eY-eVz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xn9-bX-LeV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-do-jwU">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="B8i-z2-c2E" eventType="touchUpInside" id="LbW-sM-BTa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hhh-do-jwU" firstAttribute="centerX" secondItem="Xn9-bX-LeV" secondAttribute="centerX" id="2pz-Xk-hKV"/>
+                            <constraint firstItem="hhh-do-jwU" firstAttribute="centerY" secondItem="Xn9-bX-LeV" secondAttribute="centerY" id="eUB-y5-HRp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Publish" id="1Kp-YI-iWw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ey5-cy-fkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="379"/>
+        </scene>
+    </scenes>
+</document>

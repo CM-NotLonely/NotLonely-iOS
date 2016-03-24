@@ -7,20 +7,46 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class NNTabBarController: UITabBarController {
+    @IBOutlet weak var mainTabBar: NNTabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set Titles
+        addViewController()
+        mainTabBar.publishBtn.addTarget(self, action: #selector(publishPresent), forControlEvents: .TouchUpInside)
         
-        if let items = tabBar.items {
-            for i in 0..<items.count {
-                let item = items[i]
-                item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
-            }
-        }
+        
+    }
     
+    func publishPresent() {
+        print("adf")
+        let storyboard = UIStoryboard(name: "Publish", bundle: nil)
+        let publishVC : PublishViewController = storyboard.instantiateViewControllerWithIdentifier("PublishViewController") as! PublishViewController
+        self.presentViewController(publishVC, animated: true, completion: nil)
+    }
+    
+    
+    func addViewController() {
+        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home")
+        addChildViewController("Find", imageName: "ic_tabbar_find", hightlight: "ic_tabbar_find")
+        addChildViewController("Msg", imageName: "ic_tabbar_message", hightlight: "ic_tabbar_message")
+        addChildViewController("My", imageName: "ic_tabbar_my", hightlight: "ic_tabbar_my")
+    }
+    
+    func addChildViewController(name: String, imageName: String, hightlight: String){
+        let navigation = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() as! NNNavigationController
+        
+        navigation.tabBarItem.image = UIImage(named: imageName)
+        navigation.tabBarItem.selectedImage = UIImage(named: hightlight)?.imageWithRenderingMode(.AlwaysOriginal)
+        navigation.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        
+        navigation.title = nil
+        
+        self.addChildViewController(navigation)
+        
     }
 }

@@ -21,8 +21,18 @@
 		740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B01691C9566E200E6ABD0 /* NNApi.swift */; };
 		74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C991CA2B311009BBCE5 /* SegueViewController.swift */; };
 		74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */; };
-		74163C9E1CA2B3AF009BBCE5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */; };
-		741975761C996BFB00CDC5B1 /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975751C996BFB00CDC5B1 /* UIViewController+Common.swift */; };
+		74163CA71CA2DCD3009BBCE5 /* NNTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */; };
+		74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */; };
+		74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */; };
+		74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */; };
+		74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CB01CA3DDE6009BBCE5 /* Find.storyboard */; };
+		74163CB31CA3DDEC009BBCE5 /* Msg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */; };
+		74163CB51CA3DDF1009BBCE5 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CB41CA3DDF1009BBCE5 /* My.storyboard */; };
+		74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CB61CA3DE02009BBCE5 /* PublishViewController.swift */; };
+		74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CB81CA3DE18009BBCE5 /* FindViewController.swift */; };
+		74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */; };
+		74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */; };
+		741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975751C996BFB00CDC5B1 /* NSObject+Common.swift */; };
 		741975781C99895300CDC5B1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975771C99895300CDC5B1 /* String+Extension.swift */; };
 		7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -67,8 +77,18 @@
 		740B01691C9566E200E6ABD0 /* NNApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNApi.swift; sourceTree = "<group>"; };
 		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		741975751C996BFB00CDC5B1 /* UIViewController+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
+		74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNTabBar.swift; sourceTree = "<group>"; };
+		74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publish.storyboard; sourceTree = "<group>"; };
+		74163CB01CA3DDE6009BBCE5 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Msg.storyboard; sourceTree = "<group>"; };
+		74163CB41CA3DDF1009BBCE5 /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		74163CB61CA3DE02009BBCE5 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		74163CB81CA3DE18009BBCE5 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgViewController.swift; sourceTree = "<group>"; };
+		74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		741975751C996BFB00CDC5B1 /* NSObject+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Common.swift"; sourceTree = "<group>"; };
 		741975771C99895300CDC5B1 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,11 +134,11 @@
 			children = (
 				74163C981CA2B306009BBCE5 /* Base */,
 				7406451A1CA292F900FCC873 /* Navi */,
+				74163CA81CA3DD82009BBCE5 /* Home */,
+				74163CA91CA3DD82009BBCE5 /* Publish */,
 				740645151CA2918800FCC873 /* Find */,
-				740645161CA2918800FCC873 /* Menu */,
 				740645171CA2918800FCC873 /* Msg */,
 				740645181CA2918800FCC873 /* My */,
-				740645191CA2918800FCC873 /* Raise */,
 				740645121CA28D6E00FCC873 /* TabBar */,
 			);
 			path = ViewController;
@@ -135,21 +155,17 @@
 		740645151CA2918800FCC873 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				74163CB01CA3DDE6009BBCE5 /* Find.storyboard */,
+				74163CB81CA3DE18009BBCE5 /* FindViewController.swift */,
 			);
 			path = Find;
-			sourceTree = "<group>";
-		};
-		740645161CA2918800FCC873 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				74163C9D1CA2B3AF009BBCE5 /* MenuViewController.swift */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		740645171CA2918800FCC873 /* Msg */ = {
 			isa = PBXGroup;
 			children = (
+				74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */,
+				74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */,
 			);
 			path = Msg;
 			sourceTree = "<group>";
@@ -157,15 +173,10 @@
 		740645181CA2918800FCC873 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				74163CB41CA3DDF1009BBCE5 /* My.storyboard */,
+				74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */,
 			);
 			path = My;
-			sourceTree = "<group>";
-		};
-		740645191CA2918800FCC873 /* Raise */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Raise;
 			sourceTree = "<group>";
 		};
 		7406451A1CA292F900FCC873 /* Navi */ = {
@@ -237,7 +248,7 @@
 		740B015C1C955B4200E6ABD0 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				741975751C996BFB00CDC5B1 /* UIViewController+Common.swift */,
+				741975751C996BFB00CDC5B1 /* NSObject+Common.swift */,
 				741975771C99895300CDC5B1 /* String+Extension.swift */,
 			);
 			path = extension;
@@ -265,8 +276,27 @@
 		74163CA11CA2B994009BBCE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		74163CA81CA3DD82009BBCE5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */,
+				74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		74163CA91CA3DD82009BBCE5 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */,
+				74163CB61CA3DE02009BBCE5 /* PublishViewController.swift */,
+			);
+			path = Publish;
 			sourceTree = "<group>";
 		};
 		741975791C9EDF2900CDC5B1 /* homepage */ = {
@@ -421,8 +451,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				740B00F61C9191F000E6ABD0 /* LaunchScreen.storyboard in Resources */,
+				74163CB31CA3DDEC009BBCE5 /* Msg.storyboard in Resources */,
+				74163CB51CA3DDF1009BBCE5 /* My.storyboard in Resources */,
 				740B00F31C9191F000E6ABD0 /* Assets.xcassets in Resources */,
 				740B00F11C9191F000E6ABD0 /* Main.storyboard in Resources */,
+				74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */,
+				74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */,
+				74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,15 +533,20 @@
 				740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */,
 				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
 				740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */,
+				74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */,
+				74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */,
 				741975781C99895300CDC5B1 /* String+Extension.swift in Sources */,
 				7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */,
+				74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */,
+				74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */,
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
-				74163C9E1CA2B3AF009BBCE5 /* MenuViewController.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
+				74163CA71CA2DCD3009BBCE5 /* NNTabBar.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
+				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
-				741975761C996BFB00CDC5B1 /* UIViewController+Common.swift in Sources */,
+				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,19 +1,19 @@
 //
-//  MenuViewController.swift
+//  HomeViewController.swift
 //  NotLonely-iOS
 //
-//  Created by plusub on 3/23/16.
+//  Created by plusub on 3/24/16.
 //  Copyright © 2016 cm. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: BaseViewController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.orangeColor()
     }
 
     override func didReceiveMemoryWarning() {
