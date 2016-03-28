@@ -32,9 +32,17 @@
 		74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CB81CA3DE18009BBCE5 /* FindViewController.swift */; };
 		74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */; };
 		74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */; };
+		74163CC31CA78A94009BBCE5 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CC21CA78A94009BBCE5 /* ExampleViewController.swift */; };
+		74163CC51CA78AAD009BBCE5 /* Example.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CC41CA78AAD009BBCE5 /* Example.storyboard */; };
+		74163CCB1CA7A66F009BBCE5 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CCA1CA7A66F009BBCE5 /* Intro.storyboard */; };
+		74163CCF1CA7BD85009BBCE5 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CCE1CA7BD85009BBCE5 /* ExampleTableViewController.swift */; };
+		74163CD21CA7C086009BBCE5 /* NNViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CD11CA7C086009BBCE5 /* NNViewModel.swift */; };
+		74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CD31CA7C0B0009BBCE5 /* ExampleViewModel.swift */; };
 		741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975751C996BFB00CDC5B1 /* NSObject+Common.swift */; };
 		741975781C99895300CDC5B1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975771C99895300CDC5B1 /* String+Extension.swift */; };
 		7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */; };
+		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
+		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +83,8 @@
 		740B01651C9565E900E6ABD0 /* NNUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNUrl.swift; sourceTree = "<group>"; };
 		740B01671C9566A100E6ABD0 /* NNNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNetWork.swift; sourceTree = "<group>"; };
 		740B01691C9566E200E6ABD0 /* NNApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNApi.swift; sourceTree = "<group>"; };
-		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
-		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueViewController.swift; path = Base/SegueViewController.swift; sourceTree = "<group>"; };
+		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/BaseViewController.swift; sourceTree = "<group>"; };
 		74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNTabBar.swift; sourceTree = "<group>"; };
 		74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -88,9 +96,17 @@
 		74163CB81CA3DE18009BBCE5 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgViewController.swift; sourceTree = "<group>"; };
 		74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		74163CC21CA78A94009BBCE5 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		74163CC41CA78AAD009BBCE5 /* Example.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Example.storyboard; sourceTree = "<group>"; };
+		74163CCA1CA7A66F009BBCE5 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		74163CCE1CA7BD85009BBCE5 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		74163CD11CA7C086009BBCE5 /* NNViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNViewModel.swift; sourceTree = "<group>"; };
+		74163CD31CA7C0B0009BBCE5 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		741975751C996BFB00CDC5B1 /* NSObject+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Common.swift"; sourceTree = "<group>"; };
 		741975771C99895300CDC5B1 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B5FC692CCFC17397733F1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +150,11 @@
 			children = (
 				74163C981CA2B306009BBCE5 /* Base */,
 				7406451A1CA292F900FCC873 /* Navi */,
+				74163CC81CA7A5E6009BBCE5 /* Login */,
+				74163CC91CA7A5E6009BBCE5 /* Register */,
+				74163C991CA2B311009BBCE5 /* SegueViewController.swift */,
+				74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */,
+				74163CC11CA78A87009BBCE5 /* Example */,
 				74163CA81CA3DD82009BBCE5 /* Home */,
 				74163CA91CA3DD82009BBCE5 /* Publish */,
 				740645151CA2918800FCC873 /* Find */,
@@ -212,6 +233,7 @@
 		740B00EA1C9191F000E6ABD0 /* NotLonely-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				74163CD01CA7C078009BBCE5 /* ViewModel */,
 				74163CA11CA2B994009BBCE5 /* View */,
 				740645111CA28D5600FCC873 /* ViewController */,
 				741975791C9EDF2900CDC5B1 /* homepage */,
@@ -223,6 +245,7 @@
 				740B00F21C9191F000E6ABD0 /* Assets.xcassets */,
 				740B00F41C9191F000E6ABD0 /* LaunchScreen.storyboard */,
 				740B00F71C9191F000E6ABD0 /* Info.plist */,
+				74163CCA1CA7A66F009BBCE5 /* Intro.storyboard */,
 			);
 			path = "NotLonely-iOS";
 			sourceTree = "<group>";
@@ -267,8 +290,6 @@
 		74163C981CA2B306009BBCE5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				74163C991CA2B311009BBCE5 /* SegueViewController.swift */,
-				74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -297,6 +318,41 @@
 				74163CB61CA3DE02009BBCE5 /* PublishViewController.swift */,
 			);
 			path = Publish;
+			sourceTree = "<group>";
+		};
+		74163CC11CA78A87009BBCE5 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				74163CC41CA78AAD009BBCE5 /* Example.storyboard */,
+				74163CCE1CA7BD85009BBCE5 /* ExampleTableViewController.swift */,
+				74163CC21CA78A94009BBCE5 /* ExampleViewController.swift */,
+				74163CD31CA7C0B0009BBCE5 /* ExampleViewModel.swift */,
+				74FE817E1CA8C465000A2984 /* Enum.swift */,
+				74FE81801CA8C5AD000A2984 /* Implementations.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		74163CC81CA7A5E6009BBCE5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		74163CC91CA7A5E6009BBCE5 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		74163CD01CA7C078009BBCE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74163CD11CA7C086009BBCE5 /* NNViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		741975791C9EDF2900CDC5B1 /* homepage */ = {
@@ -458,6 +514,8 @@
 				74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */,
 				74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */,
 				74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */,
+				74163CC51CA78AAD009BBCE5 /* Example.storyboard in Resources */,
+				74163CCB1CA7A66F009BBCE5 /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,11 +588,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74163CCF1CA7BD85009BBCE5 /* ExampleTableViewController.swift in Sources */,
 				740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */,
+				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
 				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
 				740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */,
 				74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */,
+				74163CD21CA7C086009BBCE5 /* NNViewModel.swift in Sources */,
 				74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */,
+				74163CC31CA78A94009BBCE5 /* ExampleViewController.swift in Sources */,
 				741975781C99895300CDC5B1 /* String+Extension.swift in Sources */,
 				7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */,
 				74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */,
@@ -543,9 +605,11 @@
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
 				74163CA71CA2DCD3009BBCE5 /* NNTabBar.swift in Sources */,
+				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
+				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,
 			);

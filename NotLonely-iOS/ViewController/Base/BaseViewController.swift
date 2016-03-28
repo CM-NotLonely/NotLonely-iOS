@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
 
 class BaseViewController: SegueViewController {
     var animatedOnNavigationBar = true
+    
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,9 @@ class BaseViewController: SegueViewController {
         guard let navigationController = navigationController else {
             return
         }
+        
+        navigationController.navigationBar.barTintColor = UIColor.init(red:1, green:0.7, blue:0, alpha:1)
+        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         navigationController.navigationBar.backgroundColor = nil
         navigationController.navigationBar.translucent = true

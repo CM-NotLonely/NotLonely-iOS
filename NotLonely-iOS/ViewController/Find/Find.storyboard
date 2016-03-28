@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ujq-pv-6za">
             <objects>
-                <navigationController storyboardIdentifier="NNNavigationController" id="Yrh-7S-S98" customClass="NNNavigationController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="Yrh-7S-S98" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SaQ-k3-bXE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

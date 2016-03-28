@@ -27,8 +27,11 @@ class NNTabBarController: UITabBarController {
         self.presentViewController(publishVC, animated: true, completion: nil)
     }
     
-    
     func addViewController() {
+        //        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
+        addChildViewController("Example", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
+
+        
         addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
         addChildViewController("Find", imageName: "ic_tabbar_find", hightlight: "ic_tabbar_find_select")
         addChildViewController("Msg", imageName: "ic_tabbar_message", hightlight: "ic_tabbar_message_select")
@@ -36,7 +39,7 @@ class NNTabBarController: UITabBarController {
     }
     
     func addChildViewController(name: String, imageName: String, hightlight: String){
-        let navigation = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() as! NNNavigationController
+        let navigation = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() as! UINavigationController
         
         navigation.tabBarItem.image = UIImage(named: imageName)
         navigation.tabBarItem.selectedImage = UIImage(named: hightlight)?.imageWithRenderingMode(.AlwaysOriginal)
