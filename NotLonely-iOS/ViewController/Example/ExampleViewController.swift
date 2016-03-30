@@ -69,9 +69,17 @@ class ExampleViewController: BaseViewController {
         let viewModel = ExampleViewModel(
             input: (
             atextview: ATextView.rx_text.asObservable(),
-            btextview: BTextView.rx_text.asObservable()
+            btextview: BTextView.rx_text.asObservable(),
+            validation: DefaultValidationService.sharedValidation
             )
         )
+        
+        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
+            self?.interBtn.enabled = valid
+            self?.interBtn.alpha = valid ? 1.0 : 0.5
+            }
+            .addDisposableTo(disposeBag)
+        
     }
     
     //对button按钮添加动作，利用segue

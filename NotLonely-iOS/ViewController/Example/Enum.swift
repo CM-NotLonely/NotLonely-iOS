@@ -18,8 +18,7 @@ enum ValidationResult {
 }
 
 protocol ValidationService {
-    func validateATextView(atextview: String) -> Observable<ValidationResult>
-    func validateBTextView(btextview: String) -> ValidationResult
+    func validateString(string: String) -> Bool
 }
 
 extension ValidationResult {

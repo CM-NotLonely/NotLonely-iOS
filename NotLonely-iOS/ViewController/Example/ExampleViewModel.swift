@@ -12,22 +12,29 @@ import RxCocoa
 
 class ExampleViewModel {
     
-    let validatedATextView: Observable<String>
-    let validatedBTextView: Observable<String>
-//    let buttonEnable: Observable<Bool>
-
-    init(input: (atextview: Observable<String>, btextview: Observable<String>)) {
+    let validatedATextView: Observable<Bool>
+    let validatedBTextView: Observable<Bool>
+    let buttonEnable: Observable<Bool>
+    
+    init(input: (atextview: Observable<String>, btextview: Observable<String>, validation: ValidationService)) {
+        
+        let validationService = input.validation
+        
         validatedATextView = input.atextview
+            .map{ atextview in
+                print(atextview)
+                return validationService.validateString(atextview)
+            }
+            .shareReplay(1)
+        
         validatedBTextView = input.btextview
-        
-//        validatedATextView.subscribeNext { (String) in
-//            print(String)
-//        }
-        
-//        buttonEnable = Observable.combineLatest(validatedATextView,validatedBTextView)
-//            { atextview, btextview in
-//                atextview.isva
-//            }
+            .map{ atextview in
+                return validationService.validateString(atextview)
+            }
+            .shareReplay(1)
+
+        buttonEnable = Observable.combineLatest(validatedATextView, validatedBTextView) { $0 && $1 }.distinctUntilChanged()
+
     }
 
 }
