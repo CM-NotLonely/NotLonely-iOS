@@ -24,12 +24,8 @@ class ViewController: UIViewController {
 //        }
 //        
 //        test("adf");
-        NNApi.TestApi(BASE_URL, params: nil) { (json, sjson) -> Void in
-            print(json)
-            print(sjson)
-        }
         
-        test("a")
+
     }
 
     override func didReceiveMemoryWarning() {

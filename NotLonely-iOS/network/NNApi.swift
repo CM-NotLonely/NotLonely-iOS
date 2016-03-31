@@ -9,10 +9,12 @@
 import Foundation
 import SwiftyJSON
 
-class NNApi: NSObject {
-        
-    static func TestApi(url : String, params : [String: AnyObject]?, completionHandler : (JSON?, AnyObject?) -> Void) {
-        NNNetWork.Get(url, params: params) { (json, sjson) -> Void in
+class NNApi {
+
+    static let sharedInstance = NNApi()
+    
+    func TestApi(url : String, params : [String: AnyObject]?, completionHandler : (JSON?, AnyObject?) -> Void) {
+        NNNetWork.sharedInstance.Get(url, params: params) { (json, sjson) -> Void in
             if (json != nil) {
                 //这里加入解析数据json
                 let tjson = JSON(json!)
@@ -23,5 +25,6 @@ class NNApi: NSObject {
             }
         }
     }
+    
     
 }

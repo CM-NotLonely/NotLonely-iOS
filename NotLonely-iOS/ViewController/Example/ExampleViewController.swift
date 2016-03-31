@@ -51,21 +51,6 @@ class ExampleViewController: BaseViewController {
         // Do any additional setup after loading the view.
         view.addSubview(testBtn)
         
-//        let AValid = ATextView.rx_text
-//            .map { $0.characters.count >= 6}
-//            .shareReplay(1)
-//        
-//        let BValid = BTextView.rx_text
-//            .map { $0.characters.count >= 6}
-//            .shareReplay(1)
-//        
-//        
-//        let AllValid = Observable.combineLatest(AValid, BValid) { $0 && $1 }
-//            .shareReplay(1)
-//        
-//        AllValid.bindTo(interBtn.rx_enabled)
-//            .addDisposableTo(disposeBag)
-        
         let viewModel = ExampleViewModel(
             input: (
             atextview: ATextView.rx_text.asObservable(),
@@ -80,6 +65,12 @@ class ExampleViewController: BaseViewController {
             }
             .addDisposableTo(disposeBag)
         
+    }
+    @IBAction func testNetwork(sender: AnyObject) {
+        NNApi.sharedInstance.TestApi(BASE_URL, params: nil) { (json, sjson) -> Void in
+            print(json)
+            print(sjson)
+        }
     }
     
     //对button按钮添加动作，利用segue

@@ -12,41 +12,44 @@ import PKHUD
 
 //let NETWORK_TIMEOUT: NSTimeInterval = 15
 
+enum NetWorkType {
+    case Get
+    case Post
+    case Patch
+    case Delete
+}
 
+class NNNetWork  {
+    static let sharedInstance = NNNetWork()
 
-class NNNetWork : NSObject {
-    
     //get请求
-    static func Get(url : String, params : [String: AnyObject]?, completionHandler : (NSDictionary?, AnyObject?) -> Void) {
+    func Get(url : String, params : [String: AnyObject]?, completionHandler : (NSDictionary?, AnyObject?) -> Void) {
         let httpUrl : String = BASE_URL + LATEST_NEWS_URL
 //        let httpUrl1 : String = BASE_URL
 //        let test : String = local
-
+        
         Alamofire.request(.GET, httpUrl, parameters: nil, encoding: .JSON, headers: nil)
-            .progress({ (bytesRead, totalBytesRead, totalBytesExpectedToRead) -> Void in
-                print(totalBytesRead)
-            })
-            .responseJSON { (response) -> Void in
-//                print(response.request[URL])
-                
-            switch response.result {
-            case .Success(let value):
-                let jsonDic = value as! NSDictionary
-                
-                print(jsonDic)
-                let error = handleReponse(jsonDic)
-                
-                if (error == nil) {
-                    print("success")
-                    completionHandler(jsonDic, nil)
-                } else {
-                    print("fail")
-                    completionHandler(nil, error)
+            .progress{bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                print(totalBytesRead)}
+            .responseJSON{ response in
+            
+                switch response.result {
+                case .Success(let value):
+                    let jsonDic = value as! NSDictionary
+                    
+                    print(jsonDic)
+                    let error = self.handleReponse(jsonDic)
+                    
+                    if (error == nil) {
+                        print("success")
+                        completionHandler(jsonDic, nil)
+                    } else {
+                        print("fail")
+                        completionHandler(nil, error)
+                    }
+                case .Failure(let error):
+                    self.showError(error)
                 }
-            case .Failure(let error):
-                showError(error)
-//                completionHandler(nil, error)
-            }
         }
     }
     
@@ -68,7 +71,7 @@ class NNNetWork : NSObject {
 //        }
 //    }
     
-    static func handleReponse(responseJson : NSDictionary) -> NSError? {
+    func handleReponse(responseJson : NSDictionary) -> NSError? {
         var error : NSError?
         let resultCode : Int
         
@@ -86,7 +89,7 @@ class NNNetWork : NSObject {
         return error
     }
     
-    static func showError(error: NSError) {
+    func showError(error: NSError) {
         if error.code == NSURLErrorTimedOut {
             HUD.flash(.Label("Requesting Licence…"), delay: 1.0) { _ in
                 print("License Obtained.")
@@ -94,8 +97,7 @@ class NNNetWork : NSObject {
         } else {
             showHudTipStr(tipFromError(error))
         }
-            
-
+        
     }
     
 }

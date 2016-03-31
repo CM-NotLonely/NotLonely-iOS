@@ -11,8 +11,8 @@ import UIKit
 
 import PKHUD
 
-extension NSObject {
-    static func tipFromError(error: NSError) -> String {
+extension NNNetWork {
+    func tipFromError(error: NSError) -> String {
         var tipStr = String()
         if error.userInfo["date"] != nil {
             print("123")
@@ -27,7 +27,7 @@ extension NSObject {
         return tipStr
     }
     
-    static func showHudTipStr(tipStr: String) {
+    func showHudTipStr(tipStr: String) {
         if tipStr.length > 0 {
             HUD.dimsBackground = false
             HUD.allowsInteraction = false
