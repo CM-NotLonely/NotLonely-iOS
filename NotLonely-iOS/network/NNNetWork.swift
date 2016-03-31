@@ -22,54 +22,109 @@ enum NetWorkType {
 class NNNetWork  {
     static let sharedInstance = NNNetWork()
 
-    //get请求
-    func Get(url : String, params : [String: AnyObject]?, completionHandler : (NSDictionary?, AnyObject?) -> Void) {
-        let httpUrl : String = BASE_URL + LATEST_NEWS_URL
-//        let httpUrl1 : String = BASE_URL
-//        let test : String = local
+    func NetWork(Url : String, Params : [String: AnyObject]?, MethodType : NetWorkType, completionHandler : (NSDictionary?, AnyObject?) -> Void) {
+
+        let httpUrl = BASE_URL + Url
         
-        Alamofire.request(.GET, httpUrl, parameters: nil, encoding: .JSON, headers: nil)
-            .progress{bytesRead, totalBytesRead, totalBytesExpectedToRead in
-                print(totalBytesRead)}
-            .responseJSON{ response in
-            
-                switch response.result {
-                case .Success(let value):
-                    let jsonDic = value as! NSDictionary
-                    
-                    print(jsonDic)
-                    let error = self.handleReponse(jsonDic)
-                    
-                    if (error == nil) {
-                        print("success")
-                        completionHandler(jsonDic, nil)
-                    } else {
-                        print("fail")
-                        completionHandler(nil, error)
-                    }
-                case .Failure(let error):
-                    self.showError(error)
+        switch MethodType {
+        case NetWorkType.Get:
+            Alamofire.request(.GET, httpUrl, parameters: Params, encoding: .JSON, headers: nil)
+                .progress{ bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                    print(totalBytesRead)
                 }
+                .responseJSON{ response in
+                    switch response.result {
+                    case .Success(let value):
+                        let jsonDic = value as! NSDictionary
+                        
+                        print(jsonDic)
+                        let error = self.handleReponse(jsonDic)
+                        
+                        if (error == nil) {
+                            print("success")
+                            completionHandler(jsonDic, nil)
+                        } else {
+                            print("fail")
+                            completionHandler(nil, error)
+                        }
+                    case .Failure(let error):
+                        self.showError(error)
+                    }
+            }
+        case NetWorkType.Post:
+            Alamofire.request(.POST, httpUrl, parameters: Params, encoding: .JSON, headers: nil)
+                .progress{ bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                    print(totalBytesRead)
+                }
+                .responseJSON{ response in
+                    switch response.result {
+                    case .Success(let value):
+                        let jsonDic = value as! NSDictionary
+                        
+                        print(jsonDic)
+                        let error = self.handleReponse(jsonDic)
+                        
+                        if (error == nil) {
+                            print("success")
+                            completionHandler(jsonDic, nil)
+                        } else {
+                            print("fail")
+                            completionHandler(nil, error)
+                        }
+                    case .Failure(let error):
+                        self.showError(error)
+                    }
+            }
+        case NetWorkType.Patch:
+            Alamofire.request(.PATCH, httpUrl, parameters: Params, encoding: .JSON, headers: nil)
+                .progress{ bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                    print(totalBytesRead)
+                }
+                .responseJSON{ response in
+                    switch response.result {
+                    case .Success(let value):
+                        let jsonDic = value as! NSDictionary
+                        
+                        print(jsonDic)
+                        let error = self.handleReponse(jsonDic)
+                        
+                        if (error == nil) {
+                            print("success")
+                            completionHandler(jsonDic, nil)
+                        } else {
+                            print("fail")
+                            completionHandler(nil, error)
+                        }
+                    case .Failure(let error):
+                        self.showError(error)
+                    }
+            }
+        case NetWorkType.Delete:
+            Alamofire.request(.DELETE, httpUrl, parameters: Params, encoding: .JSON, headers: nil)
+                .progress{ bytesRead, totalBytesRead, totalBytesExpectedToRead in
+                    print(totalBytesRead)
+                }
+                .responseJSON{ response in
+                    switch response.result {
+                    case .Success(let value):
+                        let jsonDic = value as! NSDictionary
+                        
+                        print(jsonDic)
+                        let error = self.handleReponse(jsonDic)
+                        
+                        if (error == nil) {
+                            print("success")
+                            completionHandler(jsonDic, nil)
+                        } else {
+                            print("fail")
+                            completionHandler(nil, error)
+                        }
+                    case .Failure(let error):
+                        self.showError(error)
+                    }
+            }
         }
     }
-    
-//    //post请求
-//    static func Post(url : String, params : [String: AnyObject]?, success : (json: AnyObject) -> Void, fail : (error: Any) -> Void) {
-//        let httpUrl : String = BASE_URL + LATEST_NEWS_URL
-//        let httpUrl1 : String = BASE_URL
-//        
-//        let request = Alamofire.request(.GET, httpUrl)
-//        print(request)
-//        
-//        Alamofire.request(.POST, httpUrl1, parameters: nil, encoding: .JSON, headers: nil).responseJSON { (response) -> Void in
-//            switch response.result {
-//            case .Success(let value):
-//                success(json: value)
-//            case .Failure(let error):
-//                fail(error: error)
-//            }
-//        }
-//    }
     
     func handleReponse(responseJson : NSDictionary) -> NSError? {
         var error : NSError?

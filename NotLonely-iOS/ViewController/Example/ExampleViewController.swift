@@ -67,7 +67,7 @@ class ExampleViewController: BaseViewController {
         
     }
     @IBAction func testNetwork(sender: AnyObject) {
-        NNApi.sharedInstance.TestApi(BASE_URL, params: nil) { (json, sjson) -> Void in
+        NNApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) {json, sjson in
             print(json)
             print(sjson)
         }
