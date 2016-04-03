@@ -15,7 +15,7 @@ class NNApi {
 
     func TestApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (JSON?, AnyObject?) -> Void) {
         NNNetWork.sharedInstance.NetWork(Url, Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
-            if (json != nil) {
+            if json != nil {
                 //这里加入解析数据json
                 let tjson = JSON(json!)
                 print("JSON: \(tjson)")

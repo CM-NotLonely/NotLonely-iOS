@@ -9,13 +9,14 @@
 import Foundation
 
 import RxSwift
+import SwiftyJSON
 
 class DefaultValidationService: ValidationService {
     
     static let sharedValidation = DefaultValidationService()
     
     init() {
-        print("test")
+        print("test check")
     }
     
     func validateString(string: String) -> Bool {
@@ -28,4 +29,31 @@ class DefaultValidationService: ValidationService {
         }
     }
     
+}
+
+class TestNetWorkApi : DefaultApi {
+    static let sharedTestNetWorkApi = TestNetWorkApi()
+
+    init() {
+        print("test network")
+    }
+    
+    func testNetwork(Params : [String: AnyObject]?) -> Observable<JSON?> {
+        return Observable.create { (observer) -> Disposable in
+            NNApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) { json, sjson in
+
+                if json != nil {
+                    print("not nil")
+//                    print(tjson["date"].string)
+                } else {
+                    print("nil")
+                }
+                observer.on(.Next(json))
+//                let data = json
+                observer.on(.Completed)
+            }
+            return NopDisposable.instance
+        }
+
+    }
 }

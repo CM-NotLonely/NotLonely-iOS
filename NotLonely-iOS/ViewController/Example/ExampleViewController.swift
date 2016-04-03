@@ -33,6 +33,8 @@ class ExampleViewController: BaseViewController {
         print(Selector.buttonTapped)
     }
     
+//    var viewModel : ExampleViewModel
+//    var model : ZhihuModel
     //interface build 时，利用代码块修改属性
     @IBOutlet weak var interBtn: UIButton! {
         didSet {
@@ -44,6 +46,7 @@ class ExampleViewController: BaseViewController {
     @IBOutlet weak var BTextView: UITextField!
 
     
+    @IBOutlet weak var testnetworkBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +58,11 @@ class ExampleViewController: BaseViewController {
             input: (
             atextview: ATextView.rx_text.asObservable(),
             btextview: BTextView.rx_text.asObservable(),
-            validation: DefaultValidationService.sharedValidation
+            loginTaps: interBtn.rx_tap.asObservable()
+            ),
+            dependency: (
+                validation: DefaultValidationService.sharedValidation,
+                API: TestNetWorkApi.sharedTestNetWorkApi
             )
         )
         
@@ -65,7 +72,13 @@ class ExampleViewController: BaseViewController {
             }
             .addDisposableTo(disposeBag)
         
+        viewModel.array.subscribeNext { [weak self] valid  in
+            print(valid.date)
+//            self?.model = valid
+        }
+        
     }
+    
     @IBAction func testNetwork(sender: AnyObject) {
         NNApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) {json, sjson in
             print(json)

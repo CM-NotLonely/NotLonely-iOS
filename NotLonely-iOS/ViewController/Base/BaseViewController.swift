@@ -29,7 +29,7 @@ class BaseViewController: SegueViewController {
             return
         }
         
-        navigationController.navigationBar.barTintColor = UIColor.init(red:1, green:0.7, blue:0, alpha:1)
+        navigationController.navigationBar.barTintColor = UIColor.NLMainColor()
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         navigationController.navigationBar.backgroundColor = nil

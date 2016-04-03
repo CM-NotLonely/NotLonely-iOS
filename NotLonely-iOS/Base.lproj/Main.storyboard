@@ -8,8 +8,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="7uz-wA-Rll">
             <objects>
-                <tabBarController storyboardIdentifier="NNTabBarController" id="c2s-Al-lBm" customClass="NNTabBarController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="u1C-mN-UPA" customClass="NNTabBar" customModule="NotLonely_iOS" customModuleProvider="target">
+                <tabBarController storyboardIdentifier="NLTabBarController" id="c2s-Al-lBm" customClass="NLTabBarController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="u1C-mN-UPA" customClass="NLTabBar" customModule="NotLonely_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

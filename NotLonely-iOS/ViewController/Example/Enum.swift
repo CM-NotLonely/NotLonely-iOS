@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 enum ValidationResult {
     case OK(message: String)
@@ -19,6 +20,10 @@ enum ValidationResult {
 
 protocol ValidationService {
     func validateString(string: String) -> Bool
+}
+
+protocol DefaultApi {
+    func testNetwork(Params : [String: AnyObject]?) -> Observable<JSON?>
 }
 
 extension ValidationResult {

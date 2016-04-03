@@ -131,7 +131,7 @@ class NNNetWork  {
         let resultCode : Int
         
         resultCode = (responseJson["date"]?.integerValue)!
-        if resultCode != 1 {
+        if resultCode == 1 {
             if resultCode == 20160322 {
                 showHudTipStr("您已经评论过啦~")
             } else {

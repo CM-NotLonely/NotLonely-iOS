@@ -36,3 +36,13 @@ extension NNNetWork {
     }
 
 }
+
+extension NSObject {
+    func gradientLayer() -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.NLMainColor().CGColor, UIColor.NLMidColor().CGColor, UIColor.clearColor().CGColor];
+        gradientLayer.startPoint = CGPointMake(0.0, 0.5)
+        gradientLayer.endPoint = CGPointMake(1.0, 0.5)
+        return gradientLayer
+    }
+}

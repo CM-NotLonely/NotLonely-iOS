@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 class ExampleViewModel {
     
@@ -16,9 +17,13 @@ class ExampleViewModel {
     let validatedBTextView: Observable<Bool>
     let buttonEnable: Observable<Bool>
     
-    init(input: (atextview: Observable<String>, btextview: Observable<String>, validation: ValidationService)) {
+//    let signedIn: Observable<AnyObject>
+    let array: Observable<ZhihuModel>
+
+    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: DefaultApi)) {
         
-        let validationService = input.validation
+        let validationService = dependency.validation
+        let API = dependency.API
         
         validatedATextView = input.atextview
             .map{ atextview in
@@ -32,9 +37,25 @@ class ExampleViewModel {
                 return validationService.validateString(atextview)
             }
             .shareReplay(1)
+        
 
-        buttonEnable = Observable.combineLatest(validatedATextView, validatedBTextView) { $0 && $1 }.distinctUntilChanged()
+        buttonEnable = Observable.combineLatest(validatedATextView, validatedBTextView) { $0 && $1 }
+            .distinctUntilChanged()
 
+        let usernameAndPassword = Observable.combineLatest(input.atextview, input.btextview) { ($0, $1) }
+
+//        typealias JSONDictionary = [String: AnyObject]
+
+        array = input.loginTaps.withLatestFrom(usernameAndPassword)
+            .flatMapLatest { (username, password) in
+                return API.testNetwork(["test": username,"phone_code": password])
+            }
+            .map { (json) in
+                return ZhihuModel.init(json: json!)
+//                array = Observable.create(test)
+            }
+        
+        
     }
 
 }

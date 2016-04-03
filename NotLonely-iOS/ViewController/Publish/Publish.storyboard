@@ -8,7 +8,7 @@
         <!--Publish-->
         <scene sceneID="m1Z-6R-ma2">
             <objects>
-                <viewController storyboardIdentifier="PublishViewController" id="B8i-z2-c2E" customClass="PublishViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B8i-z2-c2E" customClass="PublishViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WLN-Rz-6S3"/>
                         <viewControllerLayoutGuide type="bottom" id="jdc-eY-eVz"/>

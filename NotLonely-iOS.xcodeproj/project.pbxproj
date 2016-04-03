@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740645131CA28D9B00FCC873 /* NNTabBarController.swift */; };
+		74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CBD1CAD5DD70065D5EB /* Zhihu.swift */; };
+		74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CC01CAEA91F0065D5EB /* LoginViewController.swift */; };
+		74002CC31CAEA9640065D5EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74002CC21CAEA9640065D5EB /* Login.storyboard */; };
 		7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406451B1CA2931300FCC873 /* NNNavigationController.swift */; };
 		740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */; };
 		740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00ED1C9191F000E6ABD0 /* ViewController.swift */; };
@@ -21,7 +23,6 @@
 		740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B01691C9566E200E6ABD0 /* NNApi.swift */; };
 		74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C991CA2B311009BBCE5 /* SegueViewController.swift */; };
 		74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */; };
-		74163CA71CA2DCD3009BBCE5 /* NNTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */; };
 		74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */; };
 		74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */; };
 		74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */; };
@@ -41,6 +42,11 @@
 		741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975751C996BFB00CDC5B1 /* NSObject+Common.swift */; };
 		741975781C99895300CDC5B1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741975771C99895300CDC5B1 /* String+Extension.swift */; };
 		7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */; };
+		74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AB91CB0C68000FE2099 /* CALayer+Extension.swift */; };
+		74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ABB1CB0C77600FE2099 /* UIColor+NL.swift */; };
+		74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */; };
+		74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ABF1CB0C7E000FE2099 /* NLTabBarController.swift */; };
+		74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AC11CB0DBD300FE2099 /* InputTextField.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -65,7 +71,9 @@
 
 /* Begin PBXFileReference section */
 		6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		740645131CA28D9B00FCC873 /* NNTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNTabBarController.swift; sourceTree = "<group>"; };
+		74002CBD1CAD5DD70065D5EB /* Zhihu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zhihu.swift; sourceTree = "<group>"; };
+		74002CC01CAEA91F0065D5EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74002CC21CAEA9640065D5EB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7406451B1CA2931300FCC873 /* NNNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNavigationController.swift; sourceTree = "<group>"; };
 		740B00E81C9191F000E6ABD0 /* NotLonely-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotLonely-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +93,6 @@
 		740B01691C9566E200E6ABD0 /* NNApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNApi.swift; sourceTree = "<group>"; };
 		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueViewController.swift; path = Base/SegueViewController.swift; sourceTree = "<group>"; };
 		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/BaseViewController.swift; sourceTree = "<group>"; };
-		74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNTabBar.swift; sourceTree = "<group>"; };
 		74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publish.storyboard; sourceTree = "<group>"; };
@@ -105,6 +112,11 @@
 		741975751C996BFB00CDC5B1 /* NSObject+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Common.swift"; sourceTree = "<group>"; };
 		741975771C99895300CDC5B1 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7419757D1C9EDF3E00CDC5B1 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		74333AB91CB0C68000FE2099 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		74333ABB1CB0C77600FE2099 /* UIColor+NL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+NL.swift"; sourceTree = "<group>"; };
+		74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTabBar.swift; sourceTree = "<group>"; };
+		74333ABF1CB0C7E000FE2099 /* NLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTabBarController.swift; sourceTree = "<group>"; };
+		74333AC11CB0DBD300FE2099 /* InputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +180,7 @@
 		740645121CA28D6E00FCC873 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				740645131CA28D9B00FCC873 /* NNTabBarController.swift */,
+				74333ABF1CB0C7E000FE2099 /* NLTabBarController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -273,6 +285,8 @@
 			children = (
 				741975751C996BFB00CDC5B1 /* NSObject+Common.swift */,
 				741975771C99895300CDC5B1 /* String+Extension.swift */,
+				74333AB91CB0C68000FE2099 /* CALayer+Extension.swift */,
+				74333ABB1CB0C77600FE2099 /* UIColor+NL.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -297,7 +311,8 @@
 		74163CA11CA2B994009BBCE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74163CA61CA2DCD3009BBCE5 /* NNTabBar.swift */,
+				74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */,
+				74333AC11CB0DBD300FE2099 /* InputTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +344,7 @@
 				74163CD31CA7C0B0009BBCE5 /* ExampleViewModel.swift */,
 				74FE817E1CA8C465000A2984 /* Enum.swift */,
 				74FE81801CA8C5AD000A2984 /* Implementations.swift */,
+				74002CBD1CAD5DD70065D5EB /* Zhihu.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -336,6 +352,8 @@
 		74163CC81CA7A5E6009BBCE5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				74002CC01CAEA91F0065D5EB /* LoginViewController.swift */,
+				74002CC21CAEA9640065D5EB /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -516,6 +534,7 @@
 				74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */,
 				74163CC51CA78AAD009BBCE5 /* Example.storyboard in Resources */,
 				74163CCB1CA7A66F009BBCE5 /* Intro.storyboard in Resources */,
+				74002CC31CAEA9640065D5EB /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,9 +609,10 @@
 			files = (
 				74163CCF1CA7BD85009BBCE5 /* ExampleTableViewController.swift in Sources */,
 				740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */,
+				74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */,
 				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
+				74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */,
 				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
-				740645141CA28D9B00FCC873 /* NNTabBarController.swift in Sources */,
 				74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */,
 				74163CD21CA7C086009BBCE5 /* NNViewModel.swift in Sources */,
 				74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */,
@@ -604,13 +624,17 @@
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
-				74163CA71CA2DCD3009BBCE5 /* NNTabBar.swift in Sources */,
 				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
+				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
+				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
+				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
+				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
+				74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

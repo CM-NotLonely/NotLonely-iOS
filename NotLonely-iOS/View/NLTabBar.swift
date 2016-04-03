@@ -1,15 +1,15 @@
 //
-//  NNTabBar.swift
+//  NLTabBar.swift
 //  NotLonely-iOS
 //
-//  Created by plusub on 3/23/16.
+//  Created by plusub on 4/3/16.
 //  Copyright © 2016 cm. All rights reserved.
 //
 
 import UIKit
 
-class NNTabBar: UITabBar {
-    
+class NLTabBar: UITabBar {
+
     lazy var publishBtn: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "ic_tabbar_publish"), forState: UIControlState.Normal)
@@ -34,9 +34,8 @@ class NNTabBar: UITabBar {
                 index += (index == 1) ? 2 : 1
             }
         }
-
+        
         self.publishBtn.frame = frame
         self.publishBtn.center = CGPointMake(self.bounds.width * 0.5, self.bounds.height * 0.5 )
     }
-
 }

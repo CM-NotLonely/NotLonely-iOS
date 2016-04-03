@@ -1,15 +1,16 @@
 //
-//  NNTabBarController.swift
+//  NLTabBarController.swift
 //  NotLonely-iOS
 //
-//  Created by plusub on 3/23/16.
+//  Created by plusub on 4/3/16.
 //  Copyright © 2016 cm. All rights reserved.
 //
 
 import UIKit
 
-class NNTabBarController: UITabBarController {
-    @IBOutlet weak var mainTabBar: NNTabBar!
+class NLTabBarController: UITabBarController {
+
+    @IBOutlet weak var mainTabBar: NLTabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class NNTabBarController: UITabBarController {
     func addViewController() {
         //        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
         addChildViewController("Example", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
-
+        
         
         addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
         addChildViewController("Find", imageName: "ic_tabbar_find", hightlight: "ic_tabbar_find_select")
@@ -50,4 +51,5 @@ class NNTabBarController: UITabBarController {
         self.addChildViewController(navigation)
         
     }
+
 }
