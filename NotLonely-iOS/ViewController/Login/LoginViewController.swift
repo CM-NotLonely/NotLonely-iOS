@@ -55,6 +55,9 @@ class LoginViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        print("LoginViewController")
+    }
     /*
     // MARK: - Navigation
 

@@ -47,6 +47,8 @@
 		74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */; };
 		74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ABF1CB0C7E000FE2099 /* NLTabBarController.swift */; };
 		74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AC11CB0DBD300FE2099 /* InputTextField.swift */; };
+		74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AC51CB1373E00FE2099 /* UIViewController+Extension.swift */; };
+		74333ACC1CB23DA300FE2099 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ACB1CB23DA200FE2099 /* UINavigationBar+Extension.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -117,6 +119,8 @@
 		74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTabBar.swift; sourceTree = "<group>"; };
 		74333ABF1CB0C7E000FE2099 /* NLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLTabBarController.swift; sourceTree = "<group>"; };
 		74333AC11CB0DBD300FE2099 /* InputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		74333AC51CB1373E00FE2099 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		74333ACB1CB23DA200FE2099 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				741975771C99895300CDC5B1 /* String+Extension.swift */,
 				74333AB91CB0C68000FE2099 /* CALayer+Extension.swift */,
 				74333ABB1CB0C77600FE2099 /* UIColor+NL.swift */,
+				74333AC51CB1373E00FE2099 /* UIViewController+Extension.swift */,
+				74333ACB1CB23DA200FE2099 /* UINavigationBar+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 			files = (
 				74163CCF1CA7BD85009BBCE5 /* ExampleTableViewController.swift in Sources */,
 				740B016A1C9566E200E6ABD0 /* NNApi.swift in Sources */,
+				74333ACC1CB23DA300FE2099 /* UINavigationBar+Extension.swift in Sources */,
 				74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */,
 				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
 				74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */,
@@ -625,6 +632,7 @@
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
 				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
+				74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
 				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
