@@ -12,7 +12,6 @@ import RxCocoa
 
 
 class BaseViewController: SegueViewController {
-    var animatedOnNavigationBar = true
     
     var disposeBag = DisposeBag()
     
@@ -22,26 +21,5 @@ class BaseViewController: SegueViewController {
         view.backgroundColor = UIColor.whiteColor()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        guard let navigationController = navigationController else {
-            return
-        }
-        
-        navigationController.navigationBar.barTintColor = UIColor.NLMainColor()
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
-        navigationController.navigationBar.backgroundColor = nil
-        navigationController.navigationBar.translucent = true
-        navigationController.navigationBar.shadowImage = nil
-        navigationController.navigationBar.barStyle = UIBarStyle.Default
-        navigationController.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        
-        navigationController.navigationBar.tintColor = nil
-        
-        if navigationController.navigationBarHidden {
-            navigationController.setNavigationBarHidden(false, animated: animatedOnNavigationBar)
-        }
-    }
+
 }

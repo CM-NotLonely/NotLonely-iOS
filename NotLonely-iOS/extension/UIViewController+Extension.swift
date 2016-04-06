@@ -63,6 +63,8 @@ extension UIViewController {
     
     func nsh_viewWillAppear(animated: Bool) {
         self.nsh_viewWillAppear(animated)
+        let test = self.restorationIdentifier
+        print(test)
         if let name = self.descriptiveName {
             print("viewWillAppear: \(name)")
         } else {

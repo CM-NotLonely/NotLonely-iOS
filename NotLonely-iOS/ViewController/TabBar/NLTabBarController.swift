@@ -30,7 +30,7 @@ class NLTabBarController: UITabBarController {
     
     func addViewController() {
         //        addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
-        addChildViewController("Example", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
+//        addChildViewController("Example", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")
         
         
         addChildViewController("Home", imageName: "ic_tabbar_home", hightlight: "ic_tabbar_home_select")

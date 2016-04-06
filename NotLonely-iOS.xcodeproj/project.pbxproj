@@ -10,7 +10,6 @@
 		74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CBD1CAD5DD70065D5EB /* Zhihu.swift */; };
 		74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CC01CAEA91F0065D5EB /* LoginViewController.swift */; };
 		74002CC31CAEA9640065D5EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74002CC21CAEA9640065D5EB /* Login.storyboard */; };
-		7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406451B1CA2931300FCC873 /* NNNavigationController.swift */; };
 		740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */; };
 		740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B00ED1C9191F000E6ABD0 /* ViewController.swift */; };
 		740B00F11C9191F000E6ABD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740B00EF1C9191F000E6ABD0 /* Main.storyboard */; };
@@ -24,7 +23,6 @@
 		74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C991CA2B311009BBCE5 /* SegueViewController.swift */; };
 		74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */; };
 		74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */; };
-		74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */; };
 		74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */; };
 		74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CB01CA3DDE6009BBCE5 /* Find.storyboard */; };
 		74163CB31CA3DDEC009BBCE5 /* Msg.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */; };
@@ -49,6 +47,11 @@
 		74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AC11CB0DBD300FE2099 /* InputTextField.swift */; };
 		74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AC51CB1373E00FE2099 /* UIViewController+Extension.swift */; };
 		74333ACC1CB23DA300FE2099 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ACB1CB23DA200FE2099 /* UINavigationBar+Extension.swift */; };
+		74333AD21CB3CEE300FE2099 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74333AD11CB3CEE300FE2099 /* Home.storyboard */; };
+		74333AD41CB400EC00FE2099 /* NLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AD31CB400EC00FE2099 /* NLNavigationController.swift */; };
+		74333AD61CB5166500FE2099 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AD51CB5166500FE2099 /* ActivityViewController.swift */; };
+		74333AD81CB5167C00FE2099 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333AD71CB5167C00FE2099 /* CircleViewController.swift */; };
+		74333ADB1CB51C7200FE2099 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74333ADA1CB51C7200FE2099 /* ActivityCell.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -76,7 +79,6 @@
 		74002CBD1CAD5DD70065D5EB /* Zhihu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zhihu.swift; sourceTree = "<group>"; };
 		74002CC01CAEA91F0065D5EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		74002CC21CAEA9640065D5EB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		7406451B1CA2931300FCC873 /* NNNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNavigationController.swift; sourceTree = "<group>"; };
 		740B00E81C9191F000E6ABD0 /* NotLonely-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotLonely-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740B00EB1C9191F000E6ABD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		740B00ED1C9191F000E6ABD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueViewController.swift; path = Base/SegueViewController.swift; sourceTree = "<group>"; };
 		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/BaseViewController.swift; sourceTree = "<group>"; };
 		74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publish.storyboard; sourceTree = "<group>"; };
 		74163CB01CA3DDE6009BBCE5 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Msg.storyboard; sourceTree = "<group>"; };
@@ -121,6 +122,11 @@
 		74333AC11CB0DBD300FE2099 /* InputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		74333AC51CB1373E00FE2099 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		74333ACB1CB23DA200FE2099 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		74333AD11CB3CEE300FE2099 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		74333AD31CB400EC00FE2099 /* NLNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLNavigationController.swift; sourceTree = "<group>"; };
+		74333AD51CB5166500FE2099 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		74333AD71CB5167C00FE2099 /* CircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		74333ADA1CB51C7200FE2099 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,7 +225,7 @@
 		7406451A1CA292F900FCC873 /* Navi */ = {
 			isa = PBXGroup;
 			children = (
-				7406451B1CA2931300FCC873 /* NNNavigationController.swift */,
+				74333AD31CB400EC00FE2099 /* NLNavigationController.swift */,
 			);
 			path = Navi;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 		74163CA11CA2B994009BBCE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74333AD91CB51C5B00FE2099 /* Cell */,
 				74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */,
 				74333AC11CB0DBD300FE2099 /* InputTextField.swift */,
 			);
@@ -327,7 +334,9 @@
 			isa = PBXGroup;
 			children = (
 				74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */,
-				74163CAC1CA3DDCD009BBCE5 /* Home.storyboard */,
+				74333AD11CB3CEE300FE2099 /* Home.storyboard */,
+				74333AD51CB5166500FE2099 /* ActivityViewController.swift */,
+				74333AD71CB5167C00FE2099 /* CircleViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -409,6 +418,14 @@
 			children = (
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		74333AD91CB51C5B00FE2099 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				74333ADA1CB51C7200FE2099 /* ActivityCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		876313603E92366E6A40F780 /* Pods */ = {
@@ -531,11 +548,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				740B00F61C9191F000E6ABD0 /* LaunchScreen.storyboard in Resources */,
+				74333AD21CB3CEE300FE2099 /* Home.storyboard in Resources */,
 				74163CB31CA3DDEC009BBCE5 /* Msg.storyboard in Resources */,
 				74163CB51CA3DDF1009BBCE5 /* My.storyboard in Resources */,
 				740B00F31C9191F000E6ABD0 /* Assets.xcassets in Resources */,
 				740B00F11C9191F000E6ABD0 /* Main.storyboard in Resources */,
-				74163CAD1CA3DDCD009BBCE5 /* Home.storyboard in Resources */,
 				74163CAF1CA3DDDF009BBCE5 /* Publish.storyboard in Resources */,
 				74163CB11CA3DDE6009BBCE5 /* Find.storyboard in Resources */,
 				74163CC51CA78AAD009BBCE5 /* Example.storyboard in Resources */,
@@ -619,13 +636,13 @@
 				74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */,
 				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
 				74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */,
+				74333AD81CB5167C00FE2099 /* CircleViewController.swift in Sources */,
 				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
 				74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */,
 				74163CD21CA7C086009BBCE5 /* NNViewModel.swift in Sources */,
 				74163CBD1CA3DE25009BBCE5 /* MyViewController.swift in Sources */,
 				74163CC31CA78A94009BBCE5 /* ExampleViewController.swift in Sources */,
 				741975781C99895300CDC5B1 /* String+Extension.swift in Sources */,
-				7406451C1CA2931300FCC873 /* NNNavigationController.swift in Sources */,
 				74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */,
 				74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */,
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
@@ -634,12 +651,15 @@
 				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
 				74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
+				74333AD61CB5166500FE2099 /* ActivityViewController.swift in Sources */,
 				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
+				74333ADB1CB51C7200FE2099 /* ActivityCell.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
 				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
+				74333AD41CB400EC00FE2099 /* NLNavigationController.swift in Sources */,
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
 				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
 				74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */,

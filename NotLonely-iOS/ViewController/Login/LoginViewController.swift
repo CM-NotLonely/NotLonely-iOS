@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
+    
     @IBOutlet weak var usernameTextField: InputTextField! {
         didSet {
             usernameTextField.setPlaceHolderTextColor("用户名")

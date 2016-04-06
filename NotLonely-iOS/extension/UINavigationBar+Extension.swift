@@ -11,27 +11,6 @@ import UIKit
 
 extension UINavigationBar {
     
-//    private struct AssociatedKeys {
-//        static var DescriptiveName = "nsh_DescriptiveName"
-//    }
-//    
-//    var descriptiveName: String? {
-//        get {
-//            return objc_getAssociatedObject(self, &AssociatedKeys.DescriptiveName) as? String
-//        }
-//        
-//        set {
-//            if let newValue = newValue {
-//                objc_setAssociatedObject(
-//                    self,
-//                    &AssociatedKeys.DescriptiveName,
-//                    newValue as NSString?,
-//                    .OBJC_ASSOCIATION_RETAIN_NONATOMIC
-//                )
-//            }
-//        }
-//    }
-    
     private struct OverLayKeys {
         static var overlayKey : UIView?
     }
