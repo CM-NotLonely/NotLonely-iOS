@@ -9,11 +9,16 @@
 import UIKit
 
 class CircleViewController: BaseViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsetsMake(64.0,0.0,44.0,0.0);
+//        self.edgesForExtendedLayout = UIRectEdge.All
+
+//        self.tableView.contentInset = UIEdgeInsetsMake(64.0,0.0,44.0,0.0);
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +26,13 @@ class CircleViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+//    
+//    override func viewDidLayoutSubviews() {
+//        let top = self.topLayoutGuide.length
+//        let bottom = self.bottomLayoutGuide.length
+//        let newInsets = UIEdgeInsetsMake(top, 0, bottom, 0)
+//        self.tableView.contentInset = newInsets
+//    }
 
     /*
     // MARK: - Navigation
