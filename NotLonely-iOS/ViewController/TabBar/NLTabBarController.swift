@@ -50,6 +50,8 @@ class NLTabBarController: UITabBarController {
         
         self.addChildViewController(navigation)
         
+        self.view.setNeedsLayout()
+
     }
 
 }

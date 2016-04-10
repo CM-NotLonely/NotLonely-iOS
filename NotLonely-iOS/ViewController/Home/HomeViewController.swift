@@ -82,7 +82,7 @@ class HomeViewController: BaseViewController {
             self.contentView.addSubview(vc.view)
             self.currentViewController = vc
             
-//            self.tabBarController!.view.setNeedsLayout()
+            self.tabBarController!.view.setNeedsLayout()
 
             self.navigationController!.view.setNeedsLayout()
         }
