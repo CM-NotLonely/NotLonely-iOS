@@ -19,4 +19,12 @@ extension CALayer {
         }
     }
     
+    var shadowUIColor: UIColor {
+        set {
+            self.shadowColor = newValue.CGColor
+        }
+        get {
+            return UIColor(CGColor: self.shadowColor!)
+        }
+    }
 }

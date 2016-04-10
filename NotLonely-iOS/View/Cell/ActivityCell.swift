@@ -9,6 +9,13 @@
 import UIKit
 
 class ActivityCell: UITableViewCell {
+    @IBOutlet weak var publisherLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var infLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var praiseBtn: UIButton!
+    @IBOutlet weak var praiseLabel: UILabel!
+    @IBOutlet weak var joinBtn: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

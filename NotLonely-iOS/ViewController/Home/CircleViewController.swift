@@ -9,10 +9,11 @@
 import UIKit
 
 class CircleViewController: BaseViewController {
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.contentInset = UIEdgeInsetsMake(64.0,0.0,44.0,0.0);
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +32,19 @@ class CircleViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension CircleViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CircleCell") as! CircleCell
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 18
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }

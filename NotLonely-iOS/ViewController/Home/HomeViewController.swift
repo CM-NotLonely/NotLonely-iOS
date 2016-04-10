@@ -13,6 +13,10 @@ class HomeViewController: BaseViewController {
         case FirstChildTab = 0
         case SecondChildTab = 1
     }
+    
+    var i = 0
+    var frame = CGRectMake(0, 0, 0, 0)
+
     @IBOutlet weak var contentView: UIView!
     var currentViewController: UIViewController?
 
@@ -67,7 +71,14 @@ class HomeViewController: BaseViewController {
             self.addChildViewController(vc)
             vc.didMoveToParentViewController(self)
             
-            vc.view.frame = self.contentView.bounds
+            
+//            if i == 0 {
+                vc.view.frame = self.contentView.bounds
+                frame = self.contentView.bounds
+//                i = i + 1
+//            } else {
+//                vc.view.frame = frame
+//            }
             self.contentView.addSubview(vc.view)
             self.currentViewController = vc
         }

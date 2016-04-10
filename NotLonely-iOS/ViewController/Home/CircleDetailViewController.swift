@@ -1,14 +1,14 @@
 //
-//  FindViewController.swift
+//  CircleDetailViewController.swift
 //  NotLonely-iOS
 //
-//  Created by plusub on 3/24/16.
+//  Created by plusub on 4/10/16.
 //  Copyright © 2016 cm. All rights reserved.
 //
 
 import UIKit
 
-class FindViewController: BaseViewController {
+class CircleDetailViewController: BaseViewController {
 
     var overlay: UIView!
     
@@ -34,7 +34,7 @@ class FindViewController: BaseViewController {
     }
 }
 
-extension FindViewController: UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
+extension CircleDetailViewController: UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let color = UIColor.NLMainColor()
         let offsetY = scrollView.contentOffset.y
