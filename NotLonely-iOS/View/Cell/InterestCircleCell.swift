@@ -1,5 +1,5 @@
 //
-//  CircleCell.swift
+//  InterestCircleCell.swift
 //  NotLonely-iOS
 //
 //  Created by plusub on 4/10/16.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class CircleCell: UITableViewCell {
-    @IBOutlet weak var backView: UIView!
+class InterestCircleCell: UITableViewCell {
     @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var circleNameLabel: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var briefLabel: UILabel!
     @IBOutlet weak var joinBtn: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        backImg.image = UIImage(named: "back1.png")
+        backImg.image = UIImage(named: "back2.png")
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

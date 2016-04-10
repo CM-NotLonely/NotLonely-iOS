@@ -55,6 +55,8 @@
 		74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */; };
 		74651D0E1CBA050C001125AB /* CircleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */; };
 		74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0F1CBA0E1A001125AB /* CircleCell.swift */; };
+		749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */; };
+		749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -133,6 +135,8 @@
 		74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0F1CBA0E1A001125AB /* CircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
+		749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestPeopleCell.swift; sourceTree = "<group>"; };
+		749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCircleCell.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -433,6 +437,8 @@
 			children = (
 				74333ADA1CB51C7200FE2099 /* ActivityCell.swift */,
 				74651D0F1CBA0E1A001125AB /* CircleCell.swift */,
+				749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */,
+				749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -668,11 +674,13 @@
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
 				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
+				749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
 				74333AD41CB400EC00FE2099 /* NLNavigationController.swift in Sources */,
 				74651D0E1CBA050C001125AB /* CircleDetailViewController.swift in Sources */,
 				74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */,
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
+				749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */,
 				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
 				74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,

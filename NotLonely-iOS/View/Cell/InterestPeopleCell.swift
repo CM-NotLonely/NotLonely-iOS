@@ -1,5 +1,5 @@
 //
-//  CircleCell.swift
+//  InterestPeopleCell.swift
 //  NotLonely-iOS
 //
 //  Created by plusub on 4/10/16.
@@ -8,16 +8,18 @@
 
 import UIKit
 
-class CircleCell: UITableViewCell {
-    @IBOutlet weak var backView: UIView!
+class InterestPeopleCell: UITableViewCell {
     @IBOutlet weak var backImg: UIImageView!
-    @IBOutlet weak var circleNameLabel: UILabel!
+    @IBOutlet weak var headImg: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var followNumLabel: UILabel!
     @IBOutlet weak var briefLabel: UILabel!
-    @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet weak var followBtn: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        headImg.image = UIImage(named: "head.png")
         backImg.image = UIImage(named: "back1.png")
     }
 
