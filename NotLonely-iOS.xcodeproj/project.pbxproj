@@ -57,6 +57,12 @@
 		74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0F1CBA0E1A001125AB /* CircleCell.swift */; };
 		749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */; };
 		749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */; };
+		74D0AC591CBC8F8C00126706 /* InviteInfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */; };
+		74D0AC5B1CBC8FA900126706 /* MyFollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC5A1CBC8FA900126706 /* MyFollowCell.swift */; };
+		74D0AC5F1CBC8FF300126706 /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC5E1CBC8FF300126706 /* LikeCell.swift */; };
+		74D0AC611CBCD40900126706 /* InviteInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC601CBCD40900126706 /* InviteInfViewController.swift */; };
+		74D0AC631CBCD41500126706 /* MyFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC621CBCD41500126706 /* MyFollowViewController.swift */; };
+		74D0AC651CBCD48F00126706 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC641CBCD48F00126706 /* LikeViewController.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -100,8 +106,8 @@
 		740B01651C9565E900E6ABD0 /* NNUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNUrl.swift; sourceTree = "<group>"; };
 		740B01671C9566A100E6ABD0 /* NNNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNNetWork.swift; sourceTree = "<group>"; };
 		740B01691C9566E200E6ABD0 /* NNApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNApi.swift; sourceTree = "<group>"; };
-		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueViewController.swift; path = Base/SegueViewController.swift; sourceTree = "<group>"; };
-		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/BaseViewController.swift; sourceTree = "<group>"; };
+		74163C991CA2B311009BBCE5 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
+		74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		74163CAA1CA3DDA6009BBCE5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74163CAE1CA3DDDF009BBCE5 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publish.storyboard; sourceTree = "<group>"; };
 		74163CB01CA3DDE6009BBCE5 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
@@ -137,6 +143,12 @@
 		74651D0F1CBA0E1A001125AB /* CircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
 		749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestPeopleCell.swift; sourceTree = "<group>"; };
 		749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCircleCell.swift; sourceTree = "<group>"; };
+		74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteInfCell.swift; sourceTree = "<group>"; };
+		74D0AC5A1CBC8FA900126706 /* MyFollowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFollowCell.swift; sourceTree = "<group>"; };
+		74D0AC5E1CBC8FF300126706 /* LikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeCell.swift; sourceTree = "<group>"; };
+		74D0AC601CBCD40900126706 /* InviteInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteInfViewController.swift; sourceTree = "<group>"; };
+		74D0AC621CBCD41500126706 /* MyFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFollowViewController.swift; sourceTree = "<group>"; };
+		74D0AC641CBCD48F00126706 /* LikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,8 +196,6 @@
 				7406451A1CA292F900FCC873 /* Navi */,
 				74163CC81CA7A5E6009BBCE5 /* Login */,
 				74163CC91CA7A5E6009BBCE5 /* Register */,
-				74163C991CA2B311009BBCE5 /* SegueViewController.swift */,
-				74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */,
 				74163CC11CA78A87009BBCE5 /* Example */,
 				74163CA81CA3DD82009BBCE5 /* Home */,
 				74163CA91CA3DD82009BBCE5 /* Publish */,
@@ -219,6 +229,9 @@
 			children = (
 				74163CB21CA3DDEC009BBCE5 /* Msg.storyboard */,
 				74163CBA1CA3DE1E009BBCE5 /* MsgViewController.swift */,
+				74D0AC601CBCD40900126706 /* InviteInfViewController.swift */,
+				74D0AC621CBCD41500126706 /* MyFollowViewController.swift */,
+				74D0AC641CBCD48F00126706 /* LikeViewController.swift */,
 			);
 			path = Msg;
 			sourceTree = "<group>";
@@ -326,6 +339,8 @@
 		74163C981CA2B306009BBCE5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				74163C991CA2B311009BBCE5 /* SegueViewController.swift */,
+				74163C9B1CA2B336009BBCE5 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -439,6 +454,9 @@
 				74651D0F1CBA0E1A001125AB /* CircleCell.swift */,
 				749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */,
 				749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */,
+				74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */,
+				74D0AC5A1CBC8FA900126706 /* MyFollowCell.swift */,
+				74D0AC5E1CBC8FF300126706 /* LikeCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -652,6 +670,7 @@
 				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
 				74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */,
 				74333AD81CB5167C00FE2099 /* CircleViewController.swift in Sources */,
+				74D0AC5B1CBC8FA900126706 /* MyFollowCell.swift in Sources */,
 				74163C9A1CA2B311009BBCE5 /* SegueViewController.swift in Sources */,
 				74163CB91CA3DE18009BBCE5 /* FindViewController.swift in Sources */,
 				74163CD21CA7C086009BBCE5 /* NNViewModel.swift in Sources */,
@@ -663,6 +682,8 @@
 				74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */,
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
+				74D0AC611CBCD40900126706 /* InviteInfViewController.swift in Sources */,
+				74D0AC5F1CBC8FF300126706 /* LikeCell.swift in Sources */,
 				7419757E1C9EDF3E00CDC5B1 /* TestModel.swift in Sources */,
 				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
 				74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */,
@@ -671,7 +692,10 @@
 				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				74333ADB1CB51C7200FE2099 /* ActivityCell.swift in Sources */,
+				74D0AC651CBCD48F00126706 /* LikeViewController.swift in Sources */,
+				74D0AC591CBC8F8C00126706 /* InviteInfCell.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
+				74D0AC631CBCD41500126706 /* MyFollowViewController.swift in Sources */,
 				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
 				749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */,

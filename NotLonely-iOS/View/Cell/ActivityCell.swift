@@ -13,8 +13,8 @@ class ActivityCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var praiseBtn: UIButton!
-    @IBOutlet weak var praiseLabel: UILabel!
+    @IBOutlet weak var likeBtn: UIButton!
+    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var joinBtn: UIButton!
 
     override func awakeFromNib() {
