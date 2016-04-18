@@ -8,38 +8,39 @@
 
 import UIKit
 
-class MsgViewController: UIPageViewController {
-    
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newColoredViewController("InviteInfViewController"),
-                self.newColoredViewController("MyFollowViewController"),
-                self.newColoredViewController("LikeViewController")]
-    }()
-    
-    private func newColoredViewController(name: String) -> UIViewController {
-        return UIStoryboard(name: "Msg", bundle: nil) .
-            instantiateViewControllerWithIdentifier(name)
+class MsgViewController: UIViewController {
+    @IBOutlet weak var pageVC: PageViewController! {
+        didSet {
+            inviteinfVC!.title = "动态"
+            myfollowVC!.title = "问题"
+            likeVC!.title = "讨论"
+            
+            let vcArray = [inviteinfVC!, myfollowVC!, likeVC!]
+            pageVC.setProperty(vcArray)
+        }
     }
     
-    lazy var pageViewController: UIPageViewController = {
-        let vc = UIPageViewController.init(transitionStyle: .Scroll, navigationOrientation: <#T##UIPageViewControllerNavigationOrientation#>, options: <#T##[String : AnyObject]?#>)
+    lazy var inviteinfVC: InviteInfViewController? = {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("InviteInfViewController") as! InviteInfViewController
+        return vc
     }()
     
+    lazy var myfollowVC: MyFollowViewController? = {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("MyFollowViewController") as! MyFollowViewController
+        return vc
+    }()
+    
+    lazy var likeVC: LikeViewController? = {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("LikeViewController") as! LikeViewController
+        return vc
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dataSource = self
         // Do any additional setup after loading the view.
-        
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .Forward,
-                               animated: true,
-                               completion: nil)
-        }
-        
 
         
+//        pageVC = PageViewController.init(frame: CGRectMake(0, (self.navigationController?.navigationBar.height)! + 22, self.view.width, self.view.height), titleArray: vcArray)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,51 +48,4 @@ class MsgViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-}
-
-extension MsgViewController: UIPageViewControllerDataSource {
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-
-        
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
-            return nil
-        }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else {
-            return nil
-        }
-        
-        guard orderedViewControllers.count > previousIndex else {
-            return nil
-        }
-        self.tabBarController!.view.setNeedsLayout()
-        self.navigationController!.view.setNeedsLayout()
-        return orderedViewControllers[previousIndex]
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-
-        
-        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
-            return nil
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        let orderedViewControllersCount = orderedViewControllers.count
-        
-        guard orderedViewControllersCount != nextIndex else {
-            return nil
-        }
-        
-        guard orderedViewControllersCount > nextIndex else {
-            return nil
-        }
-        self.tabBarController!.view.setNeedsLayout()
-        self.navigationController!.view.setNeedsLayout()
-        return orderedViewControllers[nextIndex]
-    }
 }

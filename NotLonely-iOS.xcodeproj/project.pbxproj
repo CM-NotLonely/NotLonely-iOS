@@ -63,6 +63,10 @@
 		74D0AC611CBCD40900126706 /* InviteInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC601CBCD40900126706 /* InviteInfViewController.swift */; };
 		74D0AC631CBCD41500126706 /* MyFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC621CBCD41500126706 /* MyFollowViewController.swift */; };
 		74D0AC651CBCD48F00126706 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC641CBCD48F00126706 /* LikeViewController.swift */; };
+		74D0AD181CC4DE5A00126706 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD161CC4DE5A00126706 /* PageViewController.swift */; };
+		74D0AD191CC4DE5A00126706 /* PageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD171CC4DE5A00126706 /* PageMenuView.swift */; };
+		74D0AD1B1CC4DE6400126706 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD1A1CC4DE6400126706 /* UIView+Extension.swift */; };
+		74D0AD1E1CC4E89F00126706 /* NLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD1D1CC4E89F00126706 /* NLConfig.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
@@ -149,6 +153,10 @@
 		74D0AC601CBCD40900126706 /* InviteInfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteInfViewController.swift; sourceTree = "<group>"; };
 		74D0AC621CBCD41500126706 /* MyFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFollowViewController.swift; sourceTree = "<group>"; };
 		74D0AC641CBCD48F00126706 /* LikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
+		74D0AD161CC4DE5A00126706 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		74D0AD171CC4DE5A00126706 /* PageMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuView.swift; sourceTree = "<group>"; };
+		74D0AD1A1CC4DE6400126706 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		74D0AD1D1CC4E89F00126706 /* NLConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLConfig.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 		740B00EA1C9191F000E6ABD0 /* NotLonely-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				74D0AD1C1CC4E88900126706 /* Configs */,
 				74163CD01CA7C078009BBCE5 /* ViewModel */,
 				74163CA11CA2B994009BBCE5 /* View */,
 				740645111CA28D5600FCC873 /* ViewController */,
@@ -316,6 +325,7 @@
 		740B015C1C955B4200E6ABD0 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				74D0AD1A1CC4DE6400126706 /* UIView+Extension.swift */,
 				741975751C996BFB00CDC5B1 /* NSObject+Common.swift */,
 				741975771C99895300CDC5B1 /* String+Extension.swift */,
 				74333AB91CB0C68000FE2099 /* CALayer+Extension.swift */,
@@ -348,6 +358,8 @@
 		74163CA11CA2B994009BBCE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74D0AD161CC4DE5A00126706 /* PageViewController.swift */,
+				74D0AD171CC4DE5A00126706 /* PageMenuView.swift */,
 				74333AD91CB51C5B00FE2099 /* Cell */,
 				74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */,
 				74333AC11CB0DBD300FE2099 /* InputTextField.swift */,
@@ -459,6 +471,14 @@
 				74D0AC5E1CBC8FF300126706 /* LikeCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		74D0AD1C1CC4E88900126706 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				74D0AD1D1CC4E89F00126706 /* NLConfig.swift */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		876313603E92366E6A40F780 /* Pods */ = {
@@ -679,7 +699,9 @@
 				741975781C99895300CDC5B1 /* String+Extension.swift in Sources */,
 				74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */,
 				74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */,
+				74D0AD191CC4DE5A00126706 /* PageMenuView.swift in Sources */,
 				74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */,
+				74D0AD1B1CC4DE6400126706 /* UIView+Extension.swift in Sources */,
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
 				74D0AC611CBCD40900126706 /* InviteInfViewController.swift in Sources */,
@@ -692,12 +714,14 @@
 				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				74333ADB1CB51C7200FE2099 /* ActivityCell.swift in Sources */,
+				74D0AD181CC4DE5A00126706 /* PageViewController.swift in Sources */,
 				74D0AC651CBCD48F00126706 /* LikeViewController.swift in Sources */,
 				74D0AC591CBC8F8C00126706 /* InviteInfCell.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
 				74D0AC631CBCD41500126706 /* MyFollowViewController.swift in Sources */,
 				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
+				74D0AD1E1CC4E89F00126706 /* NLConfig.swift in Sources */,
 				749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
 				74333AD41CB400EC00FE2099 /* NLNavigationController.swift in Sources */,

@@ -72,13 +72,9 @@ class HomeViewController: BaseViewController {
             vc.didMoveToParentViewController(self)
             
             
-//            if i == 0 {
-                vc.view.frame = self.contentView.bounds
-                frame = self.contentView.bounds
-//                i = i + 1
-//            } else {
-//                vc.view.frame = frame
-//            }
+            vc.view.frame = self.contentView.bounds
+            frame = self.contentView.bounds
+
             self.contentView.addSubview(vc.view)
             self.currentViewController = vc
             

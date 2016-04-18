@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Oll-AM-gQI" kind="relationship" relationship="rootViewController" id="4di-Is-eew"/>
+                        <segue destination="yhy-b8-7ab" kind="relationship" relationship="rootViewController" id="Wke-KW-rtt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weC-zu-tcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,14 +22,38 @@
             <point key="canvasLocation" x="5" y="376"/>
         </scene>
         <!--Msg View Controller-->
-        <scene sceneID="NJF-lT-tNn">
+        <scene sceneID="Pa4-wW-DhH">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Oll-AM-gQI" customClass="MsgViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="te0-QM-1dv"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ap2-GL-hqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="yhy-b8-7ab" customClass="MsgViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ae-RO-yFv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ET7-fK-vmc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N34-0b-TE0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apl-lL-ECo" customClass="PageViewController" customModule="NotLonely_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="apl-lL-ECo" firstAttribute="top" secondItem="0ae-RO-yFv" secondAttribute="bottom" id="3s7-jE-uPe"/>
+                            <constraint firstItem="apl-lL-ECo" firstAttribute="bottom" secondItem="ET7-fK-vmc" secondAttribute="top" id="c8y-AN-Hcu"/>
+                            <constraint firstAttribute="trailing" secondItem="apl-lL-ECo" secondAttribute="trailing" id="pLb-s5-7gX"/>
+                            <constraint firstItem="apl-lL-ECo" firstAttribute="leading" secondItem="N34-0b-TE0" secondAttribute="leading" id="vn8-lb-Thq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nGx-De-VHp"/>
+                    <connections>
+                        <outlet property="pageVC" destination="apl-lL-ECo" id="k7b-vS-cd0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8u-AL-HMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="378"/>
+            <point key="canvasLocation" x="667" y="373"/>
         </scene>
         <!--My Follow View Controller-->
         <scene sceneID="hnB-Iw-DNd">
