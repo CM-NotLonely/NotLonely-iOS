@@ -36,7 +36,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Cc-oY-3R4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InterestPeopleCell" rowHeight="140" id="ARs-zH-qcj" customClass="InterestPeopleCell" customModule="NotLonely_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="600" height="140"/>
@@ -117,6 +117,7 @@
                                                 <constraint firstAttribute="leadingMargin" secondItem="tB1-Bm-1Wy" secondAttribute="leading" id="yPZ-pq-tlu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="backImg" destination="JHZ-v8-Hfm" id="USi-1Z-aIj"/>
                                             <outlet property="briefLabel" destination="smw-Hc-DxU" id="pl6-sx-GCf"/>
@@ -188,6 +189,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="c7s-FD-Zm9" secondAttribute="trailing" id="qTO-E7-Qnf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="backImg" destination="jWC-yW-5UK" id="UpT-qB-9Vv"/>
                                             <outlet property="briefLabel" destination="S9v-Bd-IKQ" id="eLe-8J-H5F"/>

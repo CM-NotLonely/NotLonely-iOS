@@ -14,6 +14,8 @@ class LikeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("LikeViewController")
+
     }
 
     override func didReceiveMemoryWarning() {

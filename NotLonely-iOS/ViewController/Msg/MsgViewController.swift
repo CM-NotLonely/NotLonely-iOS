@@ -9,16 +9,14 @@
 import UIKit
 
 class MsgViewController: UIViewController {
-    @IBOutlet weak var pageVC: PageViewController! {
-        didSet {
-            inviteinfVC!.title = "动态"
-            myfollowVC!.title = "问题"
-            likeVC!.title = "讨论"
-            
-            let vcArray = [inviteinfVC!, myfollowVC!, likeVC!]
-            pageVC.setProperty(vcArray)
-        }
-    }
+//    @IBOutlet weak var pageVC: PageViewController! {
+//        didSet {
+//
+//        }
+//    }
+    var frame = CGRectMake(0, 0, 0, 0)
+
+    @IBOutlet weak var contentView: UIView!
     
     lazy var inviteinfVC: InviteInfViewController? = {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("InviteInfViewController") as! InviteInfViewController
@@ -38,9 +36,32 @@ class MsgViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        inviteinfVC!.title = "动态"
+        myfollowVC!.title = "问题"
+        likeVC!.title = "讨论"
+//
+        self.tabBarController!.view.setNeedsLayout()
 
+        let vcArray = [inviteinfVC!, myfollowVC!, likeVC!]
+//        let zeVC = PageViewController()
+//        zeVC.titleArray = ["动态","问题","讨论"]
+//        self.addChildViewController(zeVC)
+//        zeVC.didMoveToParentViewController(self)
+//        zeVC.view.frame = self.contentView.bounds
+//        frame = self.contentView.bounds
+//        self.contentView.addSubview(zeVC.view)
+//        self.tabBarController!.view.setNeedsLayout()
+//        self.navigationController!.view.setNeedsLayout()
+//        self.currentViewController = zeVC
         
-//        pageVC = PageViewController.init(frame: CGRectMake(0, (self.navigationController?.navigationBar.height)! + 22, self.view.width, self.view.height), titleArray: vcArray)
+        let zeVC = PageViewController()
+        zeVC.titleArray = ["@我","我关注的","点赞"]
+        zeVC.viewArray = vcArray
+        self.addChildViewController(zeVC)
+        self.view.addSubview(zeVC.view)
+
+//        self.addChildViewController(zeVC)
+//        self.view.addSubview(zeVC.view)
     }
 
     override func didReceiveMemoryWarning() {

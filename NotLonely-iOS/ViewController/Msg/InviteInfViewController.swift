@@ -14,6 +14,12 @@ class InviteInfViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("InviteInfViewController")
+        print(self.view.bounds)
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+        print(self.view.bounds)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +47,7 @@ extension InviteInfViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 18
+        return 6
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

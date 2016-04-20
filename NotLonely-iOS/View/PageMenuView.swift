@@ -21,30 +21,35 @@ class PageMenuView: UIView {
     var lineView:UIView?
     var margin: CGFloat!
     var buttonArray:Array<UIButton> = []
-    var titleArray:Array<UIViewController> = []
+    var titleArray:Array<String> = []
     var delegate: PageMenuViewDelegate!
+    let buttonwidth: CGFloat = 65
+    let buttonalign: CGFloat = 15
     
-    func setMenu(titleArray: Array<UIViewController>) {
+    func setMenu(titleArray: Array<String>) {
         
-        margin = (width - (CGFloat(titleArray.count) * 75)) / CGFloat(titleArray.count + 1)
+//        margin = (width - (CGFloat(titleArray.count) * buttonwidth)) / CGFloat(titleArray.count + 1)
+        margin = (width - (CGFloat(titleArray.count) * buttonwidth) - CGFloat(titleArray.count - 1) * buttonalign) / 2
         self.titleArray = titleArray
         for i in 0 ..< titleArray.count {
             let button = UIButton(type: .Custom)
-            let buttonX = margin * (CGFloat(i) + 1) + CGFloat(i) * 75
             
-            button.frame = CGRectMake(buttonX, 0, 75, 40)
+            let buttonX = margin + CGFloat(i) * (buttonwidth + buttonalign)
+            
+            button.frame = CGRectMake(buttonX, 5, buttonwidth, 30)
             
             let title = titleArray[i]
-            button.setTitle(title.title, forState: .Normal)
-            button.setTitleColor(UIColor.blueColor(), forState: .Normal)
+            button.setTitle(title, forState: .Normal)
+            button.titleLabel?.font = UIFont.systemFontOfSize(14)
+            button.setTitleColor(UIColor.NLMainColor(), forState: .Normal)
             
             button.addTarget(self, action: #selector(buttonClick(_:)), forControlEvents: .TouchUpInside)
             buttonArray.append(button)
             self.addSubview(button)
         }
         
-        lineView = UIView(frame: CGRectMake(margin, self.frame.height - 1, 75, 2))
-        lineView?.backgroundColor = UIColor.blackColor()
+        lineView = UIView(frame: CGRectMake(margin, self.frame.height - 3, buttonwidth, 3))
+        lineView?.backgroundColor = UIColor.NLMainColor()
         self.addSubview(lineView!)
     }
     
@@ -64,16 +69,16 @@ class PageMenuView: UIView {
         let index = Int(rate)
         let pageRate = rate - CGFloat(index)
         let button = self.buttonArray[index]
-        self.lineView?.frame.origin.x = button.frame.origin.x + (button.frame.width+margin) * pageRate
+        self.lineView?.frame.origin.x = button.frame.origin.x + (button.frame.width + 15) * pageRate
         selectIndex(Int(rate + 0.5))
     }
     
     func selectIndex(index: Int) {
         for button in buttonArray {
-            button.setTitleColor(UIColor.blueColor(), forState: .Normal)
+            button.setTitleColor(UIColor.NLMainColor(), forState: .Normal)
         }
         let button = buttonArray[index]
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button.setTitleColor(UIColor.NLMainColor(), forState: .Normal)
     }
     
 }

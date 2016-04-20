@@ -9,4 +9,6 @@
 import UIKit
 
 let ScreenWidth = UIScreen.mainScreen().bounds.size.width
-let ScreenHight = UIScreen.mainScreen().bounds.size.height
+let ScreenHeight = UIScreen.mainScreen().bounds.size.height
+
+let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height

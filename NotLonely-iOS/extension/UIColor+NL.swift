@@ -22,4 +22,8 @@ extension UIColor {
 //        return UIColor(red:0.71, green:0.68, blue:0.67, alpha:1)
         return UIColor.init(white: 1, alpha: 0.3)
     }
+    
+    class func NLMenu() -> UIColor {
+        return UIColor(red:0.98, green:0.98, blue:0.98, alpha:1)
+    }
 }

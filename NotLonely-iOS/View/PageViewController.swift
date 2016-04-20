@@ -10,9 +10,12 @@ import UIKit
 
 
 
-class PageViewController: UIView, UIScrollViewDelegate, PageMenuViewDelegate {
+class PageViewController: UIViewController, UIScrollViewDelegate, PageMenuViewDelegate {
+    let width = UIScreen.mainScreen().bounds.size.width
+    let height = UIScreen.mainScreen().bounds.size.height
     
-    var titleArray: Array<UIViewController> = []
+    
+    var titleArray: Array<String> = []
     var scrollView: UIScrollView!
     
     var viewArray: Array<UIViewController> = []
@@ -22,60 +25,56 @@ class PageViewController: UIView, UIScrollViewDelegate, PageMenuViewDelegate {
 
     var menuView: PageMenuView!
     
-//    init(frame: CGRect, titleArray: Array<UIViewController>) {
-//        super.init(frame: frame)
-//
-//    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    func setProperty(titleArray: Array<UIViewController>) {
-        self.titleArray = titleArray
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBarController!.view.setNeedsLayout()
+        self.automaticallyAdjustsScrollViewInsets = true
+        // Do any additional setup after loading the view.
         scrollViewLayout()
         menuViewLayout()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setNeedsLayout()
-    }
-    
     func scrollViewLayout() {
-        scrollView = UIScrollView(frame: CGRectMake(0, 0, self.width, self.height))
+        self.scrollView = UIScrollView(frame: CGRectMake(0, navigationBarHeight + statusBarHeight + 44, width, height - (navigationBarHeight + statusBarHeight + 44)))
         
-        scrollView.pagingEnabled = true
-        scrollView.bounces = false
-        scrollView.delegate = self
+        self.scrollView.pagingEnabled = true
+        self.scrollView.bounces = false
+        self.scrollView.delegate = self
+        self.scrollView.showsHorizontalScrollIndicator = false
+        self.scrollView.backgroundColor = UIColor.redColor()
         
         let contentWidth = CGFloat(titleArray.count)
-        scrollView.contentSize = CGSizeMake(contentWidth * width, height)
+        self.scrollView.contentSize = CGSizeMake(contentWidth * width, height - 230)
         
         scrollY = 0
-        for i in 0 ..< titleArray.count {
-            let tableViewController = UITableViewController(style: .Plain)
-            if i == 0 {
-                tableViewController.view.backgroundColor = UIColor.greenColor()
-            } else if i == 1 {
-                tableViewController.view.backgroundColor = UIColor.yellowColor()
-            }
+        for i in 0 ..< viewArray.count {
+//            let tableViewController = UITableViewController(style: .Plain)
+//            if i == 0 {
+//                tableViewController.view.backgroundColor = UIColor.greenColor()
+//            } else if i == 1 {
+//                tableViewController.view.backgroundColor = UIColor.yellowColor()
+//            }
             
-            tableViewController.tableView.contentInset = UIEdgeInsetsMake(75, 0, 0, 0)
-            tableViewController.view.frame = CGRectMake(CGFloat(i) * width, 0, width, height)
+//            tableViewController.tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
+            viewArray[i].view.frame = CGRectMake(CGFloat(i) * width, -66, width, height - (navigationBarHeight + statusBarHeight + 44))
             
-            viewArray.append(tableViewController)
-            self.addSubview(tableViewController.view)
+//            viewArray.append(viewArray[i])
+            self.addChildViewController(viewArray[i])
+            
+            self.tabBarController!.view.setNeedsLayout()
+            
+            self.navigationController!.view.setNeedsLayout()
         }
         scrollView.addSubview(viewArray[0].view)
-        self.addSubview(scrollView)
+        self.view.addSubview(scrollView)
     }
 
     func menuViewLayout() {
-        menuView = PageMenuView(frame: CGRectMake(0, 0, width, 44))
+        menuView = PageMenuView(frame: CGRectMake(0, navigationBarHeight + statusBarHeight, width, 44))
+        menuView.backgroundColor = UIColor.NLMenu()
         menuView.delegate = self
         menuView.setMenu(titleArray)
-        self.addSubview(self.menuView)
+        self.view.addSubview(self.menuView)
     }
     
     func selectIndex(index: Int) {
@@ -91,6 +90,10 @@ class PageViewController: UIView, UIScrollViewDelegate, PageMenuViewDelegate {
 
         if scrollY >= -104 {
             scrollY = -104
+        }
+        
+        for tableViewController in viewArray {
+//            tableViewController.tableView.contentOffset = CGPointMake(0, scrollY)
         }
         
         let rate = (scrollView.contentOffset.x / width)

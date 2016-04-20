@@ -71,4 +71,17 @@ extension UIViewController {
             print("viewWillAppear: \(self)")
         }
     }
+    
+    public var navigationBarHeight: CGFloat {
+        get {
+            if let me = self as? UINavigationController,
+                let visibleViewController = me.visibleViewController {
+                return visibleViewController.navigationBarHeight
+            }
+            if let nav = self.navigationController {
+                return nav.navigationBar.height
+            }
+            return 0
+        }
+    }
 }
