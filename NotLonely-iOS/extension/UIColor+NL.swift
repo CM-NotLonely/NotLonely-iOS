@@ -14,6 +14,10 @@ extension UIColor {
         return UIColor(red:1, green:0.69, blue:0.1, alpha:1)
     }
     
+    class func NLMainColorAlpha(alpha: CGFloat) -> UIColor {
+        return UIColor(red:1, green:0.69, blue:0.1, alpha:alpha)
+    }
+    
     class func NLMidColor() -> UIColor {
         return UIColor(red:1, green:0.69, blue:0.1, alpha:0.1)
     }

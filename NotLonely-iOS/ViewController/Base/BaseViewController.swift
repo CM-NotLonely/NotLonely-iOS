@@ -20,6 +20,5 @@ class BaseViewController: SegueViewController {
         
         view.backgroundColor = UIColor.whiteColor()
     }
-    
 
 }

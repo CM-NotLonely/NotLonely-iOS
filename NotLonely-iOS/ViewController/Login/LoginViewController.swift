@@ -12,36 +12,52 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var usernameTextField: InputTextField! {
         didSet {
-            usernameTextField.setPlaceHolderTextColor("用户名")
             usernameTextField.setLeftImage("ic_user")
         }
     }
     
     @IBOutlet weak var passwordTextField: InputTextField! {
         didSet {
-            passwordTextField.setPlaceHolderTextColor("密码")
             passwordTextField.setLeftImage("ic_passwd")
         }
     }
 
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
-            let gradient = gradientLayer()
+            let gradient = horizontal_gradientLayer()
             gradient.frame = self.loginButton.bounds
             loginButton.layer.insertSublayer(gradient, atIndex: 0)
         }
     }
     
-    @IBOutlet weak var registerButton: UIButton! {
-        didSet {
-            registerButton.layer.insertSublayer(gradientLayer(), atIndex: 0)
-        }
-    }
-    
-    
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let viewModel = LoginViewModel(
+            input: (
+                atextview: usernameTextField.rx_text.asObservable(),
+                btextview: passwordTextField.rx_text.asObservable(),
+                loginTaps: loginButton.rx_tap.asObservable()
+            ),
+            dependency: (
+                validation: DefaultValidationService.sharedValidation,
+                API: TestNetWorkApi.sharedTestNetWorkApi
+            )
+        )
+        
+        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
+            self?.loginButton.enabled = valid
+            self?.loginButton.alpha = valid ? 1.0 : 0.5
+            }
+            .addDisposableTo(disposeBag)
+        
+        viewModel.array.subscribeNext { [weak self] valid  in
+            print(valid.nickname)
+//            self?.model = valid
+        }
+        
+        
         let tapBackground = UITapGestureRecognizer()
         tapBackground.rx_event
             .subscribeNext { [weak self] _ in
@@ -55,18 +71,11 @@ class LoginViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        print("LoginViewController")
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "RegisterViewController" {
+            print("13")
+    
+        }
     }
-    */
-
 }

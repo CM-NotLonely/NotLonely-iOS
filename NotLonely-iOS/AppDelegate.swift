@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//        startLogin()
-        startTabBar()
+        startLogin()
+//        startTabBar()
         return true
     }
 
@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func startTabBar() {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyboard.instantiateViewControllerWithIdentifier("NLTabBarController") as! NLTabBarController
         window?.rootViewController = rootViewController

@@ -40,7 +40,7 @@ class TestNetWorkApi : DefaultApi {
     
     func testNetwork(Params : [String: AnyObject]?) -> Observable<JSON?> {
         return Observable.create { (observer) -> Disposable in
-            NNApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) { json, sjson in
+            NLApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) { json, sjson in
 
                 if json != nil {
                     print("not nil")

@@ -9,13 +9,12 @@
 import Foundation
 
 // 网络超时时间
-let NETWORK_TIMEOUT: NSTimeInterval = 15
-//
-let BASE_URL : String = "http://news-at.zhihu.com/api/"
+//let NETWORK_TIMEOUT: NSTimeInterval = 15
 
-// MARK: - 获取当天新闻
 let LATEST_NEWS_URL = "4/news/latest"
 
-let testurl = "http://news-at.zhihu.com/api/4/version/ios/2.3.0"
 
-let local = "http://localhost:3000/articles"
+let BASE_URL : String = "http://192.168.1.147"
+
+
+let login = "/login"

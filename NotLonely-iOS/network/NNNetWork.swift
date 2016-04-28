@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 import PKHUD
 
-//let NETWORK_TIMEOUT: NSTimeInterval = 15
-
 enum NetWorkType {
     case Get
     case Post
@@ -19,8 +17,8 @@ enum NetWorkType {
     case Delete
 }
 
-class NNNetWork  {
-    static let sharedInstance = NNNetWork()
+class NLNetWork  {
+    static let sharedInstance = NLNetWork()
 
     func NetWork(Url : String, Params : [String: AnyObject]?, MethodType : NetWorkType, completionHandler : (NSDictionary?, AnyObject?) -> Void) {
 
