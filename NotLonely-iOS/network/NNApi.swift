@@ -42,6 +42,7 @@ class NLApi {
         NLNetWork.sharedInstance.NetWork("register", Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
             if json != nil {
                 let tjson = RegisterModel(json: json!)
+                self.UserData(Params!)
                 println("---------- json to \(tjson) is success... ----------")
                 completionHandler(tjson, nil)
             } else {

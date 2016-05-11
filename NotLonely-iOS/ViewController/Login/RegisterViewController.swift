@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol RegisterDelegate {
+    func updateTextField()
+}
+
+
 class RegisterViewController: BaseViewController {
+    
+    var delegate: RegisterDelegate?
     
     @IBOutlet weak var usernameTextField: InputTextField! {
         didSet {
@@ -66,7 +73,10 @@ class RegisterViewController: BaseViewController {
         
         viewModel.model.subscribeNext { valid  in
                 self.showHudTipStr(valid.msg)
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.delegate?.updateTextField()
+            self.dismissViewControllerAnimated(true, completion: {
+                println(valid.msg)
+            })
             }
             .addDisposableTo(disposeBag)
     }

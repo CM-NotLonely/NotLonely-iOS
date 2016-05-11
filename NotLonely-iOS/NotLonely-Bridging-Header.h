@@ -13,5 +13,6 @@
 @import RxCocoa;
 @import SwiftyJSON;
 @import AlamofireNetworkActivityIndicator;
+@import SwiftyUserDefaults;
 
 #endif /* NotLonely_Bridging_Header_h */

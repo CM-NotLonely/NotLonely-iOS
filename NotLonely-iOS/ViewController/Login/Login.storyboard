@@ -31,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Fk-ae-wBN" kind="presentation" id="kJF-8e-e8i"/>
+                                    <segue destination="4Fk-ae-wBN" kind="presentation" identifier="RegisterViewController" id="kJF-8e-e8i"/>
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-93-7uM">
@@ -176,7 +176,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBK-al-ggX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="373"/>
+            <point key="canvasLocation" x="791" y="367"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="J2g-GM-eGv">

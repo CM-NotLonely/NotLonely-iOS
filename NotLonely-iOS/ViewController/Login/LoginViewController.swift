@@ -74,8 +74,16 @@ class LoginViewController: BaseViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RegisterViewController" {
-            println("13")
-    
+            let secondViewController = segue.destinationViewController as! UINavigationController
+            let registerVC = secondViewController.topViewController as! RegisterViewController
+            registerVC.delegate = self
         }
+    }
+}
+
+extension LoginViewController: RegisterDelegate {
+    func updateTextField() {
+        self.passwordTextField.text = Defaults[.password]
+        self.usernameTextField.text = Defaults[.username]
     }
 }

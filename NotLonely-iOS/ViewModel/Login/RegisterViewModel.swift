@@ -54,12 +54,6 @@ class RegisterViewModel {
             Observable.combineLatest(input.pwdtextview, input.repwdtextview, resultSelector: validationService.validateSameString)
             .shareReplay(1)
         
-//        validatedRePassWordTextView = input.repwdtextview
-//            .map{ str in
-//                return validationService.validateString(str)
-//            }
-//            .shareReplay(1)
-        
         
         buttonEnable = Observable.combineLatest(validatedUserNameTextView, validatedPassWordTextView, validatedRePassWordTextView) { $0 && $1 && $2 }
             .distinctUntilChanged()
@@ -69,8 +63,11 @@ class RegisterViewModel {
         model = input.buttonTaps.withLatestFrom(usernameAndPassword)
             .flatMapLatest { (username, password, repassword) in
                 return API.VMRegisterAPI(["username": username, "password": password, "password_confirmation": repassword])
+                    .observeOn(MainScheduler.instance)
             }
             .map { model in
+//                DefaultsKeys[.username] = username
+//                DefaultsKeys[.username] = username
                 return model!
             }
             .shareReplay(1)
