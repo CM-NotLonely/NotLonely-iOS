@@ -17,10 +17,10 @@ class ViewController: UIViewController {
 //        NNNetWork.Get()
         
 //        NNNetWork.Get(BASE_URL, params: nil, success: { (json, sjson) -> Void in
-//            print(json)
-//            print(sjson)
+//            println(json)
+//            println(sjson)
 //            }) { (error) -> Void in
-//                print(error)
+//                println(error)
 //        }
 //        
 //        test("adf");
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 
     func test(test : AnyObject) {
-        print("asdf")
+        println("asdf")
         let urlSting = "TT://"
         // 2
         if let url = NSURL(string: urlSting) {

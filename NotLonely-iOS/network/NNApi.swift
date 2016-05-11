@@ -13,12 +13,12 @@ class NLApi {
 
     static let sharedInstance = NLApi()
 
+    
     func TestApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (JSON?, AnyObject?) -> Void) {
         NLNetWork.sharedInstance.NetWork(Url, Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
             if json != nil {
-                //这里加入解析数据json
                 let tjson = JSON(json!)
-                print("JSON: \(tjson)")
+                println("JSON: \(tjson)")
                 completionHandler(tjson, nil)
             } else {
                 completionHandler(nil, sjson)
@@ -26,12 +26,11 @@ class NLApi {
         })
     }
     
-    func LoginApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (JSON?, AnyObject?) -> Void) {
+    func LoginApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (LoginModel?, AnyObject?) -> Void) {
         NLNetWork.sharedInstance.NetWork(Url, Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
             if json != nil {
-                //这里加入解析数据json
-                let tjson = JSON(json!)
-                print("JSON: \(tjson)")
+                let tjson = LoginModel(json: json!)
+                println("JSON: \(tjson)")
                 completionHandler(tjson, nil)
             } else {
                 completionHandler(nil, sjson)
@@ -39,17 +38,16 @@ class NLApi {
         })
     }
     
-//        Get(url, params: params) { (json, sjson) -> Void in
-//            if (json != nil) {
-//                //这里加入解析数据json
-//                let tjson = JSON(json!)
-//                print("JSON: \(tjson)")
-//                completionHandler(tjson, nil)
-//            } else {
-//                completionHandler(nil, sjson)
-//            }
-//        }
-//    }
-    
-    
+    func RegisterApi(Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (RegisterModel?, AnyObject?) -> Void) {
+        NLNetWork.sharedInstance.NetWork("register", Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
+            if json != nil {
+                let tjson = RegisterModel(json: json!)
+                println("---------- json to \(tjson) is success... ----------")
+                completionHandler(tjson, nil)
+            } else {
+                println("---------- json is nil... ----------")
+                completionHandler(nil, sjson)
+            }
+        })
+    }
 }

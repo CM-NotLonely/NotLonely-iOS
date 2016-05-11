@@ -46,14 +46,12 @@ class InputTextField: UITextField {
     func observeSelect() {
         self.rx_controlEvent(.EditingDidBegin)
             .subscribeNext{ [weak self] _ in
-                print("EditingDidBegin")
                 self?.bottomBorder.backgroundColor = UIColor.whiteColor().CGColor
             }
             .addDisposableTo(disposeBag)
         
         self.rx_controlEvent(.EditingDidEnd)
             .subscribeNext{ [weak self] _ in
-                print("EditingDidBegin")
                 self?.bottomBorder.backgroundColor = UIColor.NLInputTextFieldLine().CGColor
             }
             .addDisposableTo(disposeBag)

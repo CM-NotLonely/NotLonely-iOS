@@ -3,6 +3,8 @@ inhibit_all_warnings!
 use_frameworks!
 
 pod 'Alamofire'
+pod 'AlamofireNetworkActivityIndicator'
+
 pod 'RxSwift'
 # pod 'RxBlocking'
 pod 'RxCocoa'
@@ -12,10 +14,10 @@ pod 'SwiftyJSON'
 # pod 'netfox'
 #
 # pod 'URLNavigator'
-# pod 'SwiftyUserDefaults'
+pod 'SwiftyUserDefaults'
 #
 # pod 'SwiftyBeaver'
-# pod 'ReachabilitySwift'
+pod 'ReachabilitySwift'
 # pod 'PKHUD'
 # pod 'PullToBounce'
 # pod 'AFDateHelper'

@@ -14,11 +14,11 @@ class InviteInfViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("InviteInfViewController")
-        print(self.view.bounds)
+        println("InviteInfViewController")
+        println(self.view.bounds)
         self.view.setNeedsLayout()
         self.view.layoutIfNeeded()
-        print(self.view.bounds)
+        println(self.view.bounds)
 
     }
 

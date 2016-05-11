@@ -14,8 +14,8 @@ import PKHUD
 extension NLNetWork {
     func tipFromError(error: NSError) -> String {
         var tipStr = String()
-        if error.userInfo["date"] != nil {
-            print("123")
+        if error.userInfo["msg"] != nil {
+            tipStr = error.userInfo["msg"] as! String
         } else {
             if ((error.userInfo["NSLocalizedDescription"]) == nil) {
                 tipStr = String(error.userInfo["NSLocalizedDescription"]!)
@@ -29,12 +29,10 @@ extension NLNetWork {
     
     func showHudTipStr(tipStr: String) {
         if tipStr.length > 0 {
-            HUD.dimsBackground = false
-            HUD.allowsInteraction = false
-            HUD.flash(.Label(tipStr), delay: 1.0)
+            let view = UIApplication.sharedApplication().keyWindow!.rootViewController
+            view!.noticeOnlyText(tipStr, autoClear: true, autoClearTime: 1)
         }
     }
-
 }
 
 extension NSObject {

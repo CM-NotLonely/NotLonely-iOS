@@ -18,13 +18,13 @@ enum ValidationResult {
     case Failed(message: String)
 }
 
-protocol ValidationService {
-    func validateString(string: String) -> Bool
-}
-
-protocol DefaultApi {
-    func testNetwork(Params : [String: AnyObject]?) -> Observable<JSON?>
-}
+//protocol ValidationService {
+//    func validateString(string: String) -> Bool
+//}
+//
+//protocol DefaultApi {
+//    func testNetwork(Params : [String: AnyObject]?) -> Observable<LoginModel?>
+//}
 
 extension ValidationResult {
     var isValid: Bool {

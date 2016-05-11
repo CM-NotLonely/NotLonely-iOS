@@ -60,6 +60,11 @@
 		74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */; };
 		74651D0E1CBA050C001125AB /* CircleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */; };
 		74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0F1CBA0E1A001125AB /* CircleCell.swift */; };
+		747712821CE0904B00B1E495 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747712811CE0904B00B1E495 /* RegisterViewModel.swift */; };
+		7477128C1CE0983700B1E495 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477128B1CE0983700B1E495 /* Protocol.swift */; };
+		7477128E1CE0984400B1E495 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477128D1CE0984400B1E495 /* RegisterModel.swift */; };
+		747712901CE0995500B1E495 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477128F1CE0995500B1E495 /* Implementations.swift */; };
+		747712921CE1D28D00B1E495 /* NLNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747712911CE1D28D00B1E495 /* NLNotice.swift */; };
 		749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */; };
 		749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */; };
 		74D0AC591CBC8F8C00126706 /* InviteInfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */; };
@@ -71,7 +76,6 @@
 		74D0AD1B1CC4DE6400126706 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD1A1CC4DE6400126706 /* UIView+Extension.swift */; };
 		74D0AD1E1CC4E89F00126706 /* NLConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0AD1D1CC4E89F00126706 /* NLConfig.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
-		74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE81801CA8C5AD000A2984 /* Implementations.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +157,12 @@
 		74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0F1CBA0E1A001125AB /* CircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
+		747712811CE0904B00B1E495 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		7477128A1CE0970100B1E495 /* NotLonely-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotLonely-Bridging-Header.h"; sourceTree = "<group>"; };
+		7477128B1CE0983700B1E495 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		7477128D1CE0984400B1E495 /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		7477128F1CE0995500B1E495 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
+		747712911CE1D28D00B1E495 /* NLNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLNotice.swift; sourceTree = "<group>"; };
 		749A7DD91CBA5B5900232104 /* InterestPeopleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestPeopleCell.swift; sourceTree = "<group>"; };
 		749A7DDB1CBA5B6600232104 /* InterestCircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCircleCell.swift; sourceTree = "<group>"; };
 		74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteInfCell.swift; sourceTree = "<group>"; };
@@ -164,7 +174,6 @@
 		74D0AD1A1CC4DE6400126706 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		74D0AD1D1CC4E89F00126706 /* NLConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLConfig.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		74FE81801CA8C5AD000A2984 /* Implementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementations.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B5FC692CCFC17397733F1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,7 +218,6 @@
 				74163C981CA2B306009BBCE5 /* Base */,
 				7406451A1CA292F900FCC873 /* Navi */,
 				74163CC81CA7A5E6009BBCE5 /* Login */,
-				74163CC91CA7A5E6009BBCE5 /* Register */,
 				74163CC11CA78A87009BBCE5 /* Example */,
 				74163CA81CA3DD82009BBCE5 /* Home */,
 				74163CA91CA3DD82009BBCE5 /* Publish */,
@@ -307,6 +315,7 @@
 				740B00F41C9191F000E6ABD0 /* LaunchScreen.storyboard */,
 				740B00F71C9191F000E6ABD0 /* Info.plist */,
 				74163CCA1CA7A66F009BBCE5 /* Intro.storyboard */,
+				7477128A1CE0970100B1E495 /* NotLonely-Bridging-Header.h */,
 			);
 			path = "NotLonely-iOS";
 			sourceTree = "<group>";
@@ -403,7 +412,6 @@
 				74163CC21CA78A94009BBCE5 /* ExampleViewController.swift */,
 				74163CD31CA7C0B0009BBCE5 /* ExampleViewModel.swift */,
 				74FE817E1CA8C465000A2984 /* Enum.swift */,
-				74FE81801CA8C5AD000A2984 /* Implementations.swift */,
 				74002CBD1CAD5DD70065D5EB /* Zhihu.swift */,
 			);
 			path = Example;
@@ -419,16 +427,11 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		74163CC91CA7A5E6009BBCE5 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
 		74163CD01CA7C078009BBCE5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7477128F1CE0995500B1E495 /* Implementations.swift */,
+				7477128B1CE0983700B1E495 /* Protocol.swift */,
 				7438900E1CD20C9400DB8329 /* Login */,
 				74163CD11CA7C086009BBCE5 /* NNViewModel.swift */,
 			);
@@ -453,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				743890131CD20D2F00DB8329 /* LoginViewModel.swift */,
+				747712811CE0904B00B1E495 /* RegisterViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -470,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				7438901B1CD20DDC00DB8329 /* LoginModel.swift */,
+				7477128D1CE0984400B1E495 /* RegisterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				7438901E1CD20FE400DB8329 /* NLLog.swift */,
+				747712911CE1D28D00B1E495 /* NLNotice.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -697,6 +703,8 @@
 				74333ACC1CB23DA300FE2099 /* UINavigationBar+Extension.swift in Sources */,
 				74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */,
 				74FE817F1CA8C465000A2984 /* Enum.swift in Sources */,
+				7477128C1CE0983700B1E495 /* Protocol.swift in Sources */,
+				7477128E1CE0984400B1E495 /* RegisterModel.swift in Sources */,
 				74333ABE1CB0C7A100FE2099 /* NLTabBar.swift in Sources */,
 				74333AD81CB5167C00FE2099 /* CircleViewController.swift in Sources */,
 				74D0AC5B1CBC8FA900126706 /* MyFollowCell.swift in Sources */,
@@ -715,10 +723,11 @@
 				74D0AC611CBCD40900126706 /* InviteInfViewController.swift in Sources */,
 				7438901C1CD20DDC00DB8329 /* LoginModel.swift in Sources */,
 				74D0AC5F1CBC8FF300126706 /* LikeCell.swift in Sources */,
-				74FE81811CA8C5AD000A2984 /* Implementations.swift in Sources */,
+				747712901CE0995500B1E495 /* Implementations.swift in Sources */,
 				74333AC61CB1373E00FE2099 /* UIViewController+Extension.swift in Sources */,
 				740B00EC1C9191F000E6ABD0 /* AppDelegate.swift in Sources */,
 				74333AD61CB5166500FE2099 /* ActivityViewController.swift in Sources */,
+				747712921CE1D28D00B1E495 /* NLNotice.swift in Sources */,
 				74333AC01CB0C7E000FE2099 /* NLTabBarController.swift in Sources */,
 				74163CBB1CA3DE1E009BBCE5 /* MsgViewController.swift in Sources */,
 				74333ADB1CB51C7200FE2099 /* ActivityCell.swift in Sources */,
@@ -742,6 +751,7 @@
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
 				749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */,
 				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
+				747712821CE0904B00B1E495 /* RegisterViewModel.swift in Sources */,
 				74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,
 			);
@@ -837,6 +847,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -874,6 +885,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -889,6 +901,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm.NotLonely-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NotLonely-iOS/NotLonely-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -902,6 +915,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cm.NotLonely-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/NotLonely-iOS/NotLonely-Bridging-Header.h";
 			};
 			name = Release;
 		};

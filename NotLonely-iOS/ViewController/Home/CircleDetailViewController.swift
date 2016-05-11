@@ -24,7 +24,7 @@ class CircleDetailViewController: BaseViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("basevc viewWillAppear")
+        println("basevc viewWillAppear")
         self.navigationController!.navigationBar.shadowImage = UIImage()
     }
     

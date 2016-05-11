@@ -16,8 +16,9 @@ class LoginModel {
     var introduction: String?
     var avatar: NSURL?
     
-    init(json: JSON) {
-        self.msg = json["msg"].stringValue
+    init(json: AnyObject) {
+        let data = JSON(json)
+        self.msg = data["msg"].stringValue
 //        self.nickname = json["user"].["nickname"].stringValue
     }
 }

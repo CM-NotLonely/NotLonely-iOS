@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
-import SwiftyJSON
+
 
 class LoginViewModel {
     
@@ -19,14 +17,14 @@ class LoginViewModel {
     
     let array: Observable<LoginModel>
     
-    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: DefaultApi)) {
+    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: VMNetWorkApi)) {
         
         let validationService = dependency.validation
         let API = dependency.API
         
         validatedATextView = input.atextview
             .map{ atextview in
-                print(atextview)
+                println(atextview)
                 return validationService.validateString(atextview)
             }
             .shareReplay(1)
@@ -45,10 +43,10 @@ class LoginViewModel {
         
         array = input.loginTaps.withLatestFrom(usernameAndPassword)
             .flatMapLatest { (username, password) in
-                return API.testNetwork(["test": username,"phone_code": password])
+                return API.VMRegisterAPI(["test": username,"phone_code": password])
             }
             .map { (json) in
-                return LoginModel.init(json: json!)
+                return LoginModel(json: json!)
         }
         
         

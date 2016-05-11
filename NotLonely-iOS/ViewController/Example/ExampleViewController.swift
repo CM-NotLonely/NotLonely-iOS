@@ -29,8 +29,8 @@ class ExampleViewController: BaseViewController {
     
     //利用Selector的extension避免复杂的action
     func buttonTapped(sender: UIButton) {
-        print("Push me and then just touch me. Until I can get my... Satisfaction.")
-        print(Selector.buttonTapped)
+        println("Push me and then just touch me. Until I can get my... Satisfaction.")
+        println(Selector.buttonTapped)
     }
     
 //    var viewModel : ExampleViewModel
@@ -54,35 +54,35 @@ class ExampleViewController: BaseViewController {
         // Do any additional setup after loading the view.
         view.addSubview(testBtn)
         
-        let viewModel = ExampleViewModel(
-            input: (
-            atextview: ATextView.rx_text.asObservable(),
-            btextview: BTextView.rx_text.asObservable(),
-            loginTaps: interBtn.rx_tap.asObservable()
-            ),
-            dependency: (
-                validation: DefaultValidationService.sharedValidation,
-                API: TestNetWorkApi.sharedTestNetWorkApi
-            )
-        )
+//        let viewModel = LoginModel(
+//            input: (
+//            atextview: ATextView.rx_text.asObservable(),
+//            btextview: BTextView.rx_text.asObservable(),
+//            loginTaps: interBtn.rx_tap.asObservable()
+//            ),
+//            dependency: (
+//                validation: DefaultValidationService.sharedValidation,
+//                API: TestNetWorkApi.sharedTestNetWorkApi
+//            )
+//        )
+//        
+//        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
+//            self?.interBtn.enabled = valid
+//            self?.interBtn.alpha = valid ? 1.0 : 0.5
+//            }
+//            .addDisposableTo(disposeBag)
         
-        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
-            self?.interBtn.enabled = valid
-            self?.interBtn.alpha = valid ? 1.0 : 0.5
-            }
-            .addDisposableTo(disposeBag)
-        
-        viewModel.array.subscribeNext { [weak self] valid  in
-            print(valid.date)
-//            self?.model = valid
-        }
+//        viewModel.array.subscribeNext { [weak self] valid  in
+//            println(valid.date)
+////            self?.model = valid
+//        }
         
     }
     
     @IBAction func testNetwork(sender: AnyObject) {
         NLApi.sharedInstance.TestApi(LATEST_NEWS_URL, Params: nil, MethodType: NetWorkType.Get) {json, sjson in
-            print(json)
-            print(sjson)
+            println(json)
+            println(sjson)
         }
     }
     
@@ -90,7 +90,7 @@ class ExampleViewController: BaseViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "testvc" {
-            print("13")
+            println("13")
             if let exampleTableVC = segue.destinationViewController as? ExampleTableViewController {
                 exampleTableVC.count = 3
             }

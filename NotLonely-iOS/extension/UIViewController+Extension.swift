@@ -64,11 +64,11 @@ extension UIViewController {
     func nsh_viewWillAppear(animated: Bool) {
         self.nsh_viewWillAppear(animated)
         let test = self.restorationIdentifier
-        print(test)
+        println(test)
         if let name = self.descriptiveName {
-            print("viewWillAppear: \(name)")
+            println("viewWillAppear: \(name)")
         } else {
-            print("viewWillAppear: \(self)")
+            println("viewWillAppear: \(self)")
         }
     }
     
@@ -82,6 +82,13 @@ extension UIViewController {
                 return nav.navigationBar.height
             }
             return 0
+        }
+    }
+    
+    func showHudTipStr(tipStr: String) {
+        if tipStr.length > 0 {
+            let view = UIApplication.sharedApplication().keyWindow!.rootViewController
+            view!.noticeOnlyText(tipStr, autoClear: true, autoClearTime: 1)
         }
     }
 }

@@ -43,6 +43,32 @@ class RegisterViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationController!.navigationBar.shadowImage = UIImage.init()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(), forBarMetrics: .Default)
+        
+        let viewModel = RegisterViewModel(
+            input: (
+                usertextview: usernameTextField.rx_text.asObservable(),
+                pwdtextview: passwordTextField.rx_text.asObservable(),
+                repwdtextview: repasswordTextField.rx_text.asObservable(),
+                
+                buttonTaps: registerButton.rx_tap.asObservable()
+            ),
+            dependency: (
+                validation: NLValidationService.sharedValidation,
+                API: VMNetWorkApi.sharedTestNetWorkApi
+            )
+        )
+        
+        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
+            self?.registerButton.enabled = valid
+            self?.registerButton.alpha = valid ? 1.0 : 0.5
+            }
+            .addDisposableTo(disposeBag)
+        
+        viewModel.model.subscribeNext { valid  in
+                self.showHudTipStr(valid.msg)
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            .addDisposableTo(disposeBag)
     }
     
     @IBAction func backToLogin(sender: AnyObject) {

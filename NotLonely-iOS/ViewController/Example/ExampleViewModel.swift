@@ -18,16 +18,16 @@ class ExampleViewModel {
     let buttonEnable: Observable<Bool>
     
 //    let signedIn: Observable<AnyObject>
-    let array: Observable<ZhihuModel>
+    let array: Observable<LoginModel>
 
-    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: DefaultApi)) {
+    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: VMNetWorkApi)) {
         
         let validationService = dependency.validation
         let API = dependency.API
         
         validatedATextView = input.atextview
             .map{ atextview in
-                print(atextview)
+                println(atextview)
                 return validationService.validateString(atextview)
             }
             .shareReplay(1)
@@ -48,10 +48,10 @@ class ExampleViewModel {
 
         array = input.loginTaps.withLatestFrom(usernameAndPassword)
             .flatMapLatest { (username, password) in
-                return API.testNetwork(["test": username,"phone_code": password])
+                return API.VMRegisterAPI(["test": username,"phone_code": password])
             }
             .map { (json) in
-                return ZhihuModel.init(json: json!)
+                return LoginModel(json: json!)
 //                array = Observable.create(test)
             }
         

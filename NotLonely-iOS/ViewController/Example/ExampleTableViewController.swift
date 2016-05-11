@@ -12,6 +12,6 @@ class ExampleTableViewController: UITableViewController {
     var count: Int = 0
     
     override func viewDidLoad() {
-        print(count)
+        println(count)
     }
 }

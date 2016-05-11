@@ -34,28 +34,28 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let viewModel = LoginViewModel(
-            input: (
-                atextview: usernameTextField.rx_text.asObservable(),
-                btextview: passwordTextField.rx_text.asObservable(),
-                loginTaps: loginButton.rx_tap.asObservable()
-            ),
-            dependency: (
-                validation: DefaultValidationService.sharedValidation,
-                API: TestNetWorkApi.sharedTestNetWorkApi
-            )
-        )
-        
-        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
-            self?.loginButton.enabled = valid
-            self?.loginButton.alpha = valid ? 1.0 : 0.5
-            }
-            .addDisposableTo(disposeBag)
-        
-        viewModel.array.subscribeNext { [weak self] valid  in
-            print(valid.nickname)
-//            self?.model = valid
-        }
+//        let viewModel = LoginViewModel(
+//            input: (
+//                atextview: usernameTextField.rx_text.asObservable(),
+//                btextview: passwordTextField.rx_text.asObservable(),
+//                loginTaps: loginButton.rx_tap.asObservable()
+//            ),
+//            dependency: (
+//                validation: DefaultValidationService.sharedValidation,
+//                API: TestNetWorkApi.sharedTestNetWorkApi
+//            )
+//        )
+//        
+//        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
+//            self?.loginButton.enabled = valid
+//            self?.loginButton.alpha = valid ? 1.0 : 0.5
+//            }
+//            .addDisposableTo(disposeBag)
+//        
+//        viewModel.array.subscribeNext { valid  in
+//            println(valid.nickname)
+////            self?.model = valid
+//        }.addDisposableTo(disposeBag)
         
         
         let tapBackground = UITapGestureRecognizer()
@@ -74,7 +74,7 @@ class LoginViewController: BaseViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RegisterViewController" {
-            print("13")
+            println("13")
     
         }
     }
