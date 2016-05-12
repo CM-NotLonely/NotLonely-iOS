@@ -80,6 +80,8 @@ class RegisterViewController: BaseViewController {
         viewModel.model.subscribeNext { valid  in
                 self.showHudTipStr(valid.msg)
                 self.delegate?.updateTextField()
+                self.dismissViewControllerAnimated(true, completion: nil)
+
             }
             .addDisposableTo(disposeBag)
     }

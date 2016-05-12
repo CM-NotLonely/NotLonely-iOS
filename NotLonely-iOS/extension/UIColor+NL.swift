@@ -35,4 +35,8 @@ extension UIColor {
     class func NLMenu() -> UIColor {
         return UIColor(red:0.98, green:0.98, blue:0.98, alpha:1)
     }
+    
+    class func NLBackgroundColor() -> UIColor {
+        return UIColor(red:0.97, green:0.96, blue:0.96, alpha:1)
+    }
 }

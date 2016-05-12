@@ -97,7 +97,7 @@ class LoginViewController: BaseViewController {
 
 extension LoginViewController: RegisterDelegate {
     func updateTextField() {
-        self.passwordTextField.text = Defaults[.password]
         self.usernameTextField.text = Defaults[.username]
+        self.usernameTextField.becomeFirstResponder()
     }
 }

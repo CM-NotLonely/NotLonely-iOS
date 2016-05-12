@@ -9,32 +9,30 @@
 import UIKit
 
 class PublishViewController: BaseViewController {
-    @IBOutlet weak var titleTextField: InputTextField! {
+    @IBOutlet weak var titleTextField: PublishTextField! {
         didSet {
-            titleTextField.setLeftImage("ic_passwd")
             titleTextField.setlineColor(UIColor.NLMainColor())
-
         }
     }
-    @IBOutlet weak var timeTextField: InputTextField! {
+    @IBOutlet weak var timeTextField: PublishTextField! {
         didSet {
             timeTextField.setLeftImage("ic_time")
             timeTextField.setlineColor(UIColor.NLMainColor())
         }
     }
-    @IBOutlet weak var locationTextField: InputTextField! {
+    @IBOutlet weak var locationTextField: PublishTextField! {
         didSet {
             locationTextField.setLeftImage("ic_location")
             locationTextField.setlineColor(UIColor.NLMainColor())
         }
     }
-    @IBOutlet weak var memberTextField: InputTextField! {
+    @IBOutlet weak var memberTextField: PublishTextField! {
         didSet {
             memberTextField.setLeftImage("ic_member")
             memberTextField.setlineColor(UIColor.NLMainColor())
         }
     }
-    @IBOutlet weak var costTextField: InputTextField! {
+    @IBOutlet weak var costTextField: PublishTextField! {
         didSet {
             costTextField.setLeftImage("ic_cost")
             costTextField.setlineColor(UIColor.NLMainColor())
@@ -43,8 +41,9 @@ class PublishViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.titleTextField.becomeFirstResponder()
+        
         let tapBackground = UITapGestureRecognizer()
         tapBackground.rx_event
             .subscribeNext { [weak self] _ in
@@ -62,14 +61,5 @@ class PublishViewController: BaseViewController {
     @IBAction func dismissAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
