@@ -61,7 +61,7 @@ class RegisterViewController: BaseViewController {
             ),
             dependency: (
                 validation: NLValidationService.sharedValidation,
-                API: VMNetWorkApi.sharedTestNetWorkApi
+                API: VMNetWorkApi.sharedVMNetWorkApi
             )
         )
         
@@ -74,9 +74,6 @@ class RegisterViewController: BaseViewController {
         viewModel.model.subscribeNext { valid  in
                 self.showHudTipStr(valid.msg)
                 self.delegate?.updateTextField()
-            self.dismissViewControllerAnimated(true, completion: {
-                println(valid.msg)
-            })
             }
             .addDisposableTo(disposeBag)
     }

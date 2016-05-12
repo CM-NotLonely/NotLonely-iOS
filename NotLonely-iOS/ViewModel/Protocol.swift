@@ -16,4 +16,6 @@ protocol ValidationService {
 
 protocol VMNetWorkApiProtocol {
     func VMRegisterAPI(Params : [String: AnyObject]?) -> Observable<RegisterModel?>
+    func VMLoginAPI(Params : [String: AnyObject]?) -> Observable<LoginModel?>
+
 }

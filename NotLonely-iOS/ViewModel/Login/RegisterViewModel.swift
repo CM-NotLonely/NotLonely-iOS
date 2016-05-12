@@ -66,8 +66,6 @@ class RegisterViewModel {
                     .observeOn(MainScheduler.instance)
             }
             .map { model in
-//                DefaultsKeys[.username] = username
-//                DefaultsKeys[.username] = username
                 return model!
             }
             .shareReplay(1)

@@ -11,45 +11,57 @@ import UIKit
 
 class LoginViewModel {
     
-    let validatedATextView: Observable<Bool>
-    let validatedBTextView: Observable<Bool>
+    let validatedUserNameTextView: Observable<Bool>
+    let validatedPassWordTextView: Observable<Bool>
+    
+    
     let buttonEnable: Observable<Bool>
     
-    let array: Observable<LoginModel>
+    let model: Observable<LoginModel>
     
-    init(input: (atextview: Observable<String>, btextview: Observable<String>, loginTaps: Observable<Void>), dependency: (validation: ValidationService, API: VMNetWorkApi)) {
+    init(
+        input: (
+        
+        usertextview: Observable<String>,
+        pwdtextview: Observable<String>,
+        buttonTaps: Observable<Void>),
+        
+        dependency: (
+        
+        validation: ValidationService,
+        API: VMNetWorkApi)
+        
+        ) {
         
         let validationService = dependency.validation
         let API = dependency.API
         
-        validatedATextView = input.atextview
-            .map{ atextview in
-                println(atextview)
-                return validationService.validateString(atextview)
+        validatedUserNameTextView = input.usertextview
+            .map{ str in
+                return validationService.validateString(str)
             }
             .shareReplay(1)
         
-        validatedBTextView = input.btextview
-            .map{ atextview in
-                return validationService.validateString(atextview)
+        validatedPassWordTextView = input.pwdtextview
+            .map{ str in
+                return validationService.validateString(str)
             }
             .shareReplay(1)
         
-        
-        buttonEnable = Observable.combineLatest(validatedATextView, validatedBTextView) { $0 && $1 }
+        buttonEnable = Observable.combineLatest(validatedUserNameTextView, validatedPassWordTextView) { $0 && $1 }
             .distinctUntilChanged()
         
-        let usernameAndPassword = Observable.combineLatest(input.atextview, input.btextview) { ($0, $1) }
+        let usernameAndPassword = Observable.combineLatest(input.usertextview, input.pwdtextview) { ($0, $1) }
         
-        array = input.loginTaps.withLatestFrom(usernameAndPassword)
+        model = input.buttonTaps.withLatestFrom(usernameAndPassword)
             .flatMapLatest { (username, password) in
-                return API.VMRegisterAPI(["test": username,"phone_code": password])
+                return API.VMLoginAPI(["username": username, "password": password])
+                    .observeOn(MainScheduler.instance)
             }
-            .map { (json) in
-                return LoginModel(json: json!)
-        }
-        
-        
+            .map { model in
+                return model!
+            }
+            .shareReplay(1)
     }
     
 }

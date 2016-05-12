@@ -12,5 +12,6 @@ extension NLApi {
     func UserData(Params: [String: AnyObject]) {
         Defaults[.username] = Params["username"] as? String
         Defaults[.password] = Params["password"] as? String
+        Defaults
     }
 }

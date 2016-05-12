@@ -12,5 +12,8 @@ extension DefaultsKeys {
     static let username = DefaultsKey<String?>("username")
     static let password = DefaultsKey<String?>("password")
     
-    static let launchCount = DefaultsKey<Int>("launchCount")
+    static let nickname = DefaultsKey<String>("nickname")
+    static let sex = DefaultsKey<Bool>("sex")
+    static let introduction = DefaultsKey<String>("introduction")
+    static let url = DefaultsKey<String>("url")
 }

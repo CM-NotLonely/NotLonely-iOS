@@ -10,9 +10,9 @@ import Foundation
 import SwiftyJSON
 
 class NLApi {
-
+    
     static let sharedInstance = NLApi()
-
+    
     
     func TestApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (JSON?, AnyObject?) -> Void) {
         NLNetWork.sharedInstance.NetWork(Url, Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
@@ -26,22 +26,27 @@ class NLApi {
         })
     }
     
-    func LoginApi(Url : String, Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (LoginModel?, AnyObject?) -> Void) {
-        NLNetWork.sharedInstance.NetWork(Url, Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
+    
+    //注册
+    func RegisterApi(Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (RegisterModel?, AnyObject?) -> Void) {
+        NLNetWork.sharedInstance.NetWork("register", Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
             if json != nil {
-                let tjson = LoginModel(json: json!)
-                println("JSON: \(tjson)")
+                let tjson = RegisterModel(json: json!)
+                self.UserData(Params!)
+                println("---------- json to \(tjson) is success... ----------")
                 completionHandler(tjson, nil)
             } else {
+                println("---------- json is nil... ----------")
                 completionHandler(nil, sjson)
             }
         })
     }
     
-    func RegisterApi(Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (RegisterModel?, AnyObject?) -> Void) {
-        NLNetWork.sharedInstance.NetWork("register", Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
+    //登陆
+    func LoginApi(Params : [String: AnyObject]?, MethodType: NetWorkType, completionHandler : (LoginModel?, AnyObject?) -> Void) {
+        NLNetWork.sharedInstance.NetWork("login", Params: Params, MethodType: MethodType, completionHandler: {json, sjson in
             if json != nil {
-                let tjson = RegisterModel(json: json!)
+                let tjson = LoginModel(json: json!)
                 self.UserData(Params!)
                 println("---------- json to \(tjson) is success... ----------")
                 completionHandler(tjson, nil)

@@ -34,30 +34,42 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let viewModel = LoginViewModel(
-//            input: (
-//                atextview: usernameTextField.rx_text.asObservable(),
-//                btextview: passwordTextField.rx_text.asObservable(),
-//                loginTaps: loginButton.rx_tap.asObservable()
-//            ),
-//            dependency: (
-//                validation: DefaultValidationService.sharedValidation,
-//                API: TestNetWorkApi.sharedTestNetWorkApi
-//            )
-//        )
-//        
-//        viewModel.buttonEnable.subscribeNext{ [weak self] valid  in
-//            self?.loginButton.enabled = valid
-//            self?.loginButton.alpha = valid ? 1.0 : 0.5
-//            }
-//            .addDisposableTo(disposeBag)
-//        
-//        viewModel.array.subscribeNext { valid  in
-//            println(valid.nickname)
-////            self?.model = valid
-//        }.addDisposableTo(disposeBag)
+        let viewModel = LoginViewModel(
+            input: (
+                usertextview: usernameTextField.rx_text.asObservable(),
+                pwdtextview: passwordTextField.rx_text.asObservable(),
+                
+                buttonTaps: loginButton.rx_tap.asObservable()
+            ),
+            dependency: (
+                validation: NLValidationService.sharedValidation,
+                API: VMNetWorkApi.sharedVMNetWorkApi
+            )
+        )
         
+        viewModel.buttonEnable
+            .subscribeNext{ [weak self] valid  in
+            self?.loginButton.enabled = valid
+            self?.loginButton.alpha = valid ? 1.0 : 0.5
+            }
+            .addDisposableTo(disposeBag)
         
+        viewModel.model.subscribeNext { valid  in
+            
+            println(Defaults[.password])
+            println(Defaults[.username])
+            println(Defaults[.nickname])
+            println(Defaults[.introduction])
+            println(Defaults[.sex])
+            println(Defaults[.url])
+            
+            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+                appDelegate.startTabBar()
+            }
+
+            }
+            .addDisposableTo(disposeBag)
+    
         let tapBackground = UITapGestureRecognizer()
         tapBackground.rx_event
             .subscribeNext { [weak self] _ in

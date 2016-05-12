@@ -10,15 +10,18 @@ import Foundation
 import SwiftyJSON
 
 class LoginModel {
-    var msg: String
     var nickname: String?
-    var sex: String?
+    var sex: Bool?
     var introduction: String?
-    var avatar: NSURL?
+    var avatar: String?
     
     init(json: AnyObject) {
         let data = JSON(json)
-        self.msg = data["msg"].stringValue
+        self.nickname = data["nickname"].stringValue
+        self.sex = data["sex"].boolValue
+        self.introduction = data["introduction"].stringValue
+        self.avatar = data["avatar"].stringValue
+
 //        self.nickname = json["user"].["nickname"].stringValue
     }
 }

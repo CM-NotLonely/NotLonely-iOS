@@ -35,7 +35,7 @@ class NLValidationService: ValidationService {
 }
 
 class VMNetWorkApi : VMNetWorkApiProtocol {
-    static let sharedTestNetWorkApi = VMNetWorkApi()
+    static let sharedVMNetWorkApi = VMNetWorkApi()
 
     init() {
         println("VMNetWorkApi")
@@ -51,6 +51,17 @@ class VMNetWorkApi : VMNetWorkApiProtocol {
             }
             return NopDisposable.instance
         }
-
+    }
+    
+    func VMLoginAPI(Params : [String: AnyObject]?) -> Observable<LoginModel?> {
+        return Observable.create { (observer) -> Disposable in
+            NLApi.sharedInstance.LoginApi(Params, MethodType: NetWorkType.Post) { model, sjson in
+                if model != nil {
+                    observer.on(.Next(model))
+                }
+                observer.on(.Completed)
+            }
+            return NopDisposable.instance
+        }
     }
 }
