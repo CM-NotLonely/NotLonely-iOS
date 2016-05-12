@@ -26,7 +26,7 @@ extension UINavigationBar {
     
     func nl_setBackgroundColor(backgroundColor: UIColor) {
         if (self.overlay == nil) {
-            self.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            self.setBackgroundImage(UIImage.init(), forBarMetrics: UIBarMetrics.Default)
             
             self.overlay = UIView(frame: CGRectMake(0, -20, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + 20))
             self.overlay.userInteractionEnabled = false
@@ -60,7 +60,8 @@ extension UINavigationBar {
     }
     
     func nl_reset() {
-        self.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.setBackgroundImage(UIImage.init(), forBarMetrics: UIBarMetrics.Default)
+        
         self.overlay.removeFromSuperview()
         self.overlay = nil
     }

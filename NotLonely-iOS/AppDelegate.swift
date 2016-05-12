@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+//        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]];
+        
+//        UINavigationBar.appearance()
 
 //        startLogin()
         startTabBar()

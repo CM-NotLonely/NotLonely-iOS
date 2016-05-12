@@ -15,6 +15,9 @@ class CircleDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //看下原理
+        self.navigationController!.navigationBar.barTintColor = UIColor.clearColor()
         self.navigationController?.navigationBar.nl_setBackgroundColor(UIColor.clearColor())
     }
     
@@ -25,12 +28,14 @@ class CircleDetailViewController: BaseViewController {
     
     override func viewWillAppear(animated: Bool) {
         println("basevc viewWillAppear")
-        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.shadowImage = UIImage.init()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.nl_reset()
+        self.navigationController?.navigationBar.nl_setBackgroundColor(UIColor.NLMainColor())
+
     }
 }
 
