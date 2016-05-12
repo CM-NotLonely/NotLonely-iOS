@@ -12,6 +12,9 @@ import RxSwift
 
 class InputTextField: UITextField {
     var disposeBag = DisposeBag()
+    
+    var lineColor = UIColor.whiteColor()
+    
     var bottomBorder: CALayer = {
         let layer = CALayer()
         layer.backgroundColor = UIColor.NLInputTextFieldLine().CGColor
@@ -27,6 +30,10 @@ class InputTextField: UITextField {
         self.leftViewMode = .Always
         self.layer.addSublayer(bottomBorder)
         observeSelect()
+    }
+    
+    func setlineColor(color: UIColor) {
+        lineColor = color
     }
     
     func setLeftImage(imageName: String) {
@@ -46,7 +53,7 @@ class InputTextField: UITextField {
     func observeSelect() {
         self.rx_controlEvent(.EditingDidBegin)
             .subscribeNext{ [weak self] _ in
-                self?.bottomBorder.backgroundColor = UIColor.whiteColor().CGColor
+                self?.bottomBorder.backgroundColor = self!.lineColor.CGColor
             }
             .addDisposableTo(disposeBag)
         

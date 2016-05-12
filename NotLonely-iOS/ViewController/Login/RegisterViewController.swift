@@ -21,6 +21,8 @@ class RegisterViewController: BaseViewController {
         didSet {
             usernameTextField.setPlaceHolderTextColor("用户名")
             usernameTextField.setLeftImage("ic_user")
+            usernameTextField.setlineColor(UIColor.whiteColor())
+
         }
     }
     
@@ -28,6 +30,8 @@ class RegisterViewController: BaseViewController {
         didSet {
             passwordTextField.setPlaceHolderTextColor("密码")
             passwordTextField.setLeftImage("ic_passwd")
+            passwordTextField.setlineColor(UIColor.whiteColor())
+
         }
     }
     
@@ -35,6 +39,8 @@ class RegisterViewController: BaseViewController {
         didSet {
             repasswordTextField.setPlaceHolderTextColor("密码")
             repasswordTextField.setLeftImage("ic_passwd")
+            repasswordTextField.setlineColor(UIColor.whiteColor())
+
         }
     }
     

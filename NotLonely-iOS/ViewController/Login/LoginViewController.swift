@@ -13,12 +13,14 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var usernameTextField: InputTextField! {
         didSet {
             usernameTextField.setLeftImage("ic_user")
+            usernameTextField.setlineColor(UIColor.whiteColor())
         }
     }
     
     @IBOutlet weak var passwordTextField: InputTextField! {
         didSet {
             passwordTextField.setLeftImage("ic_passwd")
+            passwordTextField.setlineColor(UIColor.whiteColor())
         }
     }
 

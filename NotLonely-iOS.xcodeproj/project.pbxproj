@@ -77,6 +77,7 @@
 		74DD0F901CE3378600A04BF0 /* NLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F8F1CE3378500A04BF0 /* NLUserDefaults.swift */; };
 		74DD0F921CE33BEF00A04BF0 /* NLApi+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F911CE33BEF00A04BF0 /* NLApi+Extension.swift */; };
 		74DD0F981CE4778000A04BF0 /* NLApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F971CE4778000A04BF0 /* NLApi.swift */; };
+		74DD0F9A1CE48E7800A04BF0 /* PublishTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -177,6 +178,7 @@
 		74DD0F8F1CE3378500A04BF0 /* NLUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLUserDefaults.swift; sourceTree = "<group>"; };
 		74DD0F911CE33BEF00A04BF0 /* NLApi+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NLApi+Extension.swift"; sourceTree = "<group>"; };
 		74DD0F971CE4778000A04BF0 /* NLApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLApi.swift; sourceTree = "<group>"; };
+		74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTextField.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B5FC692CCFC17397733F1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,6 +384,7 @@
 				74333AD91CB51C5B00FE2099 /* Cell */,
 				74333ABD1CB0C7A100FE2099 /* NLTabBar.swift */,
 				74333AC11CB0DBD300FE2099 /* InputTextField.swift */,
+				74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				743890191CD20D9C00DB8329 /* PageViewController.swift in Sources */,
 				74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */,
 				743890141CD20D2F00DB8329 /* LoginViewModel.swift in Sources */,
+				74DD0F9A1CE48E7800A04BF0 /* PublishTextField.swift in Sources */,
 				743890181CD20D9C00DB8329 /* PageMenuView.swift in Sources */,
 				7438901F1CD20FE400DB8329 /* NLLog.swift in Sources */,
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,

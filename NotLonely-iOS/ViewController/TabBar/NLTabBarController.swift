@@ -24,7 +24,7 @@ class NLTabBarController: UITabBarController {
     func publishPresent() {
         println("adf")
         let storyboard = UIStoryboard(name: "Publish", bundle: nil)
-        let publishVC : PublishViewController = storyboard.instantiateViewControllerWithIdentifier("PublishViewController") as! PublishViewController
+        let publishVC : NLNavigationController = storyboard.instantiateViewControllerWithIdentifier("PublishNavi") as! NLNavigationController
         self.presentViewController(publishVC, animated: true, completion: nil)
     }
     
