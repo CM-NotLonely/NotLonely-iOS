@@ -9,23 +9,44 @@
 import UIKit
 import RxCocoa
 
-class MyViewController: BaseViewController {
+class MyViewController: UIViewController {
 
     @IBOutlet weak var rightBarBtn: UIBarButtonItem!
     @IBOutlet weak var leftBarBtn: UIBarButtonItem!
 
-    @IBOutlet weak var bgImageView: UIImageView!
-    @IBOutlet weak var avatorImageView: UIImageView!
+    @IBOutlet weak var bgImageView: UIImageView!{
+        didSet{
+            bgImageView.contentMode = .ScaleAspectFill
+            self.view.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var avatorImageView: UIImageView!{
+        didSet{
+            avatorImageView.contentMode = .ScaleAspectFill
+        
+        }
+    }
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var introLabel: UILabel!
     @IBOutlet weak var focusLabel: UILabel!
+    @IBOutlet weak var myTableView: UITableView!
     
     
-    
+    var titleText = ["我的主页","我关注的","发布的活动","参与的活动","点赞的活动"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.myTableView.delegate = self
+        self.myTableView.dataSource = self
+        
+        let imageURLString = Defaults[.url]
+        let image = UIImage(contentsOfFile: imageURLString)
+        bgImageView.image = image
+        avatorImageView.image = image
 
-        // Do any additional setup after loading the view.
+        self.usernameLabel.text = Defaults[.nickname]
+        self.introLabel.text = Defaults[.introduction]
+        self.focusLabel.text = "99个人关注了我"
         rightBarBtn.rx_tap
             .subscribeNext{
                 
@@ -45,8 +66,7 @@ class MyViewController: BaseViewController {
     }
     
     
-
-    /*
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -56,4 +76,27 @@ class MyViewController: BaseViewController {
     }
     */
 
+}
+
+
+
+
+extension MyViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyTableViewCell") as! MyTableViewCell
+        cell.leadingLabel.text = titleText[indexPath.row]
+        if indexPath.row>1{
+            cell.trailingLabel.text = "20次活动"
+        }
+        return cell
+    }
 }

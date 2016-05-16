@@ -10,7 +10,6 @@
 		227CB7CC1CE9AC4E0045B1CF /* ConfigureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */; };
 		227CB7CE1CE9AC7B0045B1CF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */; };
 		227CB7D01CE9ACAA0045B1CF /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */; };
-		227CB7D41CE9C0A90045B1CF /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7D31CE9C0A90045B1CF /* myTableViewCell.swift */; };
 		74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CBD1CAD5DD70065D5EB /* Zhihu.swift */; };
 		74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CC01CAEA91F0065D5EB /* LoginViewController.swift */; };
 		74002CC31CAEA9640065D5EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74002CC21CAEA9640065D5EB /* Login.storyboard */; };
@@ -83,6 +82,7 @@
 		74DD0F981CE4778000A04BF0 /* NLApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F971CE4778000A04BF0 /* NLApi.swift */; };
 		74DD0F9A1CE48E7800A04BF0 /* PublishTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
+		76DF754C1CE9E24F00301600 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF754B1CE9E24F00301600 /* MyTableViewCell.swift */; };
 		FD7924F453CC69D39A4BD405 /* Pods_NotLonely_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66C84083F84EFD3F494BFA9 /* Pods_NotLonely_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +107,6 @@
 		227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTableViewController.swift; sourceTree = "<group>"; };
 		227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
-		227CB7D31CE9C0A90045B1CF /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 		6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6B88001402391CB561C4B13A /* Pods-NotLonely-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotLonely-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		74002CBD1CAD5DD70065D5EB /* Zhihu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zhihu.swift; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		74DD0F971CE4778000A04BF0 /* NLApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLApi.swift; sourceTree = "<group>"; };
 		74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTextField.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		76DF754B1CE9E24F00301600 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		8CBE9004DC8605F76779DBA9 /* Pods-NotLonely-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotLonely-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C66C84083F84EFD3F494BFA9 /* Pods_NotLonely_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotLonely_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,7 +282,6 @@
 				227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */,
 				227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */,
 				227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */,
-				227CB7D31CE9C0A90045B1CF /* myTableViewCell.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -470,6 +469,7 @@
 				74D0AC581CBC8F8C00126706 /* InviteInfCell.swift */,
 				74D0AC5A1CBC8FA900126706 /* MyFollowCell.swift */,
 				74D0AC5E1CBC8FF300126706 /* LikeCell.swift */,
+				76DF754B1CE9E24F00301600 /* MyTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -543,6 +543,7 @@
 				740B00E61C9191F000E6ABD0 /* Resources */,
 				5C501E7068D34E4C2D9F885C /* 📦 Embed Pods Frameworks */,
 				703A36C5F74455CCED526D33 /* 📦 Copy Pods Resources */,
+				1489D885CB42E48EA4EBD737 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -671,6 +672,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1489D885CB42E48EA4EBD737 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5C501E7068D34E4C2D9F885C /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -773,13 +789,13 @@
 				743890091CD0AF5D00DB8329 /* RegisterViewController.swift in Sources */,
 				74651D0E1CBA050C001125AB /* CircleDetailViewController.swift in Sources */,
 				743890191CD20D9C00DB8329 /* PageViewController.swift in Sources */,
-				227CB7D41CE9C0A90045B1CF /* myTableViewCell.swift in Sources */,
 				74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */,
 				743890141CD20D2F00DB8329 /* LoginViewModel.swift in Sources */,
 				74DD0F9A1CE48E7800A04BF0 /* PublishTextField.swift in Sources */,
 				743890181CD20D9C00DB8329 /* PageMenuView.swift in Sources */,
 				7438901F1CD20FE400DB8329 /* NLLog.swift in Sources */,
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
+				76DF754C1CE9E24F00301600 /* MyTableViewCell.swift in Sources */,
 				227CB7D01CE9ACAA0045B1CF /* ImagePickerViewController.swift in Sources */,
 				749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */,
 				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
