@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import RxCocoa
 
 class MyViewController: BaseViewController {
 
+    @IBOutlet weak var rightBarBtn: UIBarButtonItem!
+    @IBOutlet weak var leftBarBtn: UIBarButtonItem!
+
+    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var avatorImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var introLabel: UILabel!
+    @IBOutlet weak var focusLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +32,7 @@ class MyViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

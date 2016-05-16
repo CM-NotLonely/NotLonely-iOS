@@ -2,6 +2,8 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 use_frameworks!
 
+target 'NotLonely-iOS' do
+
 pod 'Alamofire'
 pod 'AlamofireNetworkActivityIndicator'
 
@@ -18,7 +20,7 @@ pod 'SwiftyUserDefaults'
 #
 # pod 'SwiftyBeaver'
 pod 'ReachabilitySwift'
-# pod 'PKHUD'
+pod 'PKHUD'
 # pod 'PullToBounce'
 # pod 'AFDateHelper'
 # pod 'DeviceGuru'
@@ -29,3 +31,5 @@ pod 'ReachabilitySwift'
 # pod 'NVActivityIndicatorView'
 # pod 'SnapKit'
 # pod 'AwesomeCache'
+
+end
