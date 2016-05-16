@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227CB7CC1CE9AC4E0045B1CF /* ConfigureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */; };
+		227CB7CE1CE9AC7B0045B1CF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */; };
+		227CB7D01CE9ACAA0045B1CF /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */; };
+		227CB7D21CE9B1230045B1CF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227CB7D11CE9B1230045B1CF /* UserInfo.swift */; };
 		74002CBE1CAD5DD70065D5EB /* Zhihu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CBD1CAD5DD70065D5EB /* Zhihu.swift */; };
 		74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74002CC01CAEA91F0065D5EB /* LoginViewController.swift */; };
 		74002CC31CAEA9640065D5EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74002CC21CAEA9640065D5EB /* Login.storyboard */; };
@@ -80,6 +84,7 @@
 		74DD0F9A1CE48E7800A04BF0 /* PublishTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */; };
 		74FE817F1CA8C465000A2984 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE817E1CA8C465000A2984 /* Enum.swift */; };
 		77D0F8302E66261469018050 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6B5FC692CCFC17397733F1 /* Pods.framework */; };
+		FD7924F453CC69D39A4BD405 /* Pods_NotLonely_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66C84083F84EFD3F494BFA9 /* Pods_NotLonely_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +105,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTableViewController.swift; sourceTree = "<group>"; };
+		227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		227CB7D11CE9B1230045B1CF /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6B88001402391CB561C4B13A /* Pods-NotLonely-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotLonely-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		74002CBD1CAD5DD70065D5EB /* Zhihu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zhihu.swift; sourceTree = "<group>"; };
 		74002CC01CAEA91F0065D5EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		74002CC21CAEA9640065D5EB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -180,6 +190,8 @@
 		74DD0F971CE4778000A04BF0 /* NLApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLApi.swift; sourceTree = "<group>"; };
 		74DD0F991CE48E7800A04BF0 /* PublishTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTextField.swift; sourceTree = "<group>"; };
 		74FE817E1CA8C465000A2984 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		8CBE9004DC8605F76779DBA9 /* Pods-NotLonely-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotLonely-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C66C84083F84EFD3F494BFA9 /* Pods_NotLonely_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotLonely_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B5FC692CCFC17397733F1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D0F8302E66261469018050 /* Pods.framework in Frameworks */,
+				FD7924F453CC69D39A4BD405 /* Pods_NotLonely_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6B5FC692CCFC17397733F1 /* Pods.framework */,
+				C66C84083F84EFD3F494BFA9 /* Pods_NotLonely_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,6 +283,10 @@
 			children = (
 				74163CB41CA3DDF1009BBCE5 /* My.storyboard */,
 				74163CBC1CA3DE25009BBCE5 /* MyViewController.swift */,
+				227CB7CB1CE9AC4E0045B1CF /* ConfigureTableViewController.swift */,
+				227CB7CD1CE9AC7B0045B1CF /* EditViewController.swift */,
+				227CB7CF1CE9ACAA0045B1CF /* ImagePickerViewController.swift */,
+				227CB7D11CE9B1230045B1CF /* UserInfo.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -510,6 +528,8 @@
 			children = (
 				CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */,
 				6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */,
+				8CBE9004DC8605F76779DBA9 /* Pods-NotLonely-iOS.debug.xcconfig */,
+				6B88001402391CB561C4B13A /* Pods-NotLonely-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -521,12 +541,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 740B01101C9191F000E6ABD0 /* Build configuration list for PBXNativeTarget "NotLonely-iOS" */;
 			buildPhases = (
-				E4E58528E01D5A22513BD3E6 /* Check Pods Manifest.lock */,
+				E4E58528E01D5A22513BD3E6 /* 📦 Check Pods Manifest.lock */,
 				740B00E41C9191F000E6ABD0 /* Sources */,
 				740B00E51C9191F000E6ABD0 /* Frameworks */,
 				740B00E61C9191F000E6ABD0 /* Resources */,
-				5C501E7068D34E4C2D9F885C /* Embed Pods Frameworks */,
-				703A36C5F74455CCED526D33 /* Copy Pods Resources */,
+				5C501E7068D34E4C2D9F885C /* 📦 Embed Pods Frameworks */,
+				703A36C5F74455CCED526D33 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -655,44 +675,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C501E7068D34E4C2D9F885C /* Embed Pods Frameworks */ = {
+		5C501E7068D34E4C2D9F885C /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		703A36C5F74455CCED526D33 /* Copy Pods Resources */ = {
+		703A36C5F74455CCED526D33 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NotLonely-iOS/Pods-NotLonely-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E4E58528E01D5A22513BD3E6 /* Check Pods Manifest.lock */ = {
+		E4E58528E01D5A22513BD3E6 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,10 +764,12 @@
 				74D0AC651CBCD48F00126706 /* LikeViewController.swift in Sources */,
 				74D0AC591CBC8F8C00126706 /* InviteInfCell.swift in Sources */,
 				740B01661C9565E900E6ABD0 /* NNUrl.swift in Sources */,
+				227CB7CE1CE9AC7B0045B1CF /* EditViewController.swift in Sources */,
 				74D0AC631CBCD41500126706 /* MyFollowViewController.swift in Sources */,
 				74333ABA1CB0C68000FE2099 /* CALayer+Extension.swift in Sources */,
 				74163CD41CA7C0B0009BBCE5 /* ExampleViewModel.swift in Sources */,
 				74D0AD1E1CC4E89F00126706 /* NLConfig.swift in Sources */,
+				227CB7CC1CE9AC4E0045B1CF /* ConfigureTableViewController.swift in Sources */,
 				749A7DDC1CBA5B6600232104 /* InterestCircleCell.swift in Sources */,
 				741975761C996BFB00CDC5B1 /* NSObject+Common.swift in Sources */,
 				74333AD41CB400EC00FE2099 /* NLNavigationController.swift in Sources */,
@@ -761,10 +783,12 @@
 				743890181CD20D9C00DB8329 /* PageMenuView.swift in Sources */,
 				7438901F1CD20FE400DB8329 /* NLLog.swift in Sources */,
 				74333ABC1CB0C77600FE2099 /* UIColor+NL.swift in Sources */,
+				227CB7D01CE9ACAA0045B1CF /* ImagePickerViewController.swift in Sources */,
 				749A7DDA1CBA5B5900232104 /* InterestPeopleCell.swift in Sources */,
 				74333AC21CB0DBD300FE2099 /* InputTextField.swift in Sources */,
 				747712821CE0904B00B1E495 /* RegisterViewModel.swift in Sources */,
 				74002CC11CAEA91F0065D5EB /* LoginViewController.swift in Sources */,
+				227CB7D21CE9B1230045B1CF /* UserInfo.swift in Sources */,
 				740B01681C9566A100E6ABD0 /* NNNetWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,7 +929,7 @@
 		};
 		740B01111C9191F000E6ABD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB9942B6C5D01CCEDC468BF3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8CBE9004DC8605F76779DBA9 /* Pods-NotLonely-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
@@ -919,7 +943,7 @@
 		};
 		740B01121C9191F000E6ABD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B0DDC2552A2B031343A6E5D /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6B88001402391CB561C4B13A /* Pods-NotLonely-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
