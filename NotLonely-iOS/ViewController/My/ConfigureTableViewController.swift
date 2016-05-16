@@ -21,9 +21,6 @@ class ConfigureTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserInfo.sharedInstance.sex.bindTo(sexLabel.rx_text)
-        UserInfo.sharedInstance.usernameText.bindTo(usernameLabel.rx_text)
-        UserInfo.sharedInstance.userIntro.bindTo(introLabel.rx_text)
     
         
     }

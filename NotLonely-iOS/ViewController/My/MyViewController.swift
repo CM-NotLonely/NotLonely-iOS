@@ -37,11 +37,7 @@ class MyViewController: BaseViewController {
                 
         }
         
-        UserInfo.sharedInstance.uesrnameText.bindTo(usernameLabel.rx_text)
-        UserInfo.sharedInstance.userIntro.bindTo(introLabel.rx_text)
-        UserInfo.sharedInstance.focusNumber
-            .map{"$0"+"人关注了我"}
-            .bindTo(focusLabel.rx_text)
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
