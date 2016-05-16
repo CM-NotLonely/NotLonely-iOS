@@ -32,6 +32,15 @@ class NLValidationService: ValidationService {
             return false
         }
     }
+    
+    func validateStringEmpty(string: String) -> Bool {
+        if string.length > 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+
 }
 
 class VMNetWorkApi : VMNetWorkApiProtocol {
