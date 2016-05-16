@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="687" y="376"/>
         </scene>
-        <!--Root View Controller-->
+        <!--修改资料-->
         <scene sceneID="S6X-Db-ac2">
             <objects>
-                <tableViewController id="thd-Va-hcu" sceneMemberID="viewController">
+                <tableViewController id="thd-Va-hcu" customClass="ConfigureTableViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6oZ-sm-xo3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +358,17 @@
                             <outlet property="delegate" destination="thd-Va-hcu" id="3fq-6A-zUG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Dy4-4E-Ji6"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="修改资料" id="4uW-BT-q1S">
+                        <barButtonItem key="rightBarButtonItem" title="Bingo!" id="o50-nc-Oqr"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="adH-jf-X0s" id="fdt-BA-YO6"/>
+                        <outlet property="introLabel" destination="VhJ-lw-cn6" id="QUU-BA-w6c"/>
+                        <outlet property="sexLabel" destination="1PV-Jx-V5W" id="GkP-ms-e4H"/>
+                        <outlet property="usernameLabel" destination="1IP-EQ-U0o" id="ScE-r6-ZPW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wp-3k-F41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +393,7 @@
         <!--imagePicker-->
         <scene sceneID="FZn-fG-GNu">
             <objects>
-                <viewController title="imagePicker" id="wjr-NI-Yye" sceneMemberID="viewController">
+                <viewController title="imagePicker" id="wjr-NI-Yye" customClass="ImagePickerViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoA-i4-EyU"/>
                         <viewControllerLayoutGuide type="bottom" id="ABu-SS-KUX"/>
@@ -401,7 +411,7 @@
         <!--编辑-->
         <scene sceneID="JMK-zA-7Pa">
             <objects>
-                <viewController id="7oP-J1-ylf" sceneMemberID="viewController">
+                <viewController id="7oP-J1-ylf" customClass="EditViewController" customModule="NotLonely_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jkL-ln-Rg5"/>
                         <viewControllerLayoutGuide type="bottom" id="30D-nH-aDU"/>
