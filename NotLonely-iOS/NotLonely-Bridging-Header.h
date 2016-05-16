@@ -14,5 +14,6 @@
 @import SwiftyJSON;
 @import AlamofireNetworkActivityIndicator;
 @import SwiftyUserDefaults;
+@import IQKeyboardManagerSwift;
 
 #endif /* NotLonely_Bridging_Header_h */

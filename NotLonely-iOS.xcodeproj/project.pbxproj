@@ -59,6 +59,7 @@
 		743890191CD20D9C00DB8329 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743890171CD20D9C00DB8329 /* PageViewController.swift */; };
 		7438901C1CD20DDC00DB8329 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438901B1CD20DDC00DB8329 /* LoginModel.swift */; };
 		7438901F1CD20FE400DB8329 /* NLLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438901E1CD20FE400DB8329 /* NLLog.swift */; };
+		7464138C1CE9D8F000AB7BF6 /* PublishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464138B1CE9D8F000AB7BF6 /* PublishViewModel.swift */; };
 		74651D0C1CBA04F9001125AB /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */; };
 		74651D0E1CBA050C001125AB /* CircleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */; };
 		74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74651D0F1CBA0E1A001125AB /* CircleCell.swift */; };
@@ -164,6 +165,7 @@
 		743890171CD20D9C00DB8329 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		7438901B1CD20DDC00DB8329 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		7438901E1CD20FE400DB8329 /* NLLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLLog.swift; sourceTree = "<group>"; };
+		7464138B1CE9D8F000AB7BF6 /* PublishViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewModel.swift; sourceTree = "<group>"; };
 		74651D0B1CBA04F9001125AB /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0D1CBA050C001125AB /* CircleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleDetailViewController.swift; sourceTree = "<group>"; };
 		74651D0F1CBA0E1A001125AB /* CircleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCell.swift; sourceTree = "<group>"; };
@@ -450,11 +452,13 @@
 		74163CD01CA7C078009BBCE5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7464138A1CE9D8E200AB7BF6 /* Publish */,
 				7477128F1CE0995500B1E495 /* Implementations.swift */,
 				7477128B1CE0983700B1E495 /* Protocol.swift */,
 				7438900E1CD20C9400DB8329 /* Login */,
 				74163CD11CA7C086009BBCE5 /* NNViewModel.swift */,
 				74DD0F971CE4778000A04BF0 /* NLApi.swift */,
+				7464138B1CE9D8F000AB7BF6 /* PublishViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -508,6 +512,13 @@
 				747712911CE1D28D00B1E495 /* NLNotice.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		7464138A1CE9D8E200AB7BF6 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Publish;
 			sourceTree = "<group>";
 		};
 		74D0AD1C1CC4E88900126706 /* Configs */ = {
@@ -759,6 +770,7 @@
 				74163CB71CA3DE02009BBCE5 /* PublishViewController.swift in Sources */,
 				74651D101CBA0E1A001125AB /* CircleCell.swift in Sources */,
 				74163CAB1CA3DDA6009BBCE5 /* HomeViewController.swift in Sources */,
+				7464138C1CE9D8F000AB7BF6 /* PublishViewModel.swift in Sources */,
 				74D0AD1B1CC4DE6400126706 /* UIView+Extension.swift in Sources */,
 				74163C9C1CA2B336009BBCE5 /* BaseViewController.swift in Sources */,
 				740B00EE1C9191F000E6ABD0 /* ViewController.swift in Sources */,
@@ -892,7 +904,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
@@ -931,7 +943,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
@@ -944,6 +956,7 @@
 			baseConfigurationReference = 8CBE9004DC8605F76779DBA9 /* Pods-NotLonely-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -958,6 +971,7 @@
 			baseConfigurationReference = 6B88001402391CB561C4B13A /* Pods-NotLonely-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "NotLonely-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

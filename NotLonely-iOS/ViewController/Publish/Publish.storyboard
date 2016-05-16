@@ -70,7 +70,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-D0-B1C">
                                 <rect key="frame" x="15" y="357" width="570" height="186"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wzq-2C-0RV">
+                                        <rect key="frame" x="8" y="8" width="554" height="170"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wzq-2C-0RV" firstAttribute="leading" secondItem="Tt9-D0-B1C" secondAttribute="leadingMargin" id="ETM-wC-xfd"/>
+                                    <constraint firstItem="wzq-2C-0RV" firstAttribute="top" secondItem="Tt9-D0-B1C" secondAttribute="topMargin" id="Hkt-rv-GAl"/>
+                                    <constraint firstItem="wzq-2C-0RV" firstAttribute="trailing" secondItem="Tt9-D0-B1C" secondAttribute="trailingMargin" id="kxO-rK-nbB"/>
+                                    <constraint firstItem="wzq-2C-0RV" firstAttribute="bottom" secondItem="Tt9-D0-B1C" secondAttribute="bottomMargin" id="zgE-kY-yuK"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
@@ -95,6 +109,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-ki-ere">
                                 <rect key="frame" x="15" y="72" width="570" height="277"/>
                                 <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="活动名称" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-XN-eF0" customClass="PublishTextField" customModule="NotLonely_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="8" width="544" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dPQ-S3-2cF"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.76078431369999999" green="0.73333333329999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="活动时间" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="359-UZ-gzX" customClass="PublishTextField" customModule="NotLonely_iOS" customModuleProvider="target">
                                         <rect key="frame" x="13" y="58" width="544" height="40"/>
                                         <constraints>
@@ -140,20 +168,6 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="活动经费" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fk5-xz-A95" customClass="PublishTextField" customModule="NotLonely_iOS" customModuleProvider="target">
                                         <rect key="frame" x="13" y="208" width="544" height="40"/>
                                         <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                                <color key="value" red="0.76078431369999999" green="0.73333333329999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="活动名称" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-XN-eF0" customClass="PublishTextField" customModule="NotLonely_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="8" width="544" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="dPQ-S3-2cF"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>

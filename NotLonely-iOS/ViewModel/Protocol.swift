@@ -12,6 +12,8 @@ import Foundation
 protocol ValidationService {
     func validateString(string: String) -> Bool
     func validateSameString(password: String, repeatedPassword: String) -> Bool
+    func validateStringEmpty(string: String) -> Bool
+
 }
 
 protocol VMNetWorkApiProtocol {
