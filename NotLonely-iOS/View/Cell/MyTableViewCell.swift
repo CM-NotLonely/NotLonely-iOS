@@ -18,8 +18,8 @@ class MyTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        trailingLabel.sizeToFit()
-        leadingLabel.sizeToFit()
+        trailingLabel?.sizeToFit()
+        leadingLabel?.sizeToFit()
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
