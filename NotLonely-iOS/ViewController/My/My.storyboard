@@ -188,7 +188,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="wjr-NI-Yye" kind="show" id="vIe-7U-CAU"/>
+                                            <segue destination="OmM-zH-2s3" kind="show" id="vIe-7U-CAU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Frj-Nb-eyW" customClass="MyTableViewCell" customModule="NotLonely_iOS" customModuleProvider="target">
@@ -323,12 +323,55 @@
                     <view key="view" contentMode="scaleToFill" id="cYH-mx-lSN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-P3-L3X">
+                                <rect key="frame" x="40" y="436" width="520" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="拍照">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLy-rk-C5w">
+                                <rect key="frame" x="40" y="486" width="520" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="从本地选择一张图片">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r0D-Be-mtd">
+                                <rect key="frame" x="200" y="124" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fa8-2i-mjm"/>
+                                    <constraint firstAttribute="height" constant="200" id="jMq-tq-c7Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ABu-SS-KUX" firstAttribute="top" secondItem="yLy-rk-C5w" secondAttribute="bottom" constant="40" id="5rr-Mt-2g5"/>
+                            <constraint firstItem="r0D-Be-mtd" firstAttribute="top" secondItem="PoA-i4-EyU" secondAttribute="bottom" constant="60" id="6Gf-I2-dXm"/>
+                            <constraint firstItem="fl9-P3-L3X" firstAttribute="leading" secondItem="yLy-rk-C5w" secondAttribute="leading" id="7ce-x1-lMp"/>
+                            <constraint firstItem="yLy-rk-C5w" firstAttribute="top" secondItem="fl9-P3-L3X" secondAttribute="bottom" constant="20" id="7hW-dG-ZRX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yLy-rk-C5w" secondAttribute="trailing" constant="20" id="GhV-jO-kfo"/>
+                            <constraint firstItem="fl9-P3-L3X" firstAttribute="trailing" secondItem="yLy-rk-C5w" secondAttribute="trailing" id="I6J-je-C1d"/>
+                            <constraint firstItem="r0D-Be-mtd" firstAttribute="centerX" secondItem="cYH-mx-lSN" secondAttribute="centerX" id="L55-u3-ZsG"/>
+                            <constraint firstItem="yLy-rk-C5w" firstAttribute="leading" secondItem="cYH-mx-lSN" secondAttribute="leadingMargin" constant="20" id="SvF-xt-4fl"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="选择头像" id="f9o-td-TWS">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="oUn-RB-iaL"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraBtn" destination="fl9-P3-L3X" id="jom-tr-din"/>
+                        <outlet property="doneBtn" destination="oUn-RB-iaL" id="1vc-eL-ejl"/>
+                        <outlet property="imageView" destination="r0D-Be-mtd" id="ERz-ra-lor"/>
+                        <outlet property="photoBtn" destination="yLy-rk-C5w" id="obp-Gj-vAP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYS-KK-GLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="456"/>
+            <point key="canvasLocation" x="2229" y="456"/>
         </scene>
         <!--编辑-->
         <scene sceneID="JnS-Uv-OXz">
@@ -366,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwc-lB-N7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="2030"/>
+            <point key="canvasLocation" x="1380" y="2034"/>
         </scene>
         <!--选择性别-->
         <scene sceneID="Fv1-80-IV0">
@@ -400,7 +443,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4Z-tp-6Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304" y="927"/>
+            <point key="canvasLocation" x="3116" y="927"/>
         </scene>
         <!--编辑-->
         <scene sceneID="ReN-0e-Bxu">
@@ -456,7 +499,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMO-QJ-zMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="927"/>
+            <point key="canvasLocation" x="2304" y="927"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PMY-Gd-k2Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OmM-zH-2s3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5tx-cL-AOl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wjr-NI-Yye" kind="relationship" relationship="rootViewController" id="L7p-cr-SgJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rF0-b6-VRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1417" y="456"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
