@@ -17,7 +17,7 @@ class MyViewController: UIViewController {
     @IBOutlet weak var bgImageView: UIImageView!{
         didSet{
             bgImageView.contentMode = .ScaleAspectFill
-            self.view.clipsToBounds = true
+//            self.view.clipsToBounds = true
         }
     }
     @IBOutlet weak var avatorImageView: UIImageView!{
@@ -53,10 +53,10 @@ class MyViewController: UIViewController {
         }
             
         
-        leftBarBtn.rx_tap
-            .subscribeNext{
-                
-        }
+//        leftBarBtn.rx_tap
+//            .subscribeNext{
+//                
+//        }
         
 
     }

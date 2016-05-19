@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class EditViewController: UIViewController {
+class EditNicknameViewController: BaseViewController {
 
     @IBOutlet weak var DoneBtn: UIBarButtonItem!
     @IBOutlet weak var inputLabel: UITextField!

@@ -6,8 +6,14 @@
 //  Copyright © 2016 cm. All rights reserved.
 //
 
-import Cocoa
+//import Cocoa
+import UIKit
+import RxCocoa
 
-class EditIntroViewController: UIViewController {
-
+class EditIntroViewController: BaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
