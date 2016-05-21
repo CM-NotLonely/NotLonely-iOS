@@ -10,7 +10,7 @@ target 'NotLonely-iOS' do
 	pod 'RxCocoa', '~> 2.0'
 
 	pod 'SwiftyJSON', '2.3.2'
-	
+	pod 'KMPlaceholderTextView', '~> 1.2.0'
 	# pod 'netfox'
 	#
 	# pod 'URLNavigator'

@@ -25,10 +25,7 @@ class ActivityViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.contentInset = UIEdgeInsetsMake(0, 0, self.bottomLayoutGuide.length, 0)
 
-        // Do any additional setup after loading the view.
-//        tableView.registerClass(ActivityCell.self, forCellReuseIdentifier: "ActivityCell")
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
@@ -38,8 +35,17 @@ class ActivityViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+//        self.tabBarController!.view.setNeedsLayout()
+//        self.navigationController!.view.setNeedsLayout()
+    }
 
 }
+
+
 
 extension ActivityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -11,6 +11,7 @@ import UIKit
 class CircleViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
+            
         }
     }
 
@@ -26,23 +27,7 @@ class CircleViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    
-//    override func viewDidLayoutSubviews() {
-//        let top = self.topLayoutGuide.length
-//        let bottom = self.bottomLayoutGuide.length
-//        let newInsets = UIEdgeInsetsMake(top, 0, bottom, 0)
-//        self.tableView.contentInset = newInsets
-//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension CircleViewController: UITableViewDelegate, UITableViewDataSource {

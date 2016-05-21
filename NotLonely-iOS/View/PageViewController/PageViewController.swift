@@ -92,9 +92,9 @@ class PageViewController: UIViewController, UIScrollViewDelegate, PageMenuViewDe
             scrollY = -104
         }
         
-        for tableViewController in viewArray {
+//        for tableViewController in viewArray {
 //            tableViewController.tableView.contentOffset = CGPointMake(0, scrollY)
-        }
+//        }
         
         let rate = (scrollView.contentOffset.x / width)
         self.menuView.scollToRate(rate)

@@ -11,12 +11,15 @@ import UIKit
 class CircleDetailViewController: BaseViewController {
 
     var overlay: UIView!
-    
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //看下原理
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160.0
+        
         self.navigationController!.navigationBar.barTintColor = UIColor.clearColor()
         self.navigationController?.navigationBar.nl_setBackgroundColor(UIColor.clearColor())
     }
@@ -52,8 +55,7 @@ extension CircleDetailViewController: UIScrollViewDelegate, UITableViewDelegate,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("text", forIndexPath: indexPath)
-        cell.textLabel?.text = "12134"
+        let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath)
         
         return cell
     }
@@ -62,4 +64,7 @@ extension CircleDetailViewController: UIScrollViewDelegate, UITableViewDelegate,
         return 12
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 }
